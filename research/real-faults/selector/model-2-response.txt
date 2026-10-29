@@ -1,0 +1,35 @@
+{
+  "hypotheses": [
+    {
+      "assessment": "supported",
+      "evidence_ids": [
+        "7af6db1ef5b2ac3e65825cbc95763a3674482301ef4509f4cde6bd47eddc4fc1",
+        "c335fbeb0b2e2b20cd44a6abb30df6099b98a8ec59102617ed15b83310b59381"
+      ],
+      "id": "service-selection",
+      "statement": "The Service checkout selector requires both app=checkout and track=label-2768a42373. The EndpointSlice endpointslice-9ac1e92127 for this Service shows an empty endpoints list, indicating no endpoints matched the selector at observation time. The Pod observation (c335fbeb0b2e2b20cd44a6abb30df6099b98a8ec59102617ed15b83310b59381) shows a single Pod with app=checkout but track=label-f379ccb92b, which does not satisfy the selector. This evidence supports the service-selection hypothesis because the required track label is absent from all observed Pods, causing the Service to select zero endpoints and resulting in connection refusal."
+    },
+    {
+      "assessment": "weakened",
+      "evidence_ids": [
+        "7af6db1ef5b2ac3e65825cbc95763a3674482301ef4509f4cde6bd47eddc4fc1",
+        "c335fbeb0b2e2b20cd44a6abb30df6099b98a8ec59102617ed15b83310b59381"
+      ],
+      "id": "application-regression",
+      "statement": "The application-regression hypothesis posits that Pods matching the selector exist but are not Ready due to a regression. However, the complete Pod observation (c335fbeb0b2e2b20cd44a6abb30df6099b98a8ec59102617ed15b83310b59381) shows no Pod with track=label-2768a42373 at all, ready or unready. The EndpointSlice (7af6db1ef5b2ac3e65825cbc95763a3674482301ef4509f4cde6bd47eddc4fc1) also shows zero endpoints. Since there is no evidence of any matching Pods, the hypothesis is weakened; it would require unobserved Pods that existed during the incident window but were not captured."
+    }
+  ],
+  "incident_assessment": {
+    "competing_hypotheses": [
+      "service-selection",
+      "application-regression"
+    ],
+    "explains_incident": null,
+    "missing_evidence": [
+      "Pod observations for label selector app=checkout,track=label-2768a42373 at incident time to confirm absence",
+      "ReplicaSet or Deployment status for the checkout workload to assess replica counts and rollout state",
+      "Application logs or events from checkout Pods during the incident window to detect regression symptoms"
+    ],
+    "outcome": "uncertain"
+  }
+}

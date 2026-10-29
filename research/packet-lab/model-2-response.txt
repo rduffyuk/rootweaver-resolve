@@ -1,0 +1,45 @@
+{
+  "expected_outcomes": [
+    "Service and EndpointSlice show correct endpoints including 10.42.0.180 with ready addresses and matching port 8081 → weakens svc-misconfig and dep-unhealthy",
+    "Service selects wrong pods/ports (e.g., 10.42.0.180 absent, wrong targetPort, or selector mismatch) → supports svc-misconfig",
+    "EndpointSlice has no ready endpoints or endpoints not matching 10.42.0.180 → supports dep-unhealthy or svc-misconfig",
+    "Service/EndpointSlice missing or severely misconfigured (no selector, no ports) → supports svc-misconfig"
+  ],
+  "hypotheses": [
+    {
+      "assessment": "unresolved",
+      "evidence_ids": ["59bbbf7efe99861b85d62bbc69441225921a7c168a99e428cbe104d9c459fc80"],
+      "explanation": "Client logs show TimeoutError calling dependency resolved to 10.42.0.180. Need to verify Service/EndpointSlice configuration matches that address and port.",
+      "id": "svc-misconfig",
+      "refines": [],
+      "statement": "Service/EndpointSlice misconfiguration routes traffic to non-listening pods or wrong port."
+    },
+    {
+      "assessment": "unresolved",
+      "evidence_ids": ["59bbbf7efe99861b85d62bbc69441225921a7c168a99e428cbe104d9c459fc80"],
+      "explanation": "Timeouts could indicate dependency pods not actually serving traffic despite green probes. Need to check endpoint readiness and workload status.",
+      "id": "dep-unhealthy",
+      "refines": [],
+      "statement": "Dependency pods are unhealthy despite green readiness probes."
+    },
+    {
+      "assessment": "unresolved",
+      "evidence_ids": ["59bbbf7efe99861b85d62bbc69441225921a7c168a99e428cbe104d9c459fc80"],
+      "explanation": "Client-side timeout config or pool exhaustion possible, but logs show successful DNS resolution and connection attempt. Need packet capture to see handshake behavior.",
+      "id": "client-side",
+      "refines": [],
+      "statement": "Client-side configuration or resource exhaustion causes request timeouts."
+    },
+    {
+      "assessment": "unresolved",
+      "evidence_ids": ["59bbbf7efe99861b85d62bbc69441225921a7c168a99e428cbe104d9c459fc80"],
+      "explanation": "Network policy could drop packets after SYN or during data transfer. Packet capture will reveal if SYN-ACK arrives and data flows.",
+      "id": "net-policy",
+      "refines": [],
+      "statement": "Network policy or datapath drops dependency traffic after connection establishment."
+    }
+  ],
+  "next_check": "services",
+  "reason": "Logs show client resolved dependency to 10.42.0.180 and timed out. Inspecting the Service and EndpointSlice for the dependency will confirm whether that IP is a correct, ready endpoint on the expected port, directly testing svc-misconfig and dep-unhealthy.",
+  "uncertainty": "Service/EndpointSlice data not yet observed; workload pod status and packet-level behavior also unknown."
+}

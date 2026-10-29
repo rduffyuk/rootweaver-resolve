@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Resolve · Follow the investigation</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#investigation">Skip to investigation</a>
+  <header><a class="brand" href="./" aria-label="Rootweaver Resolve — return to evidence workbench">Rootweaver <strong>Resolve</strong></a><span id="mode" class="replay-label">Recorded investigation</span><span id="version" class="version"></span></header>
+  <main id="app">
+    <div class="casebar"><label>Recorded case <select id="case"><option value="http">HTTP 500 · Ready Pod</option><option value="selector">Selector mismatch</option><option value="dns">DNS dependency name</option><option value="policy">Client-specific policy denial</option></select></label><button id="about" class="quiet">How this works</button></div>
+    <section class="intro" aria-labelledby="case-title">
+      <div><h1 id="case-title">Loading the retained investigation…</h1><p id="case-question">Follow what was checked, what came back, and what the AI added.</p></div>
+      <div class="entry-actions"><button id="start" class="primary">Walk through investigation</button><button id="explore" class="quiet">Explore evidence</button></div>
+    </section>
+    <p class="mode-note">Start with the recorded investigation below. Fresh Ultra analysis is a separate, explicit action on the same retained evidence. Neither mode runs cluster tools.</p>
+    <section class="brief" aria-label="Incident overview"><div><span>Observed during the fault</span><strong id="impact"></strong></div><div><span>Still unknown</span><strong id="uncertainty"></strong></div></section>
+    <section id="investigation" aria-label="Guided investigation">
+      <nav id="guide-steps" aria-label="Investigation steps"></nav>
+      <div class="investigation">
+        <section class="guide-panel" aria-labelledby="step-title">
+          <div class="step-heading"><span id="step-position"></span><span id="step-status" class="status"></span></div>
+          <h2 id="step-title" tabindex="-1"></h2><p id="step-why" class="why"></p>
+          <div class="observation"><span id="result-label"></span><p id="step-result"></p></div>
+          <dl id="step-receipt" class="receipt"></dl>
+          <div id="step-actions" class="actions"></div>
+          <div id="ai-summary" class="ai-summary" hidden><span>Guide summary of Ultra’s retained response</span><p id="ai-text"></p><p id="ai-limit" class="warning"></p></div>
+          <div class="guide-controls"><button id="previous">Previous check</button><span id="guide-progress"></span><button id="next" class="primary">Next check</button></div>
+        </section>
+        <section class="graph-panel" aria-labelledby="graph-title">
+          <div class="panel-heading"><h2 id="graph-title">Where we are looking</h2><span>Observed resource associations</span></div>
+          <p id="graph-context"></p><div id="topology" tabindex="-1"></div><p id="graph-note"></p>
+          <div class="graph-legend"><span class="legend-focus">Related to this check</span><span>Lines show configuration, not traced requests</span></div>
+          <details class="capture-controls"><summary>Recorded stages &amp; recovery</summary>
+            <p>Change the graph’s captured state. Ultra’s saved fault analysis stays separate from baseline and recovery.</p>
+            <div class="playback"><button id="replay">Replay stages</button><button id="play">Play</button><button id="pause">Pause</button><button id="step">Step</button></div>
+            <nav id="stages" aria-label="Capture stages"></nav><p id="time" class="capture-time"></p><p id="recovery" class="recovery"></p>
+          </details>
+        </section>
+      </div>
+    </section>
+    <section id="fresh-analysis" class="fresh-panel" aria-labelledby="fresh-title">
+      <div class="panel-heading"><h2 id="fresh-title">Ask Ultra about this evidence</h2><span>NVIDIA Nemotron · Nebius Token Factory</span></div>
+      <p>One fresh analysis of the sanitised HTTP case. The model receives saved observations, including six selected log events. It cannot collect data, run the suggested check or change the controller finding.</p>
+      <div class="actions"><button id="fresh-input">Inspect exact outgoing input</button><button id="fresh-run" class="primary" disabled>Run fresh analysis</button><button id="fresh-export" hidden>Export complete new run</button></div>
+      <p id="fresh-status" role="status" aria-live="polite">Checking local analysis availability…</p>
+      <label id="fresh-history-label" hidden>Saved fresh analyses <select id="fresh-history" aria-label="Saved fresh analysis"></select></label>
+      <div id="fresh-result"></div>
+    </section>
+    <details id="comparison" class="comparison"><summary>Compare original AI responses <span>Earlier input → added evidence · original labels and mistakes</span></summary>
+      <p class="section-note">These are sequential calls from the recorded experiment, not a controlled A/B trial. The guide above is an authored explanation; the responses below are the original model output.</p>
+      <div id="hypotheses"></div><p id="conflict" class="warning"></p><button id="model-evidence">Read all original Ultra responses</button>
+    </details>
+    <section id="evidence-library" class="evidence-library" aria-labelledby="evidence-title-main"><h2 id="evidence-title-main" tabindex="-1">Evidence used in this investigation</h2><p>Open what was collected, then compare it with the exact input supplied to Ultra. Tool names describe recorded collection, not actions you are running now.</p><div id="coverage" class="coverage"></div></section>
+    <section class="forensic"><h2>Complete investigation record</h2><p id="copy-status"></p><p><a href="investigation-review.html">Review a saved hypothesis-and-tool investigation session</a></p><button id="export-case">Export full case JSON</button>
+      <details><summary>Original model output · all statements and citations</summary><pre id="model-record"></pre></details>
+      <details><summary>Captured records, logs, completeness and source pointers</summary><pre id="raw-record"></pre></details>
+      <details><summary>Controller dispositions and typed evidence</summary><pre id="controller-record"></pre></details>
+      <details><summary>Recovery receipts · experiment watchdog attribution</summary><pre id="recovery-record"></pre></details>
+      <details><summary>Evidence identities and public-copy hashes</summary><pre id="provenance-record"></pre></details>
+    </section>
+    <footer>Retained evidence · No autonomous remediation · Ultra is not production-qualified · <a href="release.json" download>Release manifest</a></footer>
+  </main>
+  <dialog id="evidence" aria-labelledby="evidence-title" aria-describedby="evidence-description">
+    <div class="drawer-head"><div><p id="evidence-description"></p><h2 id="evidence-title"></h2></div><button id="close-evidence" aria-label="Close evidence">Close ✕</button></div>
+    <nav class="drawer-tabs" aria-label="Evidence views"><button data-tab="summary">Summary</button><button data-tab="source">Full source</button><button data-tab="projection">Model input</button><button data-tab="provenance">Provenance</button></nav>
+    <div id="drawer-content" tabindex="0"></div><p id="drawer-announce" class="sr-only" role="status" aria-live="polite"></p>
+    <div class="drawer-actions"><button id="copy-id">Copy source reference</button><button id="export-evidence">Export complete evidence</button></div>
+  </dialog>
+  <div id="announce" class="sr-only" role="status" aria-live="polite"></div>
+  <script type="module" src="app.mjs"></script>
+</body></html>

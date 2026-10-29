@@ -1,0 +1,110 @@
+{
+  "scope": "Previously reviewed standalone Resolve controller slice plus revised presentation; no private platform services or history",
+  "modules": [
+    {
+      "module": "__init__",
+      "sha256": "38a03b4797b3a113347cedf4c0a8fb2c6a9a397dac20db7a175bf4ad3aac02ac",
+      "origin": "previous reviewed standalone Resolve slice"
+    },
+    {
+      "module": "application",
+      "sha256": "54828c54ca85f803782ea6667bf9984f4c921065a4799cb84b86df872bcfd69d",
+      "origin": "previous reviewed standalone Resolve slice"
+    },
+    {
+      "module": "broker",
+      "sha256": "11de75dcb826471b17c69762f3ba529f9cb3ae15abd6e6db4f7a1df284887d3c",
+      "origin": "previous reviewed standalone Resolve slice"
+    },
+    {
+      "module": "contracts",
+      "sha256": "183ca7ffe8ec7d2a38ee38a08f7305ef0b9982b348bb274d82e600f0c1d44ffa",
+      "origin": "previous reviewed standalone Resolve slice"
+    },
+    {
+      "module": "controller",
+      "sha256": "e184dfb248c6e6d93a13c207e0b2175a9307f8abc306d24e637116799d1a28cb",
+      "origin": "previous reviewed standalone Resolve slice"
+    },
+    {
+      "module": "controller_led",
+      "sha256": "f43f892539103e44d1a16985be333f8e701c7c5facc34aea4c22452e210c8432",
+      "origin": "previous reviewed standalone Resolve slice"
+    },
+    {
+      "module": "demo",
+      "sha256": "138cdb27b0e194b14c4c683126578636153efd2a6d585fd923a6480a31b03e9c",
+      "origin": "previous reviewed standalone Resolve slice"
+    },
+    {
+      "module": "demo_contract",
+      "sha256": "adbb268e349d88f2b3221a2e8261da69dfb27777adb2a8a4586e030f335bbd68",
+      "origin": "previous reviewed standalone Resolve slice"
+    },
+    {
+      "module": "demo_transport",
+      "sha256": "f2b2764ed35be7309c20b651304943260f5882f8d8f4a0edc75d5ee88db851f6",
+      "origin": "previous reviewed standalone Resolve slice"
+    },
+    {
+      "module": "evidence_view",
+      "sha256": "4e0f83a2da157f143b1038cd4524b8457744f980be696729e0dc39f996c2c226",
+      "origin": "previous reviewed standalone Resolve slice"
+    },
+    {
+      "module": "executions",
+      "sha256": "006cb58b8e01f71972817620ae69fe2564f9d389dfdc08fad2cf9461f294a2cf",
+      "origin": "previous reviewed standalone Resolve slice"
+    },
+    {
+      "module": "family_provider",
+      "sha256": "a1200903887c07514f93a3f84221d16ebe48323ebf44d341a760fb877e70a2a2",
+      "origin": "previous reviewed standalone Resolve slice"
+    },
+    {
+      "module": "investigator",
+      "sha256": "2be31d2c868a7d476ee8fb7cef8d62f7a5d981ecbcd53fa4c166aefc9f161be3",
+      "origin": "previous reviewed standalone Resolve slice"
+    },
+    {
+      "module": "ledger",
+      "sha256": "9c6d40ec9f00b104dac7fc9779424b1a36071a86c08c9e99923edfc9ea576663",
+      "origin": "previous reviewed standalone Resolve slice"
+    },
+    {
+      "module": "namespace",
+      "sha256": "43c026eca00a96ba434cbfb821bd54e495da7bd43d6382d5ee457ba7d9306072",
+      "origin": "previous reviewed standalone Resolve slice"
+    },
+    {
+      "module": "nebius",
+      "sha256": "11c3ebf4f321e0a03640e9e76a3f970af67c0953f6d1d01170ebf44f91418089",
+      "origin": "previous reviewed standalone Resolve slice"
+    },
+    {
+      "module": "policy",
+      "sha256": "b5aaa0d5624da30d3cdb23a200a126c4d236c75170d4aa4ea9c988953412f4d3",
+      "origin": "previous reviewed standalone Resolve slice"
+    },
+    {
+      "module": "replay",
+      "sha256": "73c4888466dfbd2f66ef10638a58edbc98a0478fd7fc6000a7541495fb401ff5",
+      "origin": "previous reviewed standalone Resolve slice"
+    },
+    {
+      "module": "server",
+      "sha256": "1886bc848ae2b887d7b260207eb299622519cfa661040bba36754326309fcd83",
+      "origin": "previous reviewed standalone Resolve slice"
+    },
+    {
+      "module": "support",
+      "sha256": "c9a4f61c1294f8f3fd260c98931695e2b193c67680b1e579f577e98d06edd21e",
+      "origin": "previous reviewed standalone Resolve slice"
+    },
+    {
+      "module": "validation_diagnostics",
+      "sha256": "3561c43818e0650b9d8003deb77aa32f253c39dfdc1c637148b2954da748f542",
+      "origin": "previous reviewed standalone Resolve slice"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+# Competition-period development and attribution
+
+Rootweaver predates this event. Resolve is a new application slice developed during the competition period; first retained implementation commits are dated October24,2026 local time, inside the August26–October30 submission window. Do not claim the entire Rootweaver platform was built for this hackathon.
+
+New work includes the incident/evidence/claim contracts; deterministic claim-specific controller and counterfactual fixtures; source-field support records; local investigation UI and evidence inspector; execution provenance and human approval boundary; bounded model-facing evidence; actual Nebius/NVIDIA inference integration; retained failure diagnostics; controller-led staged acquisition; two-level technical/incident attribution; and explicit unverified model analysis with separate live/retained modes.
+
+Existing Rootweaver SRE, provenance, observation and engineering experience informed the design. The standalone package does not depend on those private services or distribute the platform. No Observe packet/kernel tooling is bundled.
+
+Ryan Duffy owns the problem, architecture, acceptance criteria and review decisions. OpenAI Codex assisted with source inspection, implementation, tests, debugging, documentation and packaging. NVIDIA Nemotron models supplied actual investigation analyses through Nebius Token Factory and were evaluated candidly. This is agent-assisted engineering, not unaided hand authorship. There was no fine-tuning. NVIDIA model weights are not redistributed. Confirm the official New/Existing form choice with the owner and disclose the pre-existing platform either way.
+
+Versions 0.3.x add the retained genuine-fault workspace, explicit original-model conflicts, contextual accessible evidence drawer/sheet, bounded-comparison disclosures and a privacy-reviewed export. It does not claim the older platform or external watchdog as newly built autonomous remediation. Four cases and seven included calls supersede the earlier six-call review's inventory; earlier failures remain unchanged.
+
+Version 0.4.0 adds explicit fresh Nemotron analysis of the fixed sanitised HTTP case, durable limits and inspectable run receipts, application-error graph cues, clearer unexecuted suggestions, and a coherent submission/review package. It is a local review candidate; publication is pending.
+
+Version 0.5.0 integrates the selected evidence workbench: readable logs, resource snapshots, TCP conversations, step-specific assessments and complete model exchanges. It adds a disclosed public derivative of the separate five-call packet investigation, preserving the four-check sequence and model errors. Three unchanged implementation modules are included under reference/retained-investigation for source review; they are not a newly exposed cluster executor. Publication remains pending. The seven older case responses remain byte-identical; the five new public investigation answers have infrastructure aliases and are explicitly not byte-identical private originals.

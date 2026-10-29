@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Resolve · Investigation handover</title><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="investigation-review.css"></head>
+<body>
+<a class="skip" href="#method-main">Skip to investigation</a>
+<header><a class="brand" href="index.html">Rootweaver <strong>Resolve</strong></a><span class="replay-label">Investigation handover</span><span class="version">Recorded evidence · human decision</span></header>
+<main id="method-main">
+  <p id="incident" class="incident-line">Loading investigation…</p>
+  <section class="handover" aria-labelledby="finding-title">
+    <div class="finding-copy"><span class="eyebrow">Current finding · all completed checks</span><h1 id="finding-title">Review an investigation</h1><p id="finding-summary"></p><p class="open-question"><strong>Still unknown</strong><span id="finding-unknown"></span></p><div id="finding-evidence" class="actions"></div></div>
+    <figure id="timing-figure" hidden><figcaption>One captured connection</figcaption><div id="timing-plot"></div><p id="timing-scope"></p></figure>
+  </section>
+  <p id="method-notice" class="method-notice" role="status"></p>
+  <div class="trail-heading"><h2>How we got here</h2><span>Choose a check to follow the evidence</span></div>
+  <nav id="method-trail" aria-label="Investigation trail"></nav>
+  <div class="method-layout">
+    <section class="guide-panel" aria-labelledby="check-heading">
+      <div class="step-heading"><span id="check-attribution"></span><span id="check-disposition" class="status"></span></div>
+      <h2 id="check-heading" tabindex="-1"></h2>
+      <dl class="handover-lines">
+        <div><dt>Checked</dt><dd id="check-did"></dd></div>
+        <div class="found"><dt>Found</dt><dd id="check-result"></dd></div>
+        <div><dt>That means</dt><dd id="check-meaning"></dd></div>
+      </dl>
+      <p class="step-limit"><strong>Still open</strong><span id="check-remaining"></span></p>
+      <div class="next-check"><span id="next-label">Next recorded check</span><p id="check-next"></p><button id="next-step" class="quiet">Continue →</button></div>
+      <div class="actions evidence-actions"><button id="method-open">Command &amp; scope</button><button id="source-open">See full output</button></div>
+      <p id="readout-attribution" class="section-note"></p>
+      <details id="review-caveats" hidden><summary id="review-caveat-title">Review notes</summary><div id="review-caveat-body" class="detail-body"></div></details>
+      <details id="model-detail"><summary>Original model reasoning &amp; response</summary><div class="detail-body"><h3>Why it chose this check</h3><p id="check-reason"></p><details><summary>Possible results considered before running</summary><p>These are the model’s predictions, not observations. The collected output is shown separately above.</p><ul id="expected-outcomes"></ul></details><h3>Reassessment after the check</h3><div id="check-changes"></div><h3>Uncertainty in the original answer</h3><p id="check-unknown"></p></div><details><summary>Exact input and public model response · complete JSON</summary><pre id="model-exchange"></pre></details></details>
+    </section>
+    <aside class="method-hypotheses" aria-labelledby="hypothesis-heading"><h2 id="hypothesis-heading">Where the theories stand</h2><p id="hypothesis-stage" class="section-note"></p><div id="method-hypotheses"></div></aside>
+  </div>
+  <details><summary>Full evidence &amp; audit record</summary><div class="detail-body"><h3>Complete incident context</h3><p id="incident-context"></p><p id="recovery-note"></p><div class="brief"><div><span>Decision authority</span><strong>Human review · no corrective actions</strong></div><div><span>Cause</span><strong>Not independently established</strong></div></div><div class="actions"><label>Open a saved session <input id="session-file" type="file" accept="application/json,.json"></label><button id="export-session">Export complete session</button></div></div><details><summary>Separate reviewer annotations and recovery record</summary><pre id="review-record"></pre></details><details><summary>Complete session JSON · all captured output</summary><pre id="session-record"></pre></details></details>
+  <footer>The readout is an editorial explanation of the retained evidence; original model wording remains available. This viewer never executes commands or sends model requests. Imported files stay in this browser. Evidence references do not authenticate producer identity or verify claim support.</footer>
+</main>
+<dialog id="method-drawer" aria-labelledby="method-drawer-title"><div class="drawer-head"><h2 id="method-drawer-title"></h2><button id="method-close">Close ✕</button></div><div id="method-drawer-body" tabindex="0"></div></dialog>
+<script type="module" src="investigation-review.mjs"></script>
+</body></html>

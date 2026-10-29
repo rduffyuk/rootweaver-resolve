@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Rootweaver Resolve · Evidence investigation</title>
+  <link rel="stylesheet" href="/style.css"><script type="module" src="/app.mjs"></script>
+</head>
+<body>
+  <header><a class="brand" href="/">Rootweaver <span>/ Resolve</span></a><span class="mode" id="execution-mode">Synthetic replay · No model invoked</span></header>
+  <section class="incident" aria-labelledby="incident-heading">
+    <div class="incident-line"><h1 id="incident-heading">Incident investigation</h1><span id="target" class="mono"></span></div>
+    <p id="symptom"></p><p class="muted">Reported user impact; release timing alone does not establish a cause.</p>
+    <div class="toolbar"><label for="scenario">Replay observations</label><select id="scenario" disabled></select><button id="reset" disabled>Reset replay</button><button id="step" class="primary" disabled>Observe next step</button><span id="progress" class="mono"></span></div>
+    <p id="error" role="alert" hidden></p>
+  </section>
+  <main>
+    <aside class="timeline-panel"><h2>Investigation timeline</h2><p class="muted">Public controller decisions, in order.</p><ol id="timeline"></ol></aside>
+    <section class="workspace" aria-label="Investigation assessment">
+      <section id="status" class="status" aria-live="polite"><p id="state" class="mono"></p><h2 id="verdict">Connecting to local replay…</h2><p id="assessment"></p></section>
+      <section><h2>Technical findings</h2><div id="technical-findings"></div></section>
+      <section><h2>Incident causal assessment</h2><div id="incident-assessment"></div></section>
+      <section><h2>Competing explanations</h2><div id="hypotheses"></div></section>
+      <details id="model-panel" hidden><summary>Nemotron proposals · controller dispositions</summary><p class="muted">Model hypotheses are unvalidated proposals. Supported findings are established separately by deterministic claim checks.</p><div id="model-decisions"></div></details>
+      <section><h2>Missing evidence</h2><div id="gaps"></div></section>
+      <section><h2>Validated nominated claims <span id="claim-count" class="count"></span></h2><p class="muted">Inspect an accepted claim to follow its exact source fields. Independent controller findings appear separately above.</p><div id="claims"></div></section>
+      <details id="checks-panel"><summary>Challenge the conclusion · all claim checks</summary><p class="muted">A real observation reference alone does not establish a claim.</p><div id="checks"></div></details>
+      <section class="approval"><h2>Human approval boundary</h2><div id="action"></div></section>
+      <details><summary>Scope & evidence limitations</summary><ul id="limitations"></ul><p id="window" class="mono"></p></details>
+    </section>
+    <aside class="inspector" aria-label="Evidence inspector"><h2>Evidence inspector</h2><p class="muted">Provider declarations and exact source fields.</p><div id="inspector"><p class="empty">Select a retained observation or supported claim. Future replay observations are not yet evidence.</p></div></aside>
+  </main>
+  <footer>Proofline by Rootweaver · Local evidence investigation · Observations only; no remediation executor.</footer>
+</body></html>

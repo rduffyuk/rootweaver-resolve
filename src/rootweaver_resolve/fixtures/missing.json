@@ -1,0 +1,60 @@
+{
+  "incident": {
+    "incident_id": "incident-a",
+    "namespace": "demo",
+    "service": "checkout",
+    "workload_labels": [
+      [
+        "app",
+        "checkout"
+      ]
+    ],
+    "window_start": "2026-10-24T00:00:00+00:00",
+    "window_end": "2026-10-24T00:05:00+00:00",
+    "symptom": "Checkout returns 503 after a release; traffic uses Service checkout."
+  },
+  "observations": [
+    {
+      "operation": "namespace_workloads",
+      "namespace": "demo",
+      "source_id": "replay:kubernetes",
+      "observed_at": "2026-10-24T00:01:00+00:00",
+      "status": "unavailable",
+      "complete_kinds": [],
+      "limitations": [
+        "synthetic workload observation unavailable"
+      ],
+      "resources": []
+    },
+    {
+      "operation": "namespace_service_network",
+      "namespace": "demo",
+      "source_id": "replay:kubernetes",
+      "observed_at": "2026-10-24T00:01:02+00:00",
+      "status": "complete",
+      "complete_kinds": [
+        "Service",
+        "EndpointSlice"
+      ],
+      "limitations": [],
+      "resources": [
+        {
+          "kind": "Service",
+          "name": "checkout",
+          "namespace": "demo",
+          "selector": {
+            "app": "checkout",
+            "track": "canary"
+          }
+        },
+        {
+          "endpoints": [],
+          "kind": "EndpointSlice",
+          "name": "checkout-opaque",
+          "namespace": "demo",
+          "service_name": "checkout"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "version": "nemotron-programme-staged-comparison/v1",
+  "batch_id": "batch-02",
+  "inference_authorized": true,
+  "max_posts": 8,
+  "retries": 0,
+  "posts_per_candidate": 2,
+  "max_completion_tokens": 16384,
+  "max_request_bytes": 16384,
+  "max_input_reservation": 20480,
+  "batch_max_token_reservation": 294912,
+  "batch_max_usd_reservation": "0.23314432",
+  "programme_max_tokens": 10000000,
+  "programme_additional_usd": "30.00",
+  "programme_cumulative_usd": "30.08992412",
+  "historical_attempts": 68,
+  "historical_usd": "0.08992412",
+  "models": [
+    {
+      "status": "active",
+      "model_id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+      "model_type": "text2text",
+      "external_provider": false,
+      "input_price_per_million_tokens": 0.06,
+      "output_price_per_million_tokens": 0.24,
+      "use_cases": [
+        "text",
+        "reasoning",
+        "function_calling",
+        "code",
+        "context_and_rag",
+        "responses_api"
+      ],
+      "max_model_len": 262144,
+      "max_posts": 2,
+      "max_reservation_per_post_usd": "0.00516096",
+      "max_pair_reservation_usd": "0.01032192"
+    },
+    {
+      "status": "active",
+      "model_id": "nvidia/nemotron-3-super-120b-a12b",
+      "model_type": "text2text",
+      "external_provider": false,
+      "input_price_per_million_tokens": 0.3,
+      "output_price_per_million_tokens": 0.9,
+      "use_cases": [
+        "dedicated-endpoint",
+        "text",
+        "summarization",
+        "context_and_rag",
+        "code",
+        "reasoning",
+        "function_calling",
+        "complex_writing",
+        "responses_api"
+      ],
+      "max_model_len": 262144,
+      "max_posts": 2,
+      "max_reservation_per_post_usd": "0.0208896",
+      "max_pair_reservation_usd": "0.0417792"
+    },
+    {
+      "status": "active",
+      "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "model_type": "text2text",
+      "external_provider": false,
+      "input_price_per_million_tokens": 1,
+      "output_price_per_million_tokens": 3,
+      "use_cases": [
+        "dedicated-endpoint",
+        "text",
+        "summarization",
+        "context_and_rag",
+        "code",
+        "reasoning",
+        "function_calling",
+        "complex_writing",
+        "responses_api"
+      ],
+      "max_model_len": 1048576,
+      "max_posts": 2,
+      "max_reservation_per_post_usd": "0.069632",
+      "max_pair_reservation_usd": "0.139264"
+    },
+    {
+      "status": "active",
+      "model_id": "nvidia/Nemotron-3.5-Super-VL",
+      "model_type": "image2text",
+      "external_provider": false,
+      "input_price_per_million_tokens": 0.3,
+      "output_price_per_million_tokens": 0.9,
+      "use_cases": [
+        "dedicated-endpoint",
+        "text",
+        "image",
+        "video",
+        "code",
+        "function_calling",
+        "reasoning",
+        "responses_api",
+        "context_and_rag",
+        "image2text"
+      ],
+      "max_model_len": 1048576,
+      "max_posts": 2,
+      "max_reservation_per_post_usd": "0.0208896",
+      "max_pair_reservation_usd": "0.0417792"
+    }
+  ],
+  "settings": {
+    "temperature": 0,
+    "stream": false,
+    "n": 1,
+    "response_format": "json_schema strict=true; unchanged hypothesis/reference/causality schema",
+    "thinking_override": "omitted; provider default unknown",
+    "reasoning_effort": "omitted; no unverified per-model parameter",
+    "max_completion_tokens_includes_reasoning": true
+  },
+  "timeout_seconds": 360,
+  "response_bytes": 1048576,
+  "public_content_bytes": 8192,
+  "support": "unchanged selection-support/v1 and validators",
+  "comparison_with_v2": "same prompts/schema/evidence; completion allowance 2048 ->16384, timeout30 ->360; new atomic programme ledger",
+  "hosted_allowance_qualification": "Nebius documented integer max_completion_tokens under model context; per-model hard output maximum unpublished. First actual assessment qualifies endpoint acceptance of 16384; rejection has no retry/fallback. Explicit prospective amendment of the earlier prequalification HOLD proposal under the owners full programme execution authority. No assertion that 16384 already empirically verified.",
+  "model_failure": "invalid initial ->skip second; continue other candidates only while accounting/security/protocol valid",
+  "stop_global": [
+    "security",
+    "budget",
+    "missing/inconsistent usage",
+    "identity",
+    "integrity",
+    "unknown charge"
+  ],
+  "scoring": {
+    "mechanical": [
+      "valid_schema_and_distinct_ids",
+      "acquired_citations_only",
+      "new_evidence_cited",
+      "hypothesis_changed"
+    ],
+    "semantic": [
+      "evidence_recognition",
+      "factual_accuracy",
+      "citation_accuracy",
+      "substantive_reassessment",
+      "unsupported_assertions"
+    ],
+    "semantic_pass": "explicit independent evidence-backed human approval; automated checks only HOLD or FAIL",
+    "semantic_minimum": [
+      "No unobserved evidence stated as fact",
+      "Citations identify observations actually bearing on statements",
+      "No historical change/incident cause promoted from present-state observations",
+      "New evidence produces substantive rather than merely textual reassessment",
+      "Missing-evidence questions respect already acquired observations",
+      "No remediation"
+    ]
+  },
+  "unchanged_historical_gates": true,
+  "new_production_observations": 0,
+  "prior_attempts": 74,
+  "prior_cumulative_usd": "0.22414922",
+  "experiment": "generic-contract-clarity/v1",
+  "comparison_with_batch_01": "Only generic public-analysis instruction paragraph changes; same evidence/schema/validators/model order/rates/allowances. New run with its own first assessment; no failed-call retries or replacement slots."
+}

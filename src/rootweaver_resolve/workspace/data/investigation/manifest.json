@@ -1,0 +1,35 @@
+{
+  "schema": "resolve-public-investigation/v1",
+  "files": {
+    "logs.txt": "4cca579c3d341e72b72634b5d3fea7b79f184870486d1e77431cc6d04c89f528",
+    "model-1-request.json": "f857ecb6d1f0ebf7b71165663fef5188419d8108a15a8197114a7bb88ea9274d",
+    "model-1-response.txt": "cc11a52c2eff2baaa9a6469f368d03bc6ff275296899221e7319dab61882cb99",
+    "model-2-request.json": "858e484bddfcf82130b36ead2bad6aff5bb2eed9ac9b18dbe3818bb9ec009e1e",
+    "model-2-response.txt": "316823c16e6c39b8a8a9d804c71f9500ce20dd7e7a6a5c3669e778255e5b6566",
+    "model-3-request.json": "ac33a0c57c177c69a5be007cc162353231465304b25b49203378a2a9f470136a",
+    "model-3-response.txt": "dec3e46256e1e2825d40324c0a08b4a3fd3c9635e406956e04f6e5258b19d6ba",
+    "model-4-request.json": "fe574c155293a9730dc49c820cfcaea477ff7967467d49dd74783aca5f939249",
+    "model-4-response.txt": "a67c94669baeac5e63175dbd7eed63146b096d6b817e8f6aac75cddb3e01bf8f",
+    "model-5-request.json": "1825ab9eff1a10cec6a807e4fb663f417f4a796d01b85b447222eb31d2141155",
+    "model-5-response.txt": "45d749732ca4095ff99c33f14976e3de83389c0ed7bf3eceac7031f8af9f57ec",
+    "packets.txt": "2e21c284bc4f3dfed1eaff3486e2d89a4d59f4404e3a6d3a44b0e30f39bebcda",
+    "review-notes.json": "e442d5d5e4a9b07c59cf6d0aa7f12d573f8871193d387ac4d16e829d5b56ad61",
+    "services.txt": "9677dbfaeea5302e253df16ac052602e6cb0a61acc90f1864cfed33a05105b3f",
+    "session.json": "5f2a44910a2ce9bd296c02181e7886dd9ec49b437db21f7e6270a6566e3537b9",
+    "workloads.txt": "305762b8cb11b1703463304583ad21c4cea9e434090c94af2c0f4ab4d3beeb65"
+  },
+  "original_session_sha256": "42b9974ddd8ad75e8829a62acffa9239cedb8a482f5ad2b65b1a6e26ca064992",
+  "log_records": 74,
+  "decoded_frames": 45,
+  "model_calls": 5,
+  "private_originals_modified": false,
+  "publication_notice": {
+    "mode": "sanitised derivative of a genuine retained investigation",
+    "original_session_sha256": "42b9974ddd8ad75e8829a62acffa9239cedb8a482f5ad2b65b1a6e26ca064992",
+    "model_text": "Identifiers aliased in all five model answers. Assertions, errors, assessments, evidence references and uncertainty preserved; these are not byte-identical private originals.",
+    "source": "All 74 log records, 45 decoded frames, five model exchanges and execution records retained. Infrastructure identifiers and paths aliased. Raw PCAP retained privately, not distributed.",
+    "hashes": "Historical hashes and evidence IDs refer to private original bytes. See manifest.json for hashes of these public files.",
+    "execution": "Playback only. No cluster commands or inference are executed by this workbench.",
+    "annotations": "Plain-language explanations are post-run Codex annotations, separate from original model output."
+  }
+}

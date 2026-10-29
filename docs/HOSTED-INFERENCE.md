@@ -1,0 +1,13 @@
+# Playback and fresh inference
+
+Resolve 0.5.0 defaults to retained replay. The existing four-case console's seven historical public responses came from genuine earlier Nemotron 3 Ultra requests through Nebius Token Factory. Those seven original outputs and their errors remain byte-identical. The separate packet workbench adds five genuine historical exchanges with disclosed identifier aliasing, not new calls. Neither replay invokes the provider. This document describes the optional fresh HTTP analysis route on cases.html.
+
+The opt-in fresh-analysis route runs only the sanitised retained HTTP case. It supplies the second historical input's observations, including six log events, without the earlier model answer. It adds a new explicit advisory-output prompt. This is an integration demonstration, not a matched A/B test or a new fault experiment. The full outgoing JSON is available before execution; complete run receipts remain outside the public asset directory.
+
+The portable route verifies the package freeze before admission, checks current authenticated model availability and expected non-external provider pricing, durably reserves at most two calls, uses a fixed HTTPS endpoint and bounded request/output/response/deadline, and never retries. It accepts no arbitrary prompts, endpoints, commands or tool requests. Local POSTs require the exact same Origin/Host, a process token and matching frozen request digest. Failed and interrupted outcomes retain reservations. Process restart is not a retry. An incomplete answer is labelled incomplete.
+
+The private owner-review launcher additionally requires a signed, clean Git revision with passing checks and a tracked source freeze, and charges the existing approved shared programme ledger. The same private-file credential boundary is used in the trusted application; keys never enter coding-agent prompts, the browser, general shell environment, exports or provider error bodies. No historical freeze or qualification gate was bypassed or reset.
+
+The new model's public text is advisory. Structured fields and citation membership are checked for display; semantic truth is not certified. The independent Service-selection finding displayed alongside it is explicitly retained from the original deterministic check. Model output cannot change that finding or run its suggested next check. Private reasoning is not displayed or retained; public response text is preserved in full.
+
+The previous synthetic runner is separate. Its legacy live activation remains governed by its original signed-source constraints. The new portable route does not requalify that old runner.

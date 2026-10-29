@@ -1,0 +1,178 @@
+[
+  {
+    "previous_public_analysis": null,
+    "view": {
+      "incident": {
+        "namespace": "incident-scope",
+        "service": "checkout",
+        "symptom": "Checkout client recorded connection refusal without an HTTP response; assess acquired evidence and remaining uncertainty.",
+        "window_end": "2026-10-25T23:16:49.517944+00:00",
+        "window_start": "2026-10-25T23:16:29.517944+00:00",
+        "workload_labels": [
+          [
+            "app",
+            "checkout"
+          ]
+        ]
+      },
+      "policy": {
+        "classification": "live-disposable-kubernetes/v1",
+        "destination": "nebius-token-factory",
+        "limitations": [
+          "Retained genuine Kubernetes capture, normalized offline; no new live observation.",
+          "Names, infrastructure identity and label values are consistently pseudonymized; addresses are redacted.",
+          "Evidence IDs refer to original on-device records; projected bytes are not the original payload.",
+          "Untrusted evidence only; no operator control records or authoritative conclusions supplied."
+        ],
+        "redaction_status": "allowlisted-capture-projection"
+      },
+      "readable_observations": [
+        {
+          "complete_kinds": [
+            "EndpointSlice",
+            "Service"
+          ],
+          "evidence_id": "7af6db1ef5b2ac3e65825cbc95763a3674482301ef4509f4cde6bd47eddc4fc1",
+          "observed_at": "2026-10-25T23:16:39.517944+00:00",
+          "operation": "namespace_service_network",
+          "resources": [
+            {
+              "kind": "Service",
+              "name": "checkout",
+              "namespace": "incident-scope",
+              "selector": {
+                "app": "checkout",
+                "track": "label-2768a42373"
+              }
+            },
+            {
+              "endpoints": [],
+              "kind": "EndpointSlice",
+              "name": "endpointslice-9ac1e92127",
+              "namespace": "incident-scope",
+              "service_name": "checkout"
+            }
+          ],
+          "source_digest": "395c1ec08633bec4bf31e0ba242afc6ad953f53eac382fa64fac5b66a068024c",
+          "status": "complete"
+        }
+      ]
+    }
+  },
+  {
+    "previous_public_analysis": {
+      "hypotheses": [
+        {
+          "assessment": "plausible",
+          "evidence_ids": [
+            "7af6db1ef5b2ac3e65825cbc95763a3674482301ef4509f4cde6bd47eddc4fc1"
+          ],
+          "id": "service-selection",
+          "statement": "The Service checkout selector includes both app=checkout and track=label-2768a42373, while the associated EndpointSlice endpointslice-9ac1e92127 shows an empty endpoints list, indicating no endpoints matched this selector at observation time. This observation is consistent with the service-selection hypothesis because the track label may not be present on any running Pods, causing the Service to select zero endpoints and resulting in connection refusal for clients."
+        },
+        {
+          "assessment": "plausible",
+          "evidence_ids": [
+            "7af6db1ef5b2ac3e65825cbc95763a3674482301ef4509f4cde6bd47eddc4fc1"
+          ],
+          "id": "application-regression",
+          "statement": "The empty EndpointSlice endpoints list could also be consistent with application-regression if Pods matching the selector exist but are not Ready (e.g., crashing due to a regression), since EndpointSlice only includes Ready Pods. However, no Pod, ReplicaSet, or Deployment observations were acquired to confirm whether matching Pods exist but are unready, so this hypothesis remains plausible but unverified by the current evidence."
+        }
+      ],
+      "incident_assessment": {
+        "competing_hypotheses": [
+          "service-selection",
+          "application-regression"
+        ],
+        "explains_incident": null,
+        "missing_evidence": [
+          "Pod observations for label selector app=checkout,track=label-2768a42373 to determine if matching Pods exist and their Ready status",
+          "ReplicaSet or Deployment status for the checkout workload to assess replica counts and rollout state",
+          "Application logs or events from checkout Pods during the incident window to detect regression symptoms",
+          "EndpointSlice conditions or topology hints that might indicate why endpoints are absent"
+        ],
+        "outcome": "uncertain"
+      }
+    },
+    "view": {
+      "incident": {
+        "namespace": "incident-scope",
+        "service": "checkout",
+        "symptom": "Checkout client recorded connection refusal without an HTTP response; assess acquired evidence and remaining uncertainty.",
+        "window_end": "2026-10-25T23:16:49.517944+00:00",
+        "window_start": "2026-10-25T23:16:29.517944+00:00",
+        "workload_labels": [
+          [
+            "app",
+            "checkout"
+          ]
+        ]
+      },
+      "policy": {
+        "classification": "live-disposable-kubernetes/v1",
+        "destination": "nebius-token-factory",
+        "limitations": [
+          "Retained genuine Kubernetes capture, normalized offline; no new live observation.",
+          "Names, infrastructure identity and label values are consistently pseudonymized; addresses are redacted.",
+          "Evidence IDs refer to original on-device records; projected bytes are not the original payload.",
+          "Untrusted evidence only; no operator control records or authoritative conclusions supplied."
+        ],
+        "redaction_status": "allowlisted-capture-projection"
+      },
+      "readable_observations": [
+        {
+          "complete_kinds": [
+            "EndpointSlice",
+            "Service"
+          ],
+          "evidence_id": "7af6db1ef5b2ac3e65825cbc95763a3674482301ef4509f4cde6bd47eddc4fc1",
+          "observed_at": "2026-10-25T23:16:39.517944+00:00",
+          "operation": "namespace_service_network",
+          "resources": [
+            {
+              "kind": "Service",
+              "name": "checkout",
+              "namespace": "incident-scope",
+              "selector": {
+                "app": "checkout",
+                "track": "label-2768a42373"
+              }
+            },
+            {
+              "endpoints": [],
+              "kind": "EndpointSlice",
+              "name": "endpointslice-9ac1e92127",
+              "namespace": "incident-scope",
+              "service_name": "checkout"
+            }
+          ],
+          "source_digest": "395c1ec08633bec4bf31e0ba242afc6ad953f53eac382fa64fac5b66a068024c",
+          "status": "complete"
+        },
+        {
+          "complete_kinds": [
+            "Pod"
+          ],
+          "evidence_id": "c335fbeb0b2e2b20cd44a6abb30df6099b98a8ec59102617ed15b83310b59381",
+          "observed_at": "2026-10-25T23:16:39.517944+00:00",
+          "operation": "namespace_workloads",
+          "resources": [
+            {
+              "kind": "Pod",
+              "labels": {
+                "app": "checkout",
+                "track": "label-f379ccb92b"
+              },
+              "name": "pod-154b9846e7",
+              "namespace": "incident-scope",
+              "phase": "Running",
+              "ready": true
+            }
+          ],
+          "source_digest": "395c1ec08633bec4bf31e0ba242afc6ad953f53eac382fa64fac5b66a068024c",
+          "status": "complete"
+        }
+      ]
+    }
+  }
+]

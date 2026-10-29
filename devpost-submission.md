@@ -1,0 +1,48 @@
+# Rootweaver Resolve — inspect the investigation
+
+Version 0.5.0 owner-review draft. Nothing has been published or submitted.
+
+## Inspiration
+
+I am an SRE. Agents can read logs convincingly, but their suggested fixes can conflict or be disruptive. I wanted to give a model real debugging tools, let it gather evidence against competing explanations, and expose enough of its method for a human to judge what to investigate next.
+
+## What it does
+
+Resolve gives NVIDIA Nemotron 3 Ultra a fixed catalogue of scoped checks. In the demonstrated laboratory run, Ultra selected client logs, Service/EndpointSlice inspection, a bounded TCP capture and pod status, then handed the unresolved investigation to a human. Observe supervised collection; the controller constrained the targets and budgets. The model could not execute arbitrary commands or remediate.
+
+The evidence workbench presents readable log rows, resource snapshots and TCP conversation timings beside the evolving hypotheses. Every check exposes its recorded command, output, model input and accepted assessment. A human can follow the method and access complete captured records without having to read JSON first.
+
+## The demonstration
+
+A dependency times out while readiness stays green. Service evidence weakens an endpoint-selection explanation. Packet evidence shows successful exchanges and four complete timings: first server data around 2,001 ms after client payload, after client FIN around 801 ms. The investigation narrows toward response delay and client waiting budget, but it does not establish the underlying latency cause or the correct timeout.
+
+The model overstated five complete timings and called the timeout too aggressive. Resolve preserves those statements and shows explicit reviewer qualifications. The video and default viewer replay genuine prior execution; they do not imply that playback runs new commands or inference. Public evidence is an explicitly sanitised derivative.
+
+## How we built it
+
+Python, plain JavaScript and SVG; NVIDIA Nemotron 3 Ultra through Nebius Token Factory; Kubernetes reads and Observe-supervised dumpcap with offline TShark decoding. The bounded investigation selected from four approved checks, with deadlines, a fixed target and no remediation. An independent experiment runner handled recovery. The public test build has no cluster connection.
+
+The existing four-case console remains available. It includes a narrow deterministic Service-selection check and an opt-in runtime action that sends fixed sanitised HTTP evidence for fresh Ultra analysis. That action is separate from the packet investigation and is disabled by default. It requires the operator's own Nebius key and retains call budgets and audit outputs.
+
+## Challenges and learning
+
+Readable output and honest attribution mattered as much as tool access. A readiness result does not establish application health. A packet capture does not identify a server-side lock or GC pause. Valid JSON and citations do not establish a correct explanation. We preserve evidence windows, model mistakes, complete outputs and the distinction between observations, model assessments and post-run editorial explanations.
+
+## Scope and limits
+
+The main run contains five genuine calls and four checks in one adapted disposable fixture. Four earlier fault case records contain seven separate historical calls. These are small demonstrations with differing prompts and windows, not a combined accuracy benchmark, held-out evaluation, calibrated confidence estimate or proof of reduced MTTR. No production qualification, autonomous remediation or superiority over experienced SREs is claimed.
+
+## Existing work and AI assistance
+
+Rootweaver predates this competition. Resolve's application, bounded model integration, evidence contracts, fault demonstrations and investigation workspace were developed during the competition. The older platform and independent watchdog are disclosed dependencies. Ryan Duffy owns the problem, architecture and acceptance; OpenAI Codex assisted implementation, verification and packaging. NVIDIA Nemotron produced the actual diagnostic outputs. No fine-tuning was performed.
+
+## Links awaiting owner approval
+
+- Public repository: publication pending; standalone source includes MIT licence and setup instructions.
+- Working demo or downloadable test build: publication pending; local source ZIP and wheel prepared for review.
+- Public YouTube video, under three minutes: local review cut narrated by Ryan; upload pending.
+
+All official form answers are in docs/DEVPOST-FIELDS.md. Subjective ratings and personal declarations remain owner decisions.
+
+
+Repository preparation update: https://github.com/rduffyuk/rootweaver-resolve is the private owner-review repository. It includes the build workflow, MIT license, research records and narrated review video. Public visibility, judge-facing demo access, YouTube upload and submission remain pending owner approval.

@@ -1,0 +1,17 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+const root=process.env.RESOLVE_WORKSPACE??fileURLToPath(new URL('../src/rootweaver_resolve/workspace/',import.meta.url));
+const {availableReceipts,logRows,streamRows,hypothesisComparison,assessmentFor,boundReview}=await import(root+'/workbench-data.mjs');
+const raw=readFileSync(root+'/data/investigation/session.json','utf8'),session=JSON.parse(raw);
+const notes=JSON.parse(readFileSync(root+'/data/investigation/review-notes.json'));
+test('past checks cannot see later observations',()=>{assert.deepEqual(availableReceipts(session,0).map(r=>r.check_id),['logs']);assert.deepEqual(availableReceipts(session,1).map(r=>r.check_id),['logs','services']);assert.equal(availableReceipts(session,4).length,4);});
+test('after-check assessment uses next accepted answer, not pre-check proposal',()=>{assert.equal(assessmentFor(session.steps,1).index,3);assert.equal(hypothesisComparison(session.steps,1).find(h=>h.id==='svc-misconfig').after,'weakened');assert.equal(hypothesisComparison(session.steps,0).find(h=>h.id==='dep-unhealthy').after,'unresolved');});
+test('all logs preserved, model window is exact, filters cannot expand that window',()=>{const r=availableReceipts(session,4)[0];assert.equal(logRows(r,true).length,74);assert.deepEqual(logRows(r).map(x=>x.row),[69,70,71,72,73,74]);assert.equal(logRows(r,false,'TimeoutError').length,6);assert.equal(logRows(r,false,'gaierror').length,0);assert.ok(logRows(r,true,'gaierror').length>0);});
+test('capture boundaries cannot be counted as complete response pairs',()=>{const r=availableReceipts(session,4).find(x=>x.check_id==='packets');const rows=streamRows(r);assert.equal(rows.length,6);assert.equal(rows.filter(x=>x.coverage==='Complete timing pair').length,4);assert.equal(r.source.rows.length,45);assert.equal(rows.find(x=>x.id==='5').response,undefined);});
+test('all five aliased model answers equal stored proposals; historical error remains',()=>{for(const step of session.steps)assert.deepEqual(JSON.parse(step.model.public_response),step.proposal);assert.match(session.steps[4].model.public_response,/across 5 streams/);assert.match(session.steps[4].model.public_response,/too aggressive/);});
+test('annotation digest mismatch refuses the editorial overlay',()=>{assert.ok(boundReview(notes,session.id,createHash('sha256').update(raw).digest('hex')));assert.equal(boundReview(notes,session.id,'wrong'),null);});
+test('public file hashes cover full exported outputs',()=>{const manifest=JSON.parse(readFileSync(root+'/data/investigation/manifest.json'));for(const[name,hash]of Object.entries(manifest.files))assert.equal(createHash('sha256').update(readFileSync(root+'/data/investigation/'+name)).digest('hex'),hash,name);});
+test('public derivative contains no private network, machine path or workload identity',()=>{assert.doesNotMatch(raw,/resolve-deep-11|rduffy|10\.42\.|\/Volumes\/|\/Users\/|\/home\//);assert.match(raw,/sanitised derivative/);});

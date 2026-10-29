@@ -1,0 +1,45 @@
+{
+  "expected_outcomes": [
+    "Logs show connection timeout (SYN sent, no SYN-ACK) → network/path/endpoint issue",
+    "Logs show connection established but request write/read timeout → dependency processing or response path issue",
+    "Logs show DNS resolution failure or wrong IP → service discovery/endpoint issue",
+    "Logs show successful control requests but failing data requests → selective path or quota issue"
+  ],
+  "hypotheses": [
+    {
+      "assessment": "unresolved",
+      "evidence_ids": [],
+      "explanation": "The dependency Service or EndpointSlice may select wrong pods/ports, so the client reaches an unresponsive endpoint despite green readiness.",
+      "id": "svc-misconfig",
+      "refines": [],
+      "statement": "Service/EndpointSlice misconfiguration routes traffic to non-listening pods or wrong port."
+    },
+    {
+      "assessment": "unresolved",
+      "evidence_ids": [],
+      "explanation": "The dependency pods report ready but their application is stuck, overloaded, or not listening on the expected port.",
+      "id": "dep-unhealthy",
+      "refines": [],
+      "statement": "Dependency pods are unhealthy despite green readiness probes."
+    },
+    {
+      "assessment": "unresolved",
+      "evidence_ids": [],
+      "explanation": "Client-side connection pool exhaustion, too-short timeout config, or TLS handshake failure causes timeouts even though the path is healthy.",
+      "id": "client-side",
+      "refines": [],
+      "statement": "Client-side configuration or resource exhaustion causes request timeouts."
+    },
+    {
+      "assessment": "unresolved",
+      "evidence_ids": [],
+      "explanation": "Network policy, CNI, or node-level firewall drops packets after the initial handshake or for specific flows.",
+      "id": "net-policy",
+      "refines": [],
+      "statement": "Network policy or datapath drops dependency traffic after connection establishment."
+    }
+  ],
+  "next_check": "logs",
+  "reason": "Client logs will reveal whether the timeout occurs during DNS lookup, TCP connection, TLS handshake, request write, or response read, and whether control-plane requests succeed. This distinguishes between the four hypotheses.",
+  "uncertainty": "No evidence yet; timestamps may shift if the experiment self-recovers during investigation."
+}

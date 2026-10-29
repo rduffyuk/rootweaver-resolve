@@ -1,0 +1,145 @@
+{
+  "session_id": "id-839825cb39d6",
+  "session_sha256": "5f2a44910a2ce9bd296c02181e7886dd9ec49b437db21f7e6270a6566e3537b9",
+  "reviewer": "Codex / OpenAI gpt-6-astra; post-run source inspection",
+  "recovery_summary": "Recovery came from the host experiment finalizer; Ultra neither changed configuration nor restored the workload.",
+  "steps": [
+    {
+      "index": 1,
+      "headline": "Logs identify timeouts but do not expose every protocol phase",
+      "notes": [
+        "The model expected logs to reveal SYN/SYN-ACK, TLS and request phases. These particular logs expose resolved addresses, TimeoutError and the control request result; they do not contain TCP flags or TLS evidence."
+      ]
+    },
+    {
+      "index": 4,
+      "headline": "Latency mismatch is observed; the right corrective action is not established",
+      "notes": [
+        "The packet evidence supports late server payload relative to client FIN. It does not establish that the client timeout should be increased. SLOs and the intended latency budget are absent.",
+        "Overload, GC pauses and locks are hypotheses. No process, scheduler, CPU or downstream database trace was collected."
+      ]
+    },
+    {
+      "index": 5,
+      "headline": "Four complete response timings, not five",
+      "notes": [
+        "The final model answer says approximately 2000 ms consistently across five streams. The retained capture contains four paired request/response timings: 2000.896, 2001.403, 2001.034 and 2000.928 ms. Five new request streams have client FIN timings; one ends without a response inside the window. A sixth stream begins mid-connection.",
+        "The model correctly leaves the reason for the delay unresolved. Its two favoured hypotheses are complementary observations; neither is a proven root cause.",
+        "The fixed catalogue is exhausted after four checks. Further deeper work needs a separately qualified probe; this run does not authorize or exercise arbitrary eBPF, syscall tracing or remediation."
+      ]
+    }
+  ],
+  "operator_readout": {
+    "author": "Codex / OpenAI gpt-6-astra",
+    "basis": "Post-run source inspection. Editorial readout, not an additional Ultra response, independent proof of root cause, or human acceptance.",
+    "overview": {
+      "title": "The client closes before server data arrives.",
+      "summary": "Traffic reaches the selected endpoint. Four paired timings show server data arriving after the client has already sent FIN.",
+      "uncertainty": "Why the dependency waits, and whether the client’s waiting budget is appropriate.",
+      "evidence_ids": [
+        "c337f2501f5968b8e904c3f97192f9723245bb73d5e92cb5d61c6c52d00cd454",
+        "d5920441ed4b55a0a8a4e54b91f2cd89e7c847e4752d19d0ed636b68450c6c95"
+      ],
+      "evidence_labels": {
+        "c337f2501f5968b8e904c3f97192f9723245bb73d5e92cb5d61c6c52d00cd454": "Endpoint evidence",
+        "d5920441ed4b55a0a8a4e54b91f2cd89e7c847e4752d19d0ed636b68450c6c95": "Packet evidence"
+      }
+    },
+    "hypothesis_labels": {
+      "svc-misconfig": "Wrong Service target or port",
+      "dep-unhealthy": "Dependency slow or unhealthy",
+      "client-side": "Client timeout or resource pressure",
+      "net-policy": "Network policy or datapath drops"
+    },
+    "steps": [
+      {
+        "index": 1,
+        "short_label": "Timeouts confirmed",
+        "check_label": "Client logs",
+        "title": "The client times out, but resolves an address.",
+        "checked": "Client logs for the observation window.",
+        "found": "Six timeout records. Each includes a resolved address and a successful control request.",
+        "meaning": "A failed lookup is less likely for these requests. The logs do not show where the wait occurs.",
+        "remaining": "TCP handshake and response timing have not been observed yet.",
+        "next": "Check whether the resolved address belongs to the intended Service endpoint.",
+        "evidence_ids": [
+          "59bbbf7efe99861b85d62bbc69441225921a7c168a99e428cbe104d9c459fc80"
+        ]
+      },
+      {
+        "index": 2,
+        "short_label": "Endpoint matches",
+        "check_label": "Service + EndpointSlice",
+        "title": "The address matches a ready endpoint.",
+        "checked": "The Service selector, port and EndpointSlice against the address in the client logs.",
+        "found": "192.0.2.11 is selected and marked ready/serving. The Service port and target port are both 8081.",
+        "meaning": "Wrong endpoint selection is less likely. A ready endpoint can still respond too slowly.",
+        "remaining": "Whether the connection succeeds and when the dependency sends data.",
+        "next": "Capture the scoped TCP flow to see the handshake, request and response timing.",
+        "evidence_ids": [
+          "59bbbf7efe99861b85d62bbc69441225921a7c168a99e428cbe104d9c459fc80",
+          "c337f2501f5968b8e904c3f97192f9723245bb73d5e92cb5d61c6c52d00cd454"
+        ]
+      },
+      {
+        "index": 3,
+        "short_label": "Reply arrives late",
+        "check_label": "Bounded TCP capture",
+        "title": "The connection succeeds. Server data arrives late.",
+        "checked": "A bounded capture of traffic between the pinned client and dependency.",
+        "found": "In four paired timings, client FIN is at about 801 ms; first server data arrives at about 2,001 ms after client payload.",
+        "meaning": "For these flows, attention shifts from connection establishment to the wait for a response.",
+        "remaining": "The capture cannot explain the server’s delay or establish the correct client timeout. Two streams have incomplete timings.",
+        "next": "Check whether either pod is restarting or not ready before handing over the remaining latency question.",
+        "evidence_ids": [
+          "59bbbf7efe99861b85d62bbc69441225921a7c168a99e428cbe104d9c459fc80",
+          "c337f2501f5968b8e904c3f97192f9723245bb73d5e92cb5d61c6c52d00cd454",
+          "d5920441ed4b55a0a8a4e54b91f2cd89e7c847e4752d19d0ed636b68450c6c95"
+        ]
+      },
+      {
+        "index": 4,
+        "short_label": "Pods are ready",
+        "check_label": "Workload snapshot",
+        "title": "Both pods are ready, with no recorded restarts.",
+        "checked": "Client and dependency pod status at the time of the snapshot.",
+        "found": "Both containers are ready and show zero restarts.",
+        "meaning": "This snapshot does not support a restart explanation. Green readiness does not explain the late server data.",
+        "remaining": "Process activity, downstream waits and the intended timeout budget were not measured.",
+        "next": "Hand over the timing mismatch and remaining hypotheses. The four available checks have been used.",
+        "evidence_ids": [
+          "59bbbf7efe99861b85d62bbc69441225921a7c168a99e428cbe104d9c459fc80",
+          "c337f2501f5968b8e904c3f97192f9723245bb73d5e92cb5d61c6c52d00cd454",
+          "d5920441ed4b55a0a8a4e54b91f2cd89e7c847e4752d19d0ed636b68450c6c95",
+          "5a76358178fe935f761c8348d20691267e9c0b051ec1dc149d4303e1d31148ab"
+        ]
+      },
+      {
+        "index": 5,
+        "short_label": "Human handover",
+        "check_label": "No corrective action",
+        "title": "We narrowed the failure. The cause is still open.",
+        "checked": "Client logs, Service selection, TCP timing and pod status.",
+        "found": "The selected endpoint is reachable. Server data arrives after client FIN; pods remain ready in the snapshot.",
+        "meaning": "Prioritise investigating dependency latency and the client’s waiting budget. The capture does not establish which one needs changing.",
+        "remaining": "Why the dependency takes about two seconds. CPU, GC, locks and downstream calls were not traced.",
+        "next": "Review the intended latency budget and select a scoped check for where the dependency spends its time. This follow-up has not run.",
+        "evidence_ids": [
+          "59bbbf7efe99861b85d62bbc69441225921a7c168a99e428cbe104d9c459fc80",
+          "c337f2501f5968b8e904c3f97192f9723245bb73d5e92cb5d61c6c52d00cd454",
+          "d5920441ed4b55a0a8a4e54b91f2cd89e7c847e4752d19d0ed636b68450c6c95",
+          "5a76358178fe935f761c8348d20691267e9c0b051ec1dc149d4303e1d31148ab"
+        ]
+      }
+    ]
+  },
+  "publication_notice": {
+    "mode": "sanitised derivative of a genuine retained investigation",
+    "original_session_sha256": "42b9974ddd8ad75e8829a62acffa9239cedb8a482f5ad2b65b1a6e26ca064992",
+    "model_text": "Identifiers aliased in all five model answers. Assertions, errors, assessments, evidence references and uncertainty preserved; these are not byte-identical private originals.",
+    "source": "All 74 log records, 45 decoded frames, five model exchanges and execution records retained. Infrastructure identifiers and paths aliased. Raw PCAP retained privately, not distributed.",
+    "hashes": "Historical hashes and evidence IDs refer to private original bytes. See manifest.json for hashes of these public files.",
+    "execution": "Playback only. No cluster commands or inference are executed by this workbench.",
+    "annotations": "Plain-language explanations are post-run Codex annotations, separate from original model output."
+  }
+}

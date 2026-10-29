@@ -1,0 +1,688 @@
+{
+  "schema": "resolve-research-custody/v1",
+  "description": "Selected original lab records and complete field extractions. Not an export of the entire private research archive. Origin paths are workspace-relative custody identifiers, not runnable paths.",
+  "files": [
+    {
+      "path": "research/synthetic/family-v2-live-results/attempt-64.json",
+      "origin": "artifacts/VW-2313/family-v2-live-results/attempt-64.json",
+      "source_sha256": "45ac1c4b222dc087e17e606aa89f1e543fbe5193967b627997385b561ef1c5f1",
+      "sha256": "45ac1c4b222dc087e17e606aa89f1e543fbe5193967b627997385b561ef1c5f1",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/family-v2-live-results/attempt-65.json",
+      "origin": "artifacts/VW-2313/family-v2-live-results/attempt-65.json",
+      "source_sha256": "363e1e6fbac0496babf182b4260873ee2e7179931734fd010392ff55f7137225",
+      "sha256": "363e1e6fbac0496babf182b4260873ee2e7179931734fd010392ff55f7137225",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/family-v2-live-results/attempt-66.json",
+      "origin": "artifacts/VW-2313/family-v2-live-results/attempt-66.json",
+      "source_sha256": "058f6b87ab2b472012a05e120046d383b856a05b89bd2668780da9fc5f4dbab7",
+      "sha256": "058f6b87ab2b472012a05e120046d383b856a05b89bd2668780da9fc5f4dbab7",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/family-v2-live-results/attempt-67.json",
+      "origin": "artifacts/VW-2313/family-v2-live-results/attempt-67.json",
+      "source_sha256": "21208b7816515a9551b6b81a1324b79dcd689449b2f69a1929eae2c7e3333e66",
+      "sha256": "21208b7816515a9551b6b81a1324b79dcd689449b2f69a1929eae2c7e3333e66",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/family-v2-live-results/attempt-68.json",
+      "origin": "artifacts/VW-2313/family-v2-live-results/attempt-68.json",
+      "source_sha256": "9b8174de5002a4af0e7ab6c2e069e8bface9b53f97816a4ffda2e0ceca7b190f",
+      "sha256": "9b8174de5002a4af0e7ab6c2e069e8bface9b53f97816a4ffda2e0ceca7b190f",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/family-v2-live-results/review-package.json",
+      "origin": "artifacts/VW-2313/family-v2-live-results/review-package.json",
+      "source_sha256": "ee5874ddcff377656350a59ee807a862815e3175c288f2dc55e4d0af829756c1",
+      "sha256": "ee5874ddcff377656350a59ee807a862815e3175c288f2dc55e4d0af829756c1",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-01-live-results/attempt-69.json",
+      "origin": "artifacts/VW-2313/programme-batch-01-live-results/attempt-69.json",
+      "source_sha256": "73a5736c63832f6ebcc5fd3adee18ec9d928360818a949065055688c6445551f",
+      "sha256": "73a5736c63832f6ebcc5fd3adee18ec9d928360818a949065055688c6445551f",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-01-live-results/attempt-70.json",
+      "origin": "artifacts/VW-2313/programme-batch-01-live-results/attempt-70.json",
+      "source_sha256": "d97a06a23f3006bcff0b443625c4d555b12964c9853e15d14353fa0269323922",
+      "sha256": "d97a06a23f3006bcff0b443625c4d555b12964c9853e15d14353fa0269323922",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-01-live-results/attempt-71.json",
+      "origin": "artifacts/VW-2313/programme-batch-01-live-results/attempt-71.json",
+      "source_sha256": "874fd2ed4c4531dd64f49d1f6c430a0869c6070770ccde4c6ad09760733456ac",
+      "sha256": "874fd2ed4c4531dd64f49d1f6c430a0869c6070770ccde4c6ad09760733456ac",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-01-live-results/attempt-72.json",
+      "origin": "artifacts/VW-2313/programme-batch-01-live-results/attempt-72.json",
+      "source_sha256": "2b29d5b0f539cae70620be211fb7573d94178f26fd169d9ce6e98d7123bfc1bc",
+      "sha256": "2b29d5b0f539cae70620be211fb7573d94178f26fd169d9ce6e98d7123bfc1bc",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-01-live-results/attempt-73.json",
+      "origin": "artifacts/VW-2313/programme-batch-01-live-results/attempt-73.json",
+      "source_sha256": "16fe636825e7749f3ce842d826267d4733486fa973d18ec1f63e7fd7eab8e680",
+      "sha256": "16fe636825e7749f3ce842d826267d4733486fa973d18ec1f63e7fd7eab8e680",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-01-live-results/attempt-74.json",
+      "origin": "artifacts/VW-2313/programme-batch-01-live-results/attempt-74.json",
+      "source_sha256": "a502275e03508f837d131d4bd103fe305d126bd78e26325f0c60856bec2cd150",
+      "sha256": "a502275e03508f837d131d4bd103fe305d126bd78e26325f0c60856bec2cd150",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-01-live-results/review-package.json",
+      "origin": "artifacts/VW-2313/programme-batch-01-live-results/review-package.json",
+      "source_sha256": "e7819f23d9f7d2419bc8600350f4b9a9ff354d1a1434cc4272ed784387e5d0a4",
+      "sha256": "e7819f23d9f7d2419bc8600350f4b9a9ff354d1a1434cc4272ed784387e5d0a4",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-02-live-results/attempt-75.json",
+      "origin": "artifacts/VW-2313/programme-batch-02-live-results/attempt-75.json",
+      "source_sha256": "0fe239295451f8babcd926316c695a2314a66a7b9832021036ceb7755883a68a",
+      "sha256": "0fe239295451f8babcd926316c695a2314a66a7b9832021036ceb7755883a68a",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-02-live-results/attempt-76.json",
+      "origin": "artifacts/VW-2313/programme-batch-02-live-results/attempt-76.json",
+      "source_sha256": "31011c2f317addc1f8272a42e1687400f3d1d7475fb35553f9b14155ae8bfcca",
+      "sha256": "31011c2f317addc1f8272a42e1687400f3d1d7475fb35553f9b14155ae8bfcca",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-02-live-results/attempt-77.json",
+      "origin": "artifacts/VW-2313/programme-batch-02-live-results/attempt-77.json",
+      "source_sha256": "fbd3e3df5e1473046e3de9264eb0e588ea46b040bceedc8215224341f93c3b71",
+      "sha256": "fbd3e3df5e1473046e3de9264eb0e588ea46b040bceedc8215224341f93c3b71",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-02-live-results/attempt-78.json",
+      "origin": "artifacts/VW-2313/programme-batch-02-live-results/attempt-78.json",
+      "source_sha256": "dddf9f3a4dc39b619bdcb3aa850271d5bc05c72c76d92440d79dfa36268ffe31",
+      "sha256": "dddf9f3a4dc39b619bdcb3aa850271d5bc05c72c76d92440d79dfa36268ffe31",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-02-live-results/review-package.json",
+      "origin": "artifacts/VW-2313/programme-batch-02-live-results/review-package.json",
+      "source_sha256": "e4deb41833d119e28fe1daec64c0b75c5f5a318ff472d256fb4358dddf76df65",
+      "sha256": "e4deb41833d119e28fe1daec64c0b75c5f5a318ff472d256fb4358dddf76df65",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-03-live-results/attempt-79.json",
+      "origin": "artifacts/VW-2313/programme-batch-03-live-results/attempt-79.json",
+      "source_sha256": "a107952f00dd43bf4f9638350ab9665aa07da83f08bcfe4c4a4a97e35d352938",
+      "sha256": "a107952f00dd43bf4f9638350ab9665aa07da83f08bcfe4c4a4a97e35d352938",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-03-live-results/attempt-80.json",
+      "origin": "artifacts/VW-2313/programme-batch-03-live-results/attempt-80.json",
+      "source_sha256": "0e5ca41922786024b1597f97aa246eee54f36db6935cb50370e168c3fada175f",
+      "sha256": "0e5ca41922786024b1597f97aa246eee54f36db6935cb50370e168c3fada175f",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-03-live-results/attempt-81.json",
+      "origin": "artifacts/VW-2313/programme-batch-03-live-results/attempt-81.json",
+      "source_sha256": "b84493d7537d6cbd878800c8be87aca6ca7e62740d1b063427ac944bb3dd00cc",
+      "sha256": "b84493d7537d6cbd878800c8be87aca6ca7e62740d1b063427ac944bb3dd00cc",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-03-live-results/attempt-82.json",
+      "origin": "artifacts/VW-2313/programme-batch-03-live-results/attempt-82.json",
+      "source_sha256": "1ce81270d4db4c4309216a656d9ad87974995305d9f37614a562fd829b408f43",
+      "sha256": "1ce81270d4db4c4309216a656d9ad87974995305d9f37614a562fd829b408f43",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-03-live-results/attempt-83.json",
+      "origin": "artifacts/VW-2313/programme-batch-03-live-results/attempt-83.json",
+      "source_sha256": "3c9423f8197564d2b562292affd8fccc3c7415485cdaa5b3ae1e6cc859f529f3",
+      "sha256": "3c9423f8197564d2b562292affd8fccc3c7415485cdaa5b3ae1e6cc859f529f3",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-03-live-results/attempt-84.json",
+      "origin": "artifacts/VW-2313/programme-batch-03-live-results/attempt-84.json",
+      "source_sha256": "05c5b6130eee0eef0adb15c059443080b462cb566374ac4bc57bb14310bb685a",
+      "sha256": "05c5b6130eee0eef0adb15c059443080b462cb566374ac4bc57bb14310bb685a",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-03-live-results/attempt-85.json",
+      "origin": "artifacts/VW-2313/programme-batch-03-live-results/attempt-85.json",
+      "source_sha256": "11f4293a457aca38066ce6c7aa493b87d470de21ff615f80084f32f751a048f0",
+      "sha256": "11f4293a457aca38066ce6c7aa493b87d470de21ff615f80084f32f751a048f0",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-03-live-results/attempt-86.json",
+      "origin": "artifacts/VW-2313/programme-batch-03-live-results/attempt-86.json",
+      "source_sha256": "decfe75bee7fb0f2469b8639613cbd580f7a82b54a5fd5ec257184043894eafe",
+      "sha256": "decfe75bee7fb0f2469b8639613cbd580f7a82b54a5fd5ec257184043894eafe",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-03-live-results/review-package.json",
+      "origin": "artifacts/VW-2313/programme-batch-03-live-results/review-package.json",
+      "source_sha256": "67eb994fbbb3ad7233795cab79af5ff44966e59e5c7601e66256692bafd15af6",
+      "sha256": "67eb994fbbb3ad7233795cab79af5ff44966e59e5c7601e66256692bafd15af6",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/ultra-qualification-01-live-results/attempt-87.json",
+      "origin": "artifacts/VW-2313/ultra-qualification-01-live-results/attempt-87.json",
+      "source_sha256": "de7c17e027211b3fbb3c5b54e63774eba7a3fef83f0a6da2bcd3ca6f0b54f80f",
+      "sha256": "de7c17e027211b3fbb3c5b54e63774eba7a3fef83f0a6da2bcd3ca6f0b54f80f",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/ultra-qualification-01-live-results/attempt-88.json",
+      "origin": "artifacts/VW-2313/ultra-qualification-01-live-results/attempt-88.json",
+      "source_sha256": "1f971f281f0d94f10982971a6da96ce881725bdeeab571d21538dc6d47b4f91a",
+      "sha256": "1f971f281f0d94f10982971a6da96ce881725bdeeab571d21538dc6d47b4f91a",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/ultra-qualification-01-live-results/attempt-89.json",
+      "origin": "artifacts/VW-2313/ultra-qualification-01-live-results/attempt-89.json",
+      "source_sha256": "2dc58fa3cf058684cb3a98aac7d0dfc0a623207537887675c6b28d9cdc326c99",
+      "sha256": "2dc58fa3cf058684cb3a98aac7d0dfc0a623207537887675c6b28d9cdc326c99",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/ultra-qualification-01-live-results/attempt-90.json",
+      "origin": "artifacts/VW-2313/ultra-qualification-01-live-results/attempt-90.json",
+      "source_sha256": "07710b8a9937a70d205d4ab07c0ee08154b4644d8c8f261f5dc5777da4057b92",
+      "sha256": "07710b8a9937a70d205d4ab07c0ee08154b4644d8c8f261f5dc5777da4057b92",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/ultra-qualification-01-live-results/attempt-91.json",
+      "origin": "artifacts/VW-2313/ultra-qualification-01-live-results/attempt-91.json",
+      "source_sha256": "f02010cfcf26337c3bf8321ea43b89f3d9127d6567d836cdd8e5dc4c9ed5ec95",
+      "sha256": "f02010cfcf26337c3bf8321ea43b89f3d9127d6567d836cdd8e5dc4c9ed5ec95",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/ultra-qualification-01-live-results/attempt-92.json",
+      "origin": "artifacts/VW-2313/ultra-qualification-01-live-results/attempt-92.json",
+      "source_sha256": "a19696b9fe134ca7cd03d1e2b6e5f49fa222e4a87e84e365cd9b6050c3eb0125",
+      "sha256": "a19696b9fe134ca7cd03d1e2b6e5f49fa222e4a87e84e365cd9b6050c3eb0125",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/ultra-qualification-01-live-results/attempt-93.json",
+      "origin": "artifacts/VW-2313/ultra-qualification-01-live-results/attempt-93.json",
+      "source_sha256": "fe8787bc8cb6e673db9a6391a234b1b18551a3f1b3fa98d71091f30f165deb66",
+      "sha256": "fe8787bc8cb6e673db9a6391a234b1b18551a3f1b3fa98d71091f30f165deb66",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/ultra-qualification-01-live-results/attempt-94.json",
+      "origin": "artifacts/VW-2313/ultra-qualification-01-live-results/attempt-94.json",
+      "source_sha256": "f0f88e8ba14fb7af23da62187662c680f1adaac545ad3f745af056223884773f",
+      "sha256": "f0f88e8ba14fb7af23da62187662c680f1adaac545ad3f745af056223884773f",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/ultra-qualification-01-live-results/attempt-95.json",
+      "origin": "artifacts/VW-2313/ultra-qualification-01-live-results/attempt-95.json",
+      "source_sha256": "5d746e20f462258a271dcebe9c1eff860dc9497c9746e4ef32afd21472c67f8c",
+      "sha256": "5d746e20f462258a271dcebe9c1eff860dc9497c9746e4ef32afd21472c67f8c",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/ultra-qualification-01-live-results/attempt-96.json",
+      "origin": "artifacts/VW-2313/ultra-qualification-01-live-results/attempt-96.json",
+      "source_sha256": "b2e6658860fb683f38909f0366199aacf10f1c8913ed72eeff5662a4dcf8f09e",
+      "sha256": "b2e6658860fb683f38909f0366199aacf10f1c8913ed72eeff5662a4dcf8f09e",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/ultra-qualification-01-live-results/qualification-checkpoint.json",
+      "origin": "artifacts/VW-2313/ultra-qualification-01-live-results/qualification-checkpoint.json",
+      "source_sha256": "27bad621a982c12c56265ac5881d2955f7ccc12be439f80e0b37fa628cecb6ff",
+      "sha256": "27bad621a982c12c56265ac5881d2955f7ccc12be439f80e0b37fa628cecb6ff",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/ultra-review-recovery-02-live-results/attempt-97.json",
+      "origin": "artifacts/VW-2313/ultra-review-recovery-02-live-results/attempt-97.json",
+      "source_sha256": "ed455dd478cb957c8c7f7a406314582161106405e67df6119b05e07871d53c07",
+      "sha256": "ed455dd478cb957c8c7f7a406314582161106405e67df6119b05e07871d53c07",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/ultra-review-recovery-02-live-results/attempt-98.json",
+      "origin": "artifacts/VW-2313/ultra-review-recovery-02-live-results/attempt-98.json",
+      "source_sha256": "ad54161f9511c7197eb83048a50d99122f32d4d551ac4567baa164173964f67c",
+      "sha256": "ad54161f9511c7197eb83048a50d99122f32d4d551ac4567baa164173964f67c",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/ultra-review-recovery-02-live-results/attempt-99.json",
+      "origin": "artifacts/VW-2313/ultra-review-recovery-02-live-results/attempt-99.json",
+      "source_sha256": "9327bed5518046b8b2e6a64dc536ac98314159f4b9ca3f8b5ff1fc5607a57096",
+      "sha256": "9327bed5518046b8b2e6a64dc536ac98314159f4b9ca3f8b5ff1fc5607a57096",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/ultra-review-recovery-02-live-results/review-recovery-checkpoint.json",
+      "origin": "artifacts/VW-2313/ultra-review-recovery-02-live-results/review-recovery-checkpoint.json",
+      "source_sha256": "e93695ed32447274de0b744bea7c7975edb1677223f0c13fc9ac62555b443979",
+      "sha256": "e93695ed32447274de0b744bea7c7975edb1677223f0c13fc9ac62555b443979",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/ultra-final-negative-live-results/attempt-100.json",
+      "origin": "artifacts/VW-2313/ultra-final-negative-live-results/attempt-100.json",
+      "source_sha256": "0bcb23e16ebe34acb7176806e4687b6152a60e53505e92a462f8812830ad47a9",
+      "sha256": "0bcb23e16ebe34acb7176806e4687b6152a60e53505e92a462f8812830ad47a9",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/ultra-final-negative-live-results/attempt-101.json",
+      "origin": "artifacts/VW-2313/ultra-final-negative-live-results/attempt-101.json",
+      "source_sha256": "6be19e212096dc0df818f4504b1f25516b8451d7df1f179c2c5a1b829cb1977f",
+      "sha256": "6be19e212096dc0df818f4504b1f25516b8451d7df1f179c2c5a1b829cb1977f",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/ultra-final-negative-live-results/attempt-102.json",
+      "origin": "artifacts/VW-2313/ultra-final-negative-live-results/attempt-102.json",
+      "source_sha256": "0cad99959ea60c5f17e824839aae0d7ca59c909853a4113a7fb1a8c63bdf7079",
+      "sha256": "0cad99959ea60c5f17e824839aae0d7ca59c909853a4113a7fb1a8c63bdf7079",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/ultra-final-negative-live-results/attempt-103.json",
+      "origin": "artifacts/VW-2313/ultra-final-negative-live-results/attempt-103.json",
+      "source_sha256": "fdbe9f4b1ea66da6d910710ae6e3b98b1f09031610f43bc383f4567bb9b2e2fd",
+      "sha256": "fdbe9f4b1ea66da6d910710ae6e3b98b1f09031610f43bc383f4567bb9b2e2fd",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/ultra-final-negative-live-results/final-negative-checkpoint.json",
+      "origin": "artifacts/VW-2313/ultra-final-negative-live-results/final-negative-checkpoint.json",
+      "source_sha256": "de51befcdd66213195e7b88e61013251f8f0243fa331156a83fc41f8e41ddce3",
+      "sha256": "de51befcdd66213195e7b88e61013251f8f0243fa331156a83fc41f8e41ddce3",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-01-protocol/protocol.json",
+      "origin": ".worktrees/resolve-sre-console/docs/hackathon/reports/phase-3-programme-batch-01-protocol/protocol.json",
+      "source_sha256": "86583d2de7c1ba8aa3864926bf283c03757cec5d175cd82367b565916c878597",
+      "sha256": "86583d2de7c1ba8aa3864926bf283c03757cec5d175cd82367b565916c878597",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-01-protocol/stage-1-template.json",
+      "origin": ".worktrees/resolve-sre-console/docs/hackathon/reports/phase-3-programme-batch-01-protocol/stage-1-template.json",
+      "source_sha256": "69990b4c050c9ca494bb92ad3dfbd960150a89690a0a75bed74d382d075a75f6",
+      "sha256": "69990b4c050c9ca494bb92ad3dfbd960150a89690a0a75bed74d382d075a75f6",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-01-protocol/stage-2-template.json",
+      "origin": ".worktrees/resolve-sre-console/docs/hackathon/reports/phase-3-programme-batch-01-protocol/stage-2-template.json",
+      "source_sha256": "e238461291805d2193966ad7faaf272d8473f1870b3384800873668c29262f4c",
+      "sha256": "e238461291805d2193966ad7faaf272d8473f1870b3384800873668c29262f4c",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-02-protocol/protocol.json",
+      "origin": ".worktrees/resolve-sre-console/docs/hackathon/reports/phase-3-programme-batch-02-protocol/protocol.json",
+      "source_sha256": "95973bd3d41f3286578be116ddd83716b464c1e1fffb8f74e81f7af41a085a3e",
+      "sha256": "95973bd3d41f3286578be116ddd83716b464c1e1fffb8f74e81f7af41a085a3e",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-02-protocol/stage-1-template.json",
+      "origin": ".worktrees/resolve-sre-console/docs/hackathon/reports/phase-3-programme-batch-02-protocol/stage-1-template.json",
+      "source_sha256": "609c33b971adc992f6e43d77beb7df89cd2737e39dd6a7514863dbd92bdb5a90",
+      "sha256": "609c33b971adc992f6e43d77beb7df89cd2737e39dd6a7514863dbd92bdb5a90",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-02-protocol/stage-2-template.json",
+      "origin": ".worktrees/resolve-sre-console/docs/hackathon/reports/phase-3-programme-batch-02-protocol/stage-2-template.json",
+      "source_sha256": "b91fc41916b2fcf7a4ff195aa00030ab7583ee6ebf8636ffdf5b5f35d6a6953e",
+      "sha256": "b91fc41916b2fcf7a4ff195aa00030ab7583ee6ebf8636ffdf5b5f35d6a6953e",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-03-protocol/protocol.json",
+      "origin": ".worktrees/resolve-sre-console/docs/hackathon/reports/phase-3-programme-batch-03-protocol/protocol.json",
+      "source_sha256": "f6442feceb31b2d96ff406759d360289eba4ca93143a1072e1fc967625038c6c",
+      "sha256": "f6442feceb31b2d96ff406759d360289eba4ca93143a1072e1fc967625038c6c",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-03-protocol/stage-1-template.json",
+      "origin": ".worktrees/resolve-sre-console/docs/hackathon/reports/phase-3-programme-batch-03-protocol/stage-1-template.json",
+      "source_sha256": "cdff108cab2fdee82bceebc4b2ad68daadf93e6e7757ed60602420561b3a0817",
+      "sha256": "cdff108cab2fdee82bceebc4b2ad68daadf93e6e7757ed60602420561b3a0817",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/synthetic/programme-batch-03-protocol/stage-2-template.json",
+      "origin": ".worktrees/resolve-sre-console/docs/hackathon/reports/phase-3-programme-batch-03-protocol/stage-2-template.json",
+      "source_sha256": "c1f730158e342f63152e3d44596c11ca0b15083941949dc39df17191a690e2ad",
+      "sha256": "c1f730158e342f63152e3d44596c11ca0b15083941949dc39df17191a690e2ad",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/packet-lab/model-1-request.json",
+      "origin": "artifacts/VW-2321/investigation-loop/operator-handover-ui/web/data/investigation-session.json",
+      "source_sha256": "42b9974ddd8ad75e8829a62acffa9239cedb8a482f5ad2b65b1a6e26ca064992",
+      "source_pointer": "/steps/0/model/request",
+      "sha256": "5100fdf285762ef46cd5780389f7059e7fbe35f48369dbc25f0706902e725cad",
+      "transformation": "complete field extraction; JSON reserialization where applicable"
+    },
+    {
+      "path": "research/packet-lab/model-1-response.txt",
+      "origin": "artifacts/VW-2321/investigation-loop/operator-handover-ui/web/data/investigation-session.json",
+      "source_sha256": "42b9974ddd8ad75e8829a62acffa9239cedb8a482f5ad2b65b1a6e26ca064992",
+      "source_pointer": "/steps/0/model/public_response",
+      "sha256": "4779a47c1d82bb1666ef0b3104818be546ad82a18508bf337e8ef45c0d1ba231",
+      "transformation": "complete field extraction; JSON reserialization where applicable"
+    },
+    {
+      "path": "research/packet-lab/provider-response-1.json",
+      "origin": "artifacts/VW-2321/investigation-loop/deep-11/evidence/public-response-1.json",
+      "source_sha256": "dcb38ab3cefb4cb2d5094cab4b92f5e908deb812b9ce2aad864c6de342ef4d47",
+      "sha256": "dcb38ab3cefb4cb2d5094cab4b92f5e908deb812b9ce2aad864c6de342ef4d47",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/packet-lab/model-2-request.json",
+      "origin": "artifacts/VW-2321/investigation-loop/operator-handover-ui/web/data/investigation-session.json",
+      "source_sha256": "42b9974ddd8ad75e8829a62acffa9239cedb8a482f5ad2b65b1a6e26ca064992",
+      "source_pointer": "/steps/1/model/request",
+      "sha256": "e9690f9bb24a547dbf7236e2717bc50c665a9c5ab0f280dea4fd27cef8410018",
+      "transformation": "complete field extraction; JSON reserialization where applicable"
+    },
+    {
+      "path": "research/packet-lab/model-2-response.txt",
+      "origin": "artifacts/VW-2321/investigation-loop/operator-handover-ui/web/data/investigation-session.json",
+      "source_sha256": "42b9974ddd8ad75e8829a62acffa9239cedb8a482f5ad2b65b1a6e26ca064992",
+      "source_pointer": "/steps/1/model/public_response",
+      "sha256": "1d5fb38968889686dbc28bc83a508589d8bbd77d4f851fc5d5eabe1006acaa1c",
+      "transformation": "complete field extraction; JSON reserialization where applicable"
+    },
+    {
+      "path": "research/packet-lab/provider-response-2.json",
+      "origin": "artifacts/VW-2321/investigation-loop/deep-11/evidence/public-response-2.json",
+      "source_sha256": "55bd3628aefcbe67fd2cbda8ab97a90ef816b57fdd2cbb974ef6a554fdc3920f",
+      "sha256": "55bd3628aefcbe67fd2cbda8ab97a90ef816b57fdd2cbb974ef6a554fdc3920f",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/packet-lab/model-3-request.json",
+      "origin": "artifacts/VW-2321/investigation-loop/operator-handover-ui/web/data/investigation-session.json",
+      "source_sha256": "42b9974ddd8ad75e8829a62acffa9239cedb8a482f5ad2b65b1a6e26ca064992",
+      "source_pointer": "/steps/2/model/request",
+      "sha256": "3dcca61d072111b33686a33005f2240c6b8486e4cf1361c02ef52c7ecb70de38",
+      "transformation": "complete field extraction; JSON reserialization where applicable"
+    },
+    {
+      "path": "research/packet-lab/model-3-response.txt",
+      "origin": "artifacts/VW-2321/investigation-loop/operator-handover-ui/web/data/investigation-session.json",
+      "source_sha256": "42b9974ddd8ad75e8829a62acffa9239cedb8a482f5ad2b65b1a6e26ca064992",
+      "source_pointer": "/steps/2/model/public_response",
+      "sha256": "c4dfd0a21013809ab3d90fb7d4d9bcd5b37a9ba7c5d93526fe10c8f48a1fc0dd",
+      "transformation": "complete field extraction; JSON reserialization where applicable"
+    },
+    {
+      "path": "research/packet-lab/provider-response-3.json",
+      "origin": "artifacts/VW-2321/investigation-loop/deep-11/evidence/public-response-3.json",
+      "source_sha256": "acd2cb41504c71ea749393d859b9cf00afd1467165d6544f83c30572760d9918",
+      "sha256": "acd2cb41504c71ea749393d859b9cf00afd1467165d6544f83c30572760d9918",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/packet-lab/model-4-request.json",
+      "origin": "artifacts/VW-2321/investigation-loop/operator-handover-ui/web/data/investigation-session.json",
+      "source_sha256": "42b9974ddd8ad75e8829a62acffa9239cedb8a482f5ad2b65b1a6e26ca064992",
+      "source_pointer": "/steps/3/model/request",
+      "sha256": "44723ca4b321f3cc980a0e78be067e84dd78594289b23cc5da82af986640df8b",
+      "transformation": "complete field extraction; JSON reserialization where applicable"
+    },
+    {
+      "path": "research/packet-lab/model-4-response.txt",
+      "origin": "artifacts/VW-2321/investigation-loop/operator-handover-ui/web/data/investigation-session.json",
+      "source_sha256": "42b9974ddd8ad75e8829a62acffa9239cedb8a482f5ad2b65b1a6e26ca064992",
+      "source_pointer": "/steps/3/model/public_response",
+      "sha256": "dd92547ca257e98c65bd8b420c81ab9d27dd3ed3fbc6be3a79109652dcb4a49d",
+      "transformation": "complete field extraction; JSON reserialization where applicable"
+    },
+    {
+      "path": "research/packet-lab/provider-response-4.json",
+      "origin": "artifacts/VW-2321/investigation-loop/deep-11/evidence/public-response-4.json",
+      "source_sha256": "8b1c2c405a9f0546fc313c4b14d3e2c1f2d0f3aaa33c91a85604c1ad18e51e1e",
+      "sha256": "8b1c2c405a9f0546fc313c4b14d3e2c1f2d0f3aaa33c91a85604c1ad18e51e1e",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/packet-lab/model-5-request.json",
+      "origin": "artifacts/VW-2321/investigation-loop/operator-handover-ui/web/data/investigation-session.json",
+      "source_sha256": "42b9974ddd8ad75e8829a62acffa9239cedb8a482f5ad2b65b1a6e26ca064992",
+      "source_pointer": "/steps/4/model/request",
+      "sha256": "b7d7d9add175f6f9a1bd25caa4cf205e6cba6779c53ee754341df6e7d16f6b2a",
+      "transformation": "complete field extraction; JSON reserialization where applicable"
+    },
+    {
+      "path": "research/packet-lab/model-5-response.txt",
+      "origin": "artifacts/VW-2321/investigation-loop/operator-handover-ui/web/data/investigation-session.json",
+      "source_sha256": "42b9974ddd8ad75e8829a62acffa9239cedb8a482f5ad2b65b1a6e26ca064992",
+      "source_pointer": "/steps/4/model/public_response",
+      "sha256": "f7e57eaca4ad9b1a409db9ae5379da267004f4c14e88049ab78919f4ddca9394",
+      "transformation": "complete field extraction; JSON reserialization where applicable"
+    },
+    {
+      "path": "research/packet-lab/provider-response-5.json",
+      "origin": "artifacts/VW-2321/investigation-loop/deep-11/evidence/public-response-5.json",
+      "source_sha256": "e62670106091d4c4097c31aa3833762daa99f79b612ff9d7e600b7db931ec0bc",
+      "sha256": "e62670106091d4c4097c31aa3833762daa99f79b612ff9d7e600b7db931ec0bc",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/packet-lab/provider-calls.json",
+      "origin": "artifacts/VW-2321/investigation-loop/operator-handover-ui/web/data/investigation-session.json",
+      "source_sha256": "42b9974ddd8ad75e8829a62acffa9239cedb8a482f5ad2b65b1a6e26ca064992",
+      "source_pointer": "/provider_calls",
+      "sha256": "d2c49d28a295d8f89c54a76d58142b4d75447e3b93b2544a78d57fdc5eb2188f",
+      "transformation": "complete field extraction; JSON reserialization where applicable"
+    },
+    {
+      "path": "research/packet-lab/logs.txt",
+      "origin": "artifacts/VW-2321/investigation-loop/operator-handover-ui/web/data/investigation-session.json",
+      "source_sha256": "42b9974ddd8ad75e8829a62acffa9239cedb8a482f5ad2b65b1a6e26ca064992",
+      "source_pointer": "/steps/0/receipt/source/stdout",
+      "sha256": "74de1772883d20cd2a966391916d9525fa1a2d190dccd02aedb2ed60a13ad2ca",
+      "transformation": "complete field extraction; JSON reserialization where applicable"
+    },
+    {
+      "path": "research/packet-lab/methods.json",
+      "origin": "artifacts/VW-2321/investigation-loop/operator-handover-ui/web/data/investigation-session.json",
+      "source_sha256": "42b9974ddd8ad75e8829a62acffa9239cedb8a482f5ad2b65b1a6e26ca064992",
+      "source_pointer": "/steps/*/receipt/{check_id,method,started_at,ended_at,evidence_id}",
+      "sha256": "ab828376726acd931a67761b6e1c0ae6d9bd926769f095f4f7145e6bc017b7e0",
+      "transformation": "complete field extraction; JSON reserialization where applicable"
+    },
+    {
+      "path": "research/packet-lab/capture.pcapng",
+      "origin": "artifacts/VW-2321/investigation-loop/deep-11/evidence/pcap/6bec5f3a-3128-4556-b60e-eeef24601a29/45476e93-3e11-45d8-b6bc-7e69a50762aa-9a69e091-c71f-4168-bc1c-1b48f9f28261.pcapng",
+      "source_sha256": "68ce2051eb01e41f5243e2dcb3d392ff61bc04d475f6a7121c4b48853633dfda",
+      "sha256": "68ce2051eb01e41f5243e2dcb3d392ff61bc04d475f6a7121c4b48853633dfda",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/packet-lab/original-review-summary.json",
+      "origin": "artifacts/VW-2321/investigation-loop/deep-11/review-summary.json",
+      "source_sha256": "1358154fb630e747eb0bd8e370f142ff0d526b9abdefe2b79dc715e58e9a81b2",
+      "sha256": "1358154fb630e747eb0bd8e370f142ff0d526b9abdefe2b79dc715e58e9a81b2",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "research/real-faults/selector/model-1-response.txt",
+      "origin": "artifacts/VW-2321/option-b-release/public-candidate/src/rootweaver_resolve/workspace/data/selector.json",
+      "source_sha256": "0ef16569b0e2c1a5a45f380e7b763db4e9128eeac0894181a40ca08fb60e8719",
+      "source_pointer": "/decisions/0/raw_public_response",
+      "sha256": "b23ac708777bb174f1913d18152a66c979b42fbd4d390ab410602e696f308c24",
+      "transformation": "complete field extraction; JSON reserialization where applicable"
+    },
+    {
+      "path": "research/real-faults/selector/model-2-response.txt",
+      "origin": "artifacts/VW-2321/option-b-release/public-candidate/src/rootweaver_resolve/workspace/data/selector.json",
+      "source_sha256": "0ef16569b0e2c1a5a45f380e7b763db4e9128eeac0894181a40ca08fb60e8719",
+      "source_pointer": "/decisions/1/raw_public_response",
+      "sha256": "aba63978059d04ceab578cce1cd642add3814b9fecd5d53d4beaf9a7c702d078",
+      "transformation": "complete field extraction; JSON reserialization where applicable"
+    },
+    {
+      "path": "research/real-faults/selector/inputs.json",
+      "origin": "artifacts/VW-2321/option-b-release/public-candidate/src/rootweaver_resolve/workspace/data/selector.json",
+      "source_sha256": "0ef16569b0e2c1a5a45f380e7b763db4e9128eeac0894181a40ca08fb60e8719",
+      "source_pointer": "/inputs",
+      "sha256": "9995b57c9d54415dbbe6dea5b06172e6bdec417c0f4af5bc5ee09e8aaa7b1392",
+      "transformation": "complete field extraction; JSON reserialization where applicable"
+    },
+    {
+      "path": "research/real-faults/http/model-1-response.txt",
+      "origin": "artifacts/VW-2321/option-b-release/public-candidate/src/rootweaver_resolve/workspace/data/http.json",
+      "source_sha256": "34de4dcde5a0c6fb66faba12768d634ae6cbe390c74c674785025688d803e282",
+      "source_pointer": "/decisions/0/raw_public_response",
+      "sha256": "b289c42cc628d6648012b628dc01f470a7465d7883e0645e842e0d67af43f206",
+      "transformation": "complete field extraction; JSON reserialization where applicable"
+    },
+    {
+      "path": "research/real-faults/http/model-2-response.txt",
+      "origin": "artifacts/VW-2321/option-b-release/public-candidate/src/rootweaver_resolve/workspace/data/http.json",
+      "source_sha256": "34de4dcde5a0c6fb66faba12768d634ae6cbe390c74c674785025688d803e282",
+      "source_pointer": "/decisions/1/raw_public_response",
+      "sha256": "043058ff6d3d74665926f6125a22560e204ec9f65adaeb62da28d58d8ae1e765",
+      "transformation": "complete field extraction; JSON reserialization where applicable"
+    },
+    {
+      "path": "research/real-faults/http/inputs.json",
+      "origin": "artifacts/VW-2321/option-b-release/public-candidate/src/rootweaver_resolve/workspace/data/http.json",
+      "source_sha256": "34de4dcde5a0c6fb66faba12768d634ae6cbe390c74c674785025688d803e282",
+      "source_pointer": "/inputs",
+      "sha256": "72eaead92b2b5c94e3e782edaf38c1a9c47e0b4360185b34a9862c95be442281",
+      "transformation": "complete field extraction; JSON reserialization where applicable"
+    },
+    {
+      "path": "research/real-faults/dns/model-1-response.txt",
+      "origin": "artifacts/VW-2321/option-b-release/public-candidate/src/rootweaver_resolve/workspace/data/dns.json",
+      "source_sha256": "d7aa737d361dddbf6ff0f446fafc0a2e89e1de975e0b13cb08f67725fa2d2c94",
+      "source_pointer": "/decisions/0/raw_public_response",
+      "sha256": "dad423829a2b5028e7bff1a3bab9881a92dbfa6d57e47d44a3a10a13569ff2d7",
+      "transformation": "complete field extraction; JSON reserialization where applicable"
+    },
+    {
+      "path": "research/real-faults/dns/model-2-response.txt",
+      "origin": "artifacts/VW-2321/option-b-release/public-candidate/src/rootweaver_resolve/workspace/data/dns.json",
+      "source_sha256": "d7aa737d361dddbf6ff0f446fafc0a2e89e1de975e0b13cb08f67725fa2d2c94",
+      "source_pointer": "/decisions/1/raw_public_response",
+      "sha256": "43212b99d2562a8d7737a0031252c91dd2444cda1d4883c20715f5d86ad6a7bf",
+      "transformation": "complete field extraction; JSON reserialization where applicable"
+    },
+    {
+      "path": "research/real-faults/dns/inputs.json",
+      "origin": "artifacts/VW-2321/option-b-release/public-candidate/src/rootweaver_resolve/workspace/data/dns.json",
+      "source_sha256": "d7aa737d361dddbf6ff0f446fafc0a2e89e1de975e0b13cb08f67725fa2d2c94",
+      "source_pointer": "/inputs",
+      "sha256": "11156a4c7099eee13fff31e84ead7a1916b012199a3c57c5a376c8792cc3cc0c",
+      "transformation": "complete field extraction; JSON reserialization where applicable"
+    },
+    {
+      "path": "research/real-faults/policy/model-1-response.txt",
+      "origin": "artifacts/VW-2321/option-b-release/public-candidate/src/rootweaver_resolve/workspace/data/policy.json",
+      "source_sha256": "ac95e59a1901f93b1abdeb9756e0682c7c45087b180e71b2090effa5cc8634ca",
+      "source_pointer": "/decisions/0/raw_public_response",
+      "sha256": "b80910595feb24f1a0b241f022357e66188cc9ed0730158716b9fc01363f6e97",
+      "transformation": "complete field extraction; JSON reserialization where applicable"
+    },
+    {
+      "path": "research/real-faults/policy/inputs.json",
+      "origin": "artifacts/VW-2321/option-b-release/public-candidate/src/rootweaver_resolve/workspace/data/policy.json",
+      "source_sha256": "ac95e59a1901f93b1abdeb9756e0682c7c45087b180e71b2090effa5cc8634ca",
+      "source_pointer": "/inputs",
+      "sha256": "0bdf1fc6475c46fdd911eb742e8130c4f26f429469e29816b2bce5042e273df5",
+      "transformation": "complete field extraction; JSON reserialization where applicable"
+    },
+    {
+      "path": "docs/media/desktop-overview.png",
+      "origin": "artifacts/VW-2321/option-b-release/screenshots/desktop-overview.png",
+      "source_sha256": "6416b8a3df0c896b0a399294cb0ffa053c6429949e03dbc557186bf9b6589ac3",
+      "sha256": "6416b8a3df0c896b0a399294cb0ffa053c6429949e03dbc557186bf9b6589ac3",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "docs/media/mobile-overview.png",
+      "origin": "artifacts/VW-2321/option-b-release/screenshots/mobile-overview.png",
+      "source_sha256": "dbe82ce46c69895ede9a281d5810c65e5350dd5722451572d2ac54b9f1011d39",
+      "sha256": "dbe82ce46c69895ede9a281d5810c65e5350dd5722451572d2ac54b9f1011d39",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "docs/media/mobile-assessment.png",
+      "origin": "artifacts/VW-2321/option-b-release/screenshots/mobile-assessment.png",
+      "source_sha256": "79d8433c4cd4452553bbf2b0e7bf7503cc810f6c927320a87dd1c1f23b67d134",
+      "sha256": "79d8433c4cd4452553bbf2b0e7bf7503cc810f6c927320a87dd1c1f23b67d134",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "docs/media/method-desktop.png",
+      "origin": "artifacts/VW-2321/option-b-release/screenshots/method-desktop.png",
+      "source_sha256": "eb029f3106e3eb497f46bfab0de15a649daae3f71dde9bf7067bdae0ae887a99",
+      "sha256": "eb029f3106e3eb497f46bfab0de15a649daae3f71dde9bf7067bdae0ae887a99",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "docs/media/resolve-05-ryan-review.mp4",
+      "origin": "artifacts/VW-2321/option-b-release/video/human-voice/resolve-05-ryan-review.mp4",
+      "source_sha256": "c289a5b9a7c181232fe49fa09997d72c26d54948a1d6b136a6008e5e667a3cf4",
+      "sha256": "c289a5b9a7c181232fe49fa09997d72c26d54948a1d6b136a6008e5e667a3cf4",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "docs/media/captions.vtt",
+      "origin": "artifacts/VW-2321/option-b-release/video/human-voice/captions.vtt",
+      "source_sha256": "70e28a87cea04db39147218fc3d505978b3e6c3e2dd257f2304051bdfc1e36ef",
+      "sha256": "70e28a87cea04db39147218fc3d505978b3e6c3e2dd257f2304051bdfc1e36ef",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "docs/media/captions.srt",
+      "origin": "artifacts/VW-2321/option-b-release/video/human-voice/captions.srt",
+      "source_sha256": "a479b81d1544da9d9ef02efc9be5d668f93c139daa556443a1df052480c51113",
+      "sha256": "a479b81d1544da9d9ef02efc9be5d668f93c139daa556443a1df052480c51113",
+      "transformation": "none; byte-identical"
+    }
+  ]
+}

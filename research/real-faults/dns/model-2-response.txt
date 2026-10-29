@@ -1,0 +1,45 @@
+{
+  "hypotheses": [
+    {
+      "assessment": "supported",
+      "basis_state": "failed_checkout_observed",
+      "evidence_ids": [
+        "bf3ec5432de67cd81f251e551bd1ae4b623c0a736b8c8e1df0622c7f3b947d39"
+      ],
+      "id": "application_failure",
+      "polarity": "failure_present",
+      "statement": "A checkout request has an observed failed application response or application exception in the supplied scope."
+    },
+    {
+      "assessment": "supported",
+      "basis_state": "failed_dependency_lookup",
+      "evidence_ids": [
+        "c84a73aee9bb15d26cabcb30ff2c4621bece3875b5400bdc297713c67840c857",
+        "bf3ec5432de67cd81f251e551bd1ae4b623c0a736b8c8e1df0622c7f3b947d39"
+      ],
+      "id": "dependency_name_resolution_failure",
+      "polarity": "failure_present",
+      "statement": "A required checkout dependency name has an observed unsuccessful lookup in the supplied scope."
+    },
+    {
+      "assessment": "refuted",
+      "basis_state": "healthy_selection_observed",
+      "evidence_ids": [
+        "b015b05005b33837f3d8ae599bf8f2a568dd795450b037a80fe52220e708e545",
+        "dc71b8a77c6cf6cfc164dbc148c89e99b0e51d97a6052b24d4d3e64656f0fddb"
+      ],
+      "id": "service_selection_failure",
+      "polarity": "failure_present",
+      "statement": "Within the supplied target/time, Service selection excludes the independently intended Ready workload and has no Ready associated backend."
+    }
+  ],
+  "incident_assessment": {
+    "competing_hypotheses": [],
+    "explains_incident": null,
+    "missing_evidence": [
+      "Checkout HTTP request records covering the full incident window (2026-10-26T20:32:40Z to 2026-10-26T20:32:42.93Z) before the first observed client record.",
+      "Continuous checkout HTTP request records covering the period after 2026-10-26T20:32:46.04Z to the window end."
+    ],
+    "outcome": "uncertain"
+  }
+}

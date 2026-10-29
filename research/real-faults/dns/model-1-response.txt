@@ -1,0 +1,46 @@
+{
+  "hypotheses": [
+    {
+      "assessment": "refuted",
+      "basis_state": "successful_checkout_observed",
+      "evidence_ids": [
+        "5e73c3d6ded4e509d956970a89e55feff4ce9172fb60f54d885fc1b16a5c496d"
+      ],
+      "id": "application_failure",
+      "polarity": "failure_present",
+      "statement": "A checkout request has an observed failed application response or application exception in the supplied scope."
+    },
+    {
+      "assessment": "refuted",
+      "basis_state": "not_established",
+      "evidence_ids": [
+        "b015b05005b33837f3d8ae599bf8f2a568dd795450b037a80fe52220e708e545",
+        "dc71b8a77c6cf6cfc164dbc148c89e99b0e51d97a6052b24d4d3e64656f0fddb",
+        "5e73c3d6ded4e509d956970a89e55feff4ce9172fb60f54d885fc1b16a5c496d"
+      ],
+      "id": "dependency_name_resolution_failure",
+      "polarity": "failure_present",
+      "statement": "A required checkout dependency name has an observed unsuccessful lookup in the supplied scope."
+    },
+    {
+      "assessment": "refuted",
+      "basis_state": "healthy_selection_observed",
+      "evidence_ids": [
+        "b015b05005b33837f3d8ae599bf8f2a568dd795450b037a80fe52220e708e545",
+        "dc71b8a77c6cf6cfc164dbc148c89e99b0e51d97a6052b24d4d3e64656f0fddb"
+      ],
+      "id": "service_selection_failure",
+      "polarity": "failure_present",
+      "statement": "Within the supplied target/time, Service selection excludes the independently intended Ready workload and has no Ready associated backend."
+    }
+  ],
+  "incident_assessment": {
+    "competing_hypotheses": [],
+    "explains_incident": null,
+    "missing_evidence": [
+      "Direct DNS lookup attempts (success or failure) for the checkout-dependency name within the incident window.",
+      "Checkout HTTP request records covering the full incident window (2026-10-26T20:32:40Z to 2026-10-26T20:32:42.93Z) before the first observed client record."
+    ],
+    "outcome": "uncertain"
+  }
+}

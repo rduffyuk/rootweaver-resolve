@@ -1,0 +1,508 @@
+[
+  {
+    "previous_public_analysis": null,
+    "view": {
+      "incident": {
+        "namespace": "incident-scope",
+        "service": "checkout",
+        "symptom": "Observed checkout HTTP request failures.",
+        "window_end": "2026-10-26T20:32:47.853483Z",
+        "window_start": "2026-10-26T20:32:40+00:00"
+      },
+      "policy": {
+        "classification": "live-disposable-kubernetes/v1",
+        "destination": "nebius-token-factory",
+        "limitations": [
+          "Untrusted acquired evidence only. No fixture code, control state, expected answers, controller findings or recovery evidence.",
+          "Stage B expands the same retained cutoff; no new live diagnostics."
+        ],
+        "redaction_status": "allowlisted projection; namespace and Pod aliases; IPs/raw packets withheld"
+      },
+      "readable_observations": [
+        {
+          "evidence_id": "b015b05005b33837f3d8ae599bf8f2a568dd795450b037a80fe52220e708e545",
+          "observed_at": "2026-10-26T20:32:47.421114Z",
+          "operation": "namespace_service_network",
+          "resources": [
+            {
+              "kind": "Service",
+              "name": "checkout",
+              "namespace": "incident-scope",
+              "selector": {
+                "app": "checkout",
+                "track": "label-f379ccb92b"
+              }
+            },
+            {
+              "kind": "Service",
+              "name": "pod-e031df2078",
+              "namespace": "incident-scope",
+              "selector": {
+                "app": "pod-e031df2078"
+              }
+            },
+            {
+              "endpoints": [
+                {
+                  "addresses": [
+                    "redacted"
+                  ],
+                  "conditions": {
+                    "ready": true,
+                    "serving": true,
+                    "terminating": false
+                  },
+                  "target": "pod-e031df2078"
+                }
+              ],
+              "kind": "EndpointSlice",
+              "name": "endpointslice-c118b18229",
+              "namespace": "incident-scope",
+              "service_name": "pod-e031df2078"
+            },
+            {
+              "endpoints": [
+                {
+                  "addresses": [
+                    "redacted"
+                  ],
+                  "conditions": {
+                    "ready": true,
+                    "serving": true,
+                    "terminating": false
+                  },
+                  "target": "pod-3b3e6fe10c"
+                }
+              ],
+              "kind": "EndpointSlice",
+              "name": "endpointslice-9ac1e92127",
+              "namespace": "incident-scope",
+              "service_name": "checkout"
+            }
+          ],
+          "scope": "namespace Service/EndpointSlice inventory",
+          "status": "complete"
+        },
+        {
+          "evidence_id": "dc71b8a77c6cf6cfc164dbc148c89e99b0e51d97a6052b24d4d3e64656f0fddb",
+          "observed_at": "2026-10-26T20:32:47.686669Z",
+          "operation": "namespace_workloads",
+          "resources": [
+            {
+              "kind": "Pod",
+              "labels": {
+                "app": "checkout",
+                "track": "label-f379ccb92b"
+              },
+              "name": "pod-3b3e6fe10c",
+              "namespace": "incident-scope",
+              "phase": "Running",
+              "ready": true
+            },
+            {
+              "kind": "Pod",
+              "labels": {
+                "app": "pod-e031df2078"
+              },
+              "name": "pod-e031df2078",
+              "namespace": "incident-scope",
+              "phase": "Running",
+              "ready": true
+            }
+          ],
+          "scope": "namespace Pods",
+          "status": "complete"
+        },
+        {
+          "data": [
+            {
+              "duration_ms": 205.884,
+              "finished_at": "2026-10-26T20:32:43.142296+00:00",
+              "path": "/checkout",
+              "started_at": "2026-10-26T20:32:42.936409+00:00",
+              "status": 200,
+              "transport_error": null
+            },
+            {
+              "duration_ms": 195.812,
+              "finished_at": "2026-10-26T20:32:43.339268+00:00",
+              "path": "/readyz",
+              "started_at": "2026-10-26T20:32:43.143464+00:00",
+              "status": 200,
+              "transport_error": null
+            },
+            {
+              "duration_ms": 100.426,
+              "finished_at": "2026-10-26T20:32:44.441045+00:00",
+              "path": "/checkout",
+              "started_at": "2026-10-26T20:32:44.340616+00:00",
+              "status": 200,
+              "transport_error": null
+            },
+            {
+              "duration_ms": 198.089,
+              "finished_at": "2026-10-26T20:32:44.640095+00:00",
+              "path": "/readyz",
+              "started_at": "2026-10-26T20:32:44.442011+00:00",
+              "status": 200,
+              "transport_error": null
+            },
+            {
+              "duration_ms": 198.352,
+              "finished_at": "2026-10-26T20:32:45.839383+00:00",
+              "path": "/checkout",
+              "started_at": "2026-10-26T20:32:45.641036+00:00",
+              "status": 200,
+              "transport_error": null
+            },
+            {
+              "duration_ms": 209.516,
+              "finished_at": "2026-10-26T20:32:46.049854+00:00",
+              "path": "/readyz",
+              "started_at": "2026-10-26T20:32:45.840349+00:00",
+              "status": 200,
+              "transport_error": null
+            }
+          ],
+          "evidence_id": "5e73c3d6ded4e509d956970a89e55feff4ce9172fb60f54d885fc1b16a5c496d",
+          "observed_at": "2026-10-26T20:32:47.087983+00:00",
+          "operation": "independent_client_http",
+          "scope": "last six actual client records in cutoff; HTTP status distinct from DNS RCODE",
+          "status": "ok"
+        }
+      ]
+    }
+  },
+  {
+    "previous_public_analysis": {
+      "hypotheses": [
+        {
+          "assessment": "refuted",
+          "basis_state": "successful_checkout_observed",
+          "evidence_ids": [
+            "5e73c3d6ded4e509d956970a89e55feff4ce9172fb60f54d885fc1b16a5c496d"
+          ],
+          "id": "application_failure",
+          "polarity": "failure_present",
+          "statement": "A checkout request has an observed failed application response or application exception in the supplied scope."
+        },
+        {
+          "assessment": "refuted",
+          "basis_state": "not_established",
+          "evidence_ids": [
+            "b015b05005b33837f3d8ae599bf8f2a568dd795450b037a80fe52220e708e545",
+            "dc71b8a77c6cf6cfc164dbc148c89e99b0e51d97a6052b24d4d3e64656f0fddb",
+            "5e73c3d6ded4e509d956970a89e55feff4ce9172fb60f54d885fc1b16a5c496d"
+          ],
+          "id": "dependency_name_resolution_failure",
+          "polarity": "failure_present",
+          "statement": "A required checkout dependency name has an observed unsuccessful lookup in the supplied scope."
+        },
+        {
+          "assessment": "refuted",
+          "basis_state": "healthy_selection_observed",
+          "evidence_ids": [
+            "b015b05005b33837f3d8ae599bf8f2a568dd795450b037a80fe52220e708e545",
+            "dc71b8a77c6cf6cfc164dbc148c89e99b0e51d97a6052b24d4d3e64656f0fddb"
+          ],
+          "id": "service_selection_failure",
+          "polarity": "failure_present",
+          "statement": "Within the supplied target/time, Service selection excludes the independently intended Ready workload and has no Ready associated backend."
+        }
+      ],
+      "incident_assessment": {
+        "competing_hypotheses": [],
+        "explains_incident": null,
+        "missing_evidence": [
+          "Direct DNS lookup attempts (success or failure) for the pod-e031df2078 name within the incident window.",
+          "Checkout HTTP request records covering the full incident window (2026-10-26T20:32:40Z to 2026-10-26T20:32:42.93Z) before the first observed client record."
+        ],
+        "outcome": "uncertain"
+      }
+    },
+    "view": {
+      "incident": {
+        "namespace": "incident-scope",
+        "service": "checkout",
+        "symptom": "Observed checkout HTTP request failures.",
+        "window_end": "2026-10-26T20:32:47.853483Z",
+        "window_start": "2026-10-26T20:32:40+00:00"
+      },
+      "policy": {
+        "classification": "live-disposable-kubernetes/v1",
+        "destination": "nebius-token-factory",
+        "limitations": [
+          "Untrusted acquired evidence only. No fixture code, control state, expected answers, controller findings or recovery evidence.",
+          "Stage B expands the same retained cutoff; no new live diagnostics."
+        ],
+        "redaction_status": "allowlisted projection; namespace and Pod aliases; IPs/raw packets withheld"
+      },
+      "readable_observations": [
+        {
+          "evidence_id": "b015b05005b33837f3d8ae599bf8f2a568dd795450b037a80fe52220e708e545",
+          "observed_at": "2026-10-26T20:32:47.421114Z",
+          "operation": "namespace_service_network",
+          "resources": [
+            {
+              "kind": "Service",
+              "name": "checkout",
+              "namespace": "incident-scope",
+              "selector": {
+                "app": "checkout",
+                "track": "label-f379ccb92b"
+              }
+            },
+            {
+              "kind": "Service",
+              "name": "pod-e031df2078",
+              "namespace": "incident-scope",
+              "selector": {
+                "app": "pod-e031df2078"
+              }
+            },
+            {
+              "endpoints": [
+                {
+                  "addresses": [
+                    "redacted"
+                  ],
+                  "conditions": {
+                    "ready": true,
+                    "serving": true,
+                    "terminating": false
+                  },
+                  "target": "pod-e031df2078"
+                }
+              ],
+              "kind": "EndpointSlice",
+              "name": "endpointslice-c118b18229",
+              "namespace": "incident-scope",
+              "service_name": "pod-e031df2078"
+            },
+            {
+              "endpoints": [
+                {
+                  "addresses": [
+                    "redacted"
+                  ],
+                  "conditions": {
+                    "ready": true,
+                    "serving": true,
+                    "terminating": false
+                  },
+                  "target": "pod-3b3e6fe10c"
+                }
+              ],
+              "kind": "EndpointSlice",
+              "name": "endpointslice-9ac1e92127",
+              "namespace": "incident-scope",
+              "service_name": "checkout"
+            }
+          ],
+          "scope": "namespace Service/EndpointSlice inventory",
+          "status": "complete"
+        },
+        {
+          "evidence_id": "dc71b8a77c6cf6cfc164dbc148c89e99b0e51d97a6052b24d4d3e64656f0fddb",
+          "observed_at": "2026-10-26T20:32:47.686669Z",
+          "operation": "namespace_workloads",
+          "resources": [
+            {
+              "kind": "Pod",
+              "labels": {
+                "app": "checkout",
+                "track": "label-f379ccb92b"
+              },
+              "name": "pod-3b3e6fe10c",
+              "namespace": "incident-scope",
+              "phase": "Running",
+              "ready": true
+            },
+            {
+              "kind": "Pod",
+              "labels": {
+                "app": "pod-e031df2078"
+              },
+              "name": "pod-e031df2078",
+              "namespace": "incident-scope",
+              "phase": "Running",
+              "ready": true
+            }
+          ],
+          "scope": "namespace Pods",
+          "status": "complete"
+        },
+        {
+          "data": [
+            {
+              "duration_ms": 205.884,
+              "finished_at": "2026-10-26T20:32:43.142296+00:00",
+              "path": "/checkout",
+              "started_at": "2026-10-26T20:32:42.936409+00:00",
+              "status": 200,
+              "transport_error": null
+            },
+            {
+              "duration_ms": 195.812,
+              "finished_at": "2026-10-26T20:32:43.339268+00:00",
+              "path": "/readyz",
+              "started_at": "2026-10-26T20:32:43.143464+00:00",
+              "status": 200,
+              "transport_error": null
+            },
+            {
+              "duration_ms": 100.426,
+              "finished_at": "2026-10-26T20:32:44.441045+00:00",
+              "path": "/checkout",
+              "started_at": "2026-10-26T20:32:44.340616+00:00",
+              "status": 200,
+              "transport_error": null
+            },
+            {
+              "duration_ms": 198.089,
+              "finished_at": "2026-10-26T20:32:44.640095+00:00",
+              "path": "/readyz",
+              "started_at": "2026-10-26T20:32:44.442011+00:00",
+              "status": 200,
+              "transport_error": null
+            },
+            {
+              "duration_ms": 198.352,
+              "finished_at": "2026-10-26T20:32:45.839383+00:00",
+              "path": "/checkout",
+              "started_at": "2026-10-26T20:32:45.641036+00:00",
+              "status": 200,
+              "transport_error": null
+            },
+            {
+              "duration_ms": 209.516,
+              "finished_at": "2026-10-26T20:32:46.049854+00:00",
+              "path": "/readyz",
+              "started_at": "2026-10-26T20:32:45.840349+00:00",
+              "status": 200,
+              "transport_error": null
+            }
+          ],
+          "evidence_id": "5e73c3d6ded4e509d956970a89e55feff4ce9172fb60f54d885fc1b16a5c496d",
+          "observed_at": "2026-10-26T20:32:47.087983+00:00",
+          "operation": "independent_client_http",
+          "scope": "last six actual client records in cutoff; HTTP status distinct from DNS RCODE",
+          "status": "ok"
+        },
+        {
+          "data": {
+            "control": {
+              "additional_count": 0,
+              "answer_count": 1,
+              "authority_count": 0,
+              "duration_ms": 0.778,
+              "finished_at": "2026-10-26T20:32:46.987107+00:00",
+              "query_name": "checkout.incident-scope.svc.cluster.local.",
+              "query_type": "A",
+              "rcode": 0,
+              "rcode_name": "NOERROR",
+              "resolver_port": 53,
+              "started_at": "2026-10-26T20:32:46.986328+00:00",
+              "status": "ok",
+              "truncated": false
+            },
+            "dependency": {
+              "additional_count": 0,
+              "answer_count": 0,
+              "authority_count": 1,
+              "duration_ms": 1.419,
+              "finished_at": "2026-10-26T20:32:46.986278+00:00",
+              "query_name": "dep-671783149c.incident-scope.svc.cluster.local.",
+              "query_type": "A",
+              "rcode": 3,
+              "rcode_name": "NXDOMAIN",
+              "resolver_port": 53,
+              "started_at": "2026-10-26T20:32:46.984864+00:00",
+              "status": "ok",
+              "truncated": false
+            },
+            "native_dependency": {
+              "api": "socket.getaddrinfo",
+              "duration_ms": 0.631,
+              "errno": -2,
+              "error_message": "[Errno -2] Name or service not known",
+              "error_type": "gaierror",
+              "family": "AF_INET",
+              "finished_at": "2026-10-26T20:32:46.987745+00:00",
+              "query_name": "dep-671783149c.incident-scope.svc.cluster.local.",
+              "started_at": "2026-10-26T20:32:46.987113+00:00",
+              "status": "error"
+            }
+          },
+          "evidence_id": "c84a73aee9bb15d26cabcb30ff2c4621bece3875b5400bdc297713c67840c857",
+          "observed_at": "2026-10-26T20:32:46.984818+00:00",
+          "operation": "dns_resolution_probe",
+          "scope": "unprivileged app-namespace DNS A response header and native getaddrinfo; control query to same resolver",
+          "status": "ok"
+        },
+        {
+          "data": [
+            {
+              "api": "socket.getaddrinfo",
+              "duration_ms": 0.743,
+              "errno": -2,
+              "error_message": "[Errno -2] Name or service not known",
+              "error_type": "gaierror",
+              "event": "resolver_lookup",
+              "family": "AF_INET",
+              "finished_at": "2026-10-26T20:32:47.333921+00:00",
+              "operation": "resolve_checkout_dependency",
+              "query_name": "dep-671783149c.incident-scope.svc.cluster.local.",
+              "request_id": "id-bb0b589ce8",
+              "started_at": "2026-10-26T20:32:47.333169+00:00",
+              "status": "error"
+            },
+            {
+              "duration_ms": 0.968,
+              "event": "checkout_response",
+              "path": "/checkout",
+              "request_id": "id-bb0b589ce8",
+              "status": 500,
+              "time": "2026-10-26T20:32:47.334009+00:00"
+            }
+          ],
+          "evidence_id": "bf3ec5432de67cd81f251e551bd1ae4b623c0a736b8c8e1df0622c7f3b947d39",
+          "observed_at": "2026-10-26T20:32:47.853483Z",
+          "operation": "kubernetes_application_logs",
+          "scope": "last two relevant complete structured log records; full captured range retained locally",
+          "status": "ok"
+        },
+        {
+          "data": "# TYPE http_requests_total counter\nhttp_requests_total{path=\"/checkout\",status=\"200\"} 14\n# TYPE dns_lookups_total counter\ndns_lookups_total{result=\"ok\"} 14\n",
+          "evidence_id": "dc414fecb3cfc64b46e0cff22420a85b39da4469b52396e040df66da8b13a498",
+          "http_status": 200,
+          "observed_at": "2026-10-26T20:32:47.006951+00:00",
+          "operation": "application_metrics_http",
+          "status": "ok"
+        },
+        {
+          "data": [],
+          "evidence_id": "24da4c69135b93b5599f5772e48a53d32aafc02171e1f79246b98bb9e7ef32c3",
+          "limitations": [
+            "Query-specific empty result. No test-correlated central telemetry demonstrated; not evidence of no events."
+          ],
+          "operation": "prometheus",
+          "queried_at": "2026-10-26T20:32:51.785639Z",
+          "returned_observations": 0,
+          "status": "ok"
+        },
+        {
+          "data": [],
+          "evidence_id": "e70e8fb6f9bffca9592c26200fc197a89ab7af76c6f9e779c076880802f0203a",
+          "limitations": [
+            "Query-specific empty result. No test-correlated central telemetry demonstrated; not evidence of no events."
+          ],
+          "operation": "loki",
+          "queried_at": "2026-10-26T20:32:52.332519Z",
+          "returned_observations": 0,
+          "status": "ok"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "version": "0.5.0",
+  "mode": "retained replay by default; opt-in bounded fresh Ultra analysis of fixed sanitised HTTP evidence; no cluster access",
+  "cases": [
+    "selector",
+    "http",
+    "dns",
+    "policy"
+  ],
+  "prior_genuine_ultra_calls_included": 7,
+  "investigation_calls_included": 5,
+  "default_view": "evidence workbench; retained model-selected packet investigation",
+  "phase3": "unqualified; historical gates unchanged",
+  "authority": "No remediation interface. Recovery performed by external experiment watchdog.",
+  "publication": "owner approval pending"
+}

@@ -1,0 +1,172 @@
+[
+  {
+    "previous_public_analysis": null,
+    "view": {
+      "incident": {
+        "namespace": "incident-scope",
+        "service": "checkout",
+        "symptom": "Source-client connection failures; control measurements provided separately.",
+        "window_end": "2026-10-26T21:41:44.196663+00:00",
+        "window_start": "2026-10-26T21:40:45.087565+00:00"
+      },
+      "policy": {
+        "classification": "live-disposable-kubernetes/v1",
+        "destination": "nebius-token-factory",
+        "limitations": [
+          "Only acquired evidence and public prior analysis. No injector records, fixture controls, expected answers, recovery or controller conclusions.",
+          "Application responses are distinct from source transport errors. No policy-cause controller predicate."
+        ],
+        "redaction_status": "allowlisted records; namespace/Pod aliases and IP redaction"
+      },
+      "readable_observations": [
+        {
+          "evidence_id": "aec58939173535ee4876ee7e92dd3a78d788af63bd013c4027c5a05aba205259",
+          "observed_at": "2026-10-26T21:40:54.136468Z",
+          "operation": "namespace_service_network",
+          "projection_scope": "target/source subset; no inventory absence claims",
+          "resources": [
+            {
+              "kind": "Service",
+              "name": "checkout",
+              "namespace": "incident-scope",
+              "selector": {
+                "app": "checkout",
+                "track": "label-f379ccb92b"
+              }
+            },
+            {
+              "endpoints": [
+                {
+                  "addresses": [
+                    "redacted"
+                  ],
+                  "conditions": {
+                    "ready": true,
+                    "serving": true,
+                    "terminating": false
+                  },
+                  "target": "pod-3b3e6fe10c"
+                }
+              ],
+              "kind": "EndpointSlice",
+              "name": "endpointslice-9ac1e92127",
+              "namespace": "incident-scope",
+              "service_name": "checkout"
+            }
+          ],
+          "status": "complete"
+        },
+        {
+          "evidence_id": "0fc0d1aca8c955e13962452af27063c317a77dce5f2993eeba384c1a96fd3114",
+          "observed_at": "2026-10-26T21:40:54.336125Z",
+          "operation": "namespace_workloads",
+          "projection_scope": "target/source subset; no inventory absence claims",
+          "resources": [
+            {
+              "kind": "Pod",
+              "labels": {
+                "app": "checkout",
+                "track": "label-f379ccb92b"
+              },
+              "name": "pod-3b3e6fe10c",
+              "namespace": "incident-scope",
+              "phase": "Running",
+              "ready": true
+            },
+            {
+              "kind": "Pod",
+              "labels": {
+                "app": "resolve-client",
+                "evaluation-client": "source-a"
+              },
+              "name": "pod-93691946c3",
+              "namespace": "incident-scope",
+              "phase": "Running",
+              "ready": true
+            }
+          ],
+          "status": "complete"
+        },
+        {
+          "data": {
+            "client_a": {
+              "baseline": {
+                "count": 3,
+                "first_at": "2026-10-26T21:40:24.191999+00:00",
+                "http_status": 200,
+                "last_at": "2026-10-26T21:40:26.190875+00:00"
+              },
+              "labels": {
+                "evaluation-client": "source-a"
+              },
+              "observed_requests": {
+                "count": 64,
+                "first_started_at": "2026-10-26T21:40:45.087565+00:00",
+                "last_finished_at": "2026-10-26T21:41:43.194221+00:00",
+                "records_sha256": "a2194b4d91910b4f8a652426a5899bc44070af467773ab3e77ef831972497354",
+                "status_counts": {
+                  "no_http_response": 64
+                },
+                "transport_counts": {
+                  "connection_refused": 64
+                }
+              },
+              "samples": [
+                {
+                  "duration_ms": 99.577,
+                  "finished_at": "2026-10-26T21:40:45.187146+00:00",
+                  "started_at": "2026-10-26T21:40:45.087565+00:00",
+                  "status": null,
+                  "transport_error": "connection_refused"
+                },
+                {
+                  "duration_ms": 6.367,
+                  "finished_at": "2026-10-26T21:41:43.194221+00:00",
+                  "started_at": "2026-10-26T21:41:43.187845+00:00",
+                  "status": null,
+                  "transport_error": "connection_refused"
+                }
+              ],
+              "source": "observed namespace Pod"
+            },
+            "completeness": "Rollups include every captured complete request within the common selected interval. First/last samples are a bounded projection; complete raw records retained locally.",
+            "control": {
+              "baseline": {
+                "count": 3,
+                "first_at": "2026-10-26T21:40:27.073890+00:00",
+                "http_status": 200,
+                "last_at": "2026-10-26T21:40:27.144361+00:00"
+              },
+              "observed_requests": {
+                "count": 43,
+                "first_started_at": "2026-10-26T21:40:45.596286+00:00",
+                "last_finished_at": "2026-10-26T21:41:44.196663+00:00",
+                "records_sha256": "64d0c4643d177fa2ad31bfa1b2f3f9b68362a5ced25d5c992de9cc9dc9f01eee",
+                "status_counts": {
+                  "200": 43
+                },
+                "transport_counts": {
+                  "none": 43
+                }
+              },
+              "samples": [
+                {
+                  "duration_ms": 102.633,
+                  "finished_at": "2026-10-26T21:41:44.196663+00:00",
+                  "started_at": "2026-10-26T21:41:44.094032+00:00",
+                  "status": 200,
+                  "transport_error": null
+                }
+              ],
+              "source": "independent host client; different network path and not a second namespace Pod"
+            }
+          },
+          "evidence_id": "6d3a11a5b87460f61481cc89617ada3d28bd5b2e5dde7bfaf49a79a85af118fe",
+          "observed_at": "2026-10-26T21:41:44.196663+00:00",
+          "operation": "client_observations",
+          "status": "ok"
+        }
+      ]
+    }
+  }
+]
