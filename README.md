@@ -1,22 +1,49 @@
-# Rootweaver Resolve 0.5.0
+# Rootweaver Resolve
 
-**An agent investigates. An SRE can inspect every check.**
+**An agent investigates. You inspect the evidence.**
 
-[MIT license](LICENSE) · [Build and CI](docs/BUILD.md) · [Visual architecture](docs/ARCHITECTURE.md) · [Research and original outputs](research/README.md) · [Narrated review video](docs/media/resolve-05-ryan-review.mp4)
+NVIDIA Nemotron 3 Ultra chooses bounded debugging checks. Resolve puts the command,
+readable output and changing assessment side by side, so an SRE can decide what to
+investigate next.
 
-![Resolve evidence workbench](docs/media/desktop-overview.png)
+[**Run locally →**](#start-here--no-credentials-needed) · [**Watch Ryan’s 2:18 demo →**](docs/media/resolve-05-ryan-review.mp4) · [**Explore the architecture →**](docs/ARCHITECTURE.md)
 
-Resolve gives NVIDIA Nemotron 3 Ultra a bounded catalogue of debugging checks, gathers their outputs and shows how competing explanations change. The opening evidence workbench replays one genuine laboratory investigation: client timeouts, Service/EndpointSlice inspection, a scoped TCP capture and workload status. Ultra ran through Nebius Token Factory; Observe supervised packet acquisition. The human can inspect the method, complete output and unresolved questions.
+[MIT](LICENSE) · Python 3.12+ · No runtime dependencies · Version 0.5.0 · Private review candidate
+
+![Actual Resolve workbench: TCP evidence beside the model assessment](docs/media/investigation-preview.gif)
+
+*Actual browser footage from a retained laboratory investigation. Playback makes no
+new model call or cluster request. [Full desktop view](docs/media/desktop-overview.png) · [Mobile assessment](docs/media/mobile-assessment.png)*
+
+## Understand it in thirty seconds
+
+1. **Inspect TCP capture.** The selected endpoint is reachable. Four complete timings
+   show first server data around **2,001 ms**, after the client FIN around **801 ms**.
+2. **Compare the explanation.** Ultra narrows the investigation, but overcounts the
+   timings and recommends a timeout change without seeing its configuration.
+3. **Challenge the conclusion.** Open the method, original output and qualifications.
+   The underlying latency cause and correct timeout remain unresolved.
+
+That is the useful handover: the checks already done, the evidence that changed the
+assessment, and the uncertainty an operator still needs to resolve.
 
 ## Start here — no credentials needed
 
-Python 3.12 or newer; no runtime dependencies:
+Clone or extract this repository first. Python 3.12 or newer; no runtime dependencies:
 
 ```sh
 python3.12 -m venv .venv
 .venv/bin/python -m pip install .
 .venv/bin/resolve-demo
 ```
+
+Open **http://127.0.0.1:8766/**. Choose **TCP capture** for the payoff, or **Follow from
+the first check** for the full investigation. For cloning, pinned build tools and CI,
+see [Build and verify](docs/BUILD.md).
+
+<details>
+<summary>What the replay includes, collection windows and original research artifacts</summary>
+
 
 Open http://127.0.0.1:8766/ . The opening screen shows the completed investigation. Choose **Follow from the first check** to replay Logs → Service & endpoint → TCP capture → Pod status → Handover. Each step exposes the command, evidence available then and the next accepted model assessment. Later evidence is unavailable in earlier steps.
 
@@ -26,30 +53,41 @@ The five genuine Ultra calls and four executed checks happened during the retain
 
 **Other cases & fresh HTTP analysis** opens the existing four-case console. Its seven historical model responses remain byte-identical. Its optional inference action below analyses a fixed HTTP evidence bundle; it does not run a new packet investigation. The earlier guided checks are authored navigation, whereas the packet investigation's four checks were selected by Ultra from a fixed catalogue.
 
-## See how the investigation works
+</details>
 
-![Resolve investigation architecture](docs/diagrams/investigation-loop.svg)
+## What runs where
 
-[Visual architecture and source map](docs/ARCHITECTURE.md) · [Actual investigation sequence](docs/diagrams/packet-investigation.svg) · [What the standalone package runs](docs/diagrams/standalone-paths.svg) · [Static overview](docs/diagrams/investigation-loop.static.svg)
+| Path | What happens | What is required |
+|---|---|---|
+| Default evidence workbench | Replays five genuine Ultra exchanges and four executed lab checks; no new requests | Local Python installation |
+| Fresh HTTP analysis | Sends fixed retained HTTP evidence to Ultra; no new telemetry | Explicit opt-in, your Nebius key and durable call budget |
+| Original lab investigation | Ultra selected checks; Observe supervised collection; a human received the unresolved handover | Retained research records; the private collector is not a standalone runtime |
 
 ## Run a fresh model analysis
 
-On the **Other cases & fresh HTTP analysis** page, the **Ask Ultra about this evidence** panel is the runtime integration. It sends one fixed sanitised HTTP-case input to `nvidia/Nemotron-3-Ultra-550b-a55b` through Nebius Token Factory. Inspect the exact outgoing request before pressing **Run fresh analysis**. The result, original public response, input hash, usage, timestamps and independent retained finding are inspectable and exportable.
+The separate **Other cases & fresh HTTP analysis → Ask Ultra about this evidence**
+panel provides the opt-in Nebius runtime integration. It is disabled by default.
+[Read the exact setup, request bounds, reservations and failure handling](docs/FRESH-ANALYSIS.md).
 
-This is fresh inference on retained observations, **not new telemetry or autonomous collection**. The revised prompt is different from the original experiment; the resulting answer is not a controlled before/after evaluation. Historical responses and gate outcomes remain unchanged.
+## Follow the investigation through the architecture
 
-Create a private directory with mode 700 and a mode-600 key file containing one `NEBIUS_API_KEY=...` line, using your normal secure editor or secret provisioning. Do not put the key in browser storage, a command argument, source control or a public host. Choose a durable private state directory outside the repository. Then:
+![Animated Resolve investigation architecture](docs/diagrams/investigation-loop.svg)
 
-```sh
-.venv/bin/resolve-demo --enable-live \
-  --key-file /absolute/private/nebius.env \
-  --state-dir /absolute/private/resolve-review-state \
-  --freeze-sha256 "$(cat LIVE-FREEZE.sha256)"
-```
+[Source map and all three animated diagrams](docs/ARCHITECTURE.md) · [Static version](docs/diagrams/investigation-loop.static.svg)
 
-Opening the page still makes no inference call. An explicit button starts one. The frozen package and request, fixed HTTPS provider, current model access/pricing checks, two durable reservations, 16,384-byte request bound, 4,096-token completion allowance, 120-second transport deadline and no retries bound this route. At the expected $1/$3 per million input/output tokens, the maximum two-call reservation is $0.065536; actual request reservations are displayed. Reservations persist after errors/restarts. Missing or inconsistent usage stops further calls. These are application controls, not account-wide billing limits. Do not delete state to bypass them.
+## Find what you need
 
-The author's local verification also uses the existing signed-commit launch guard and shared programme ledger. Those private financial records and launch credentials are not distributed. The portable package's explicit digest verifies package integrity; it is not a claim of human approval or production certification. The older synthetic qualification runner and its signed guards remain separate and unchanged.
+| You want to… | Start here |
+|---|---|
+| Install, test or reproduce the build | [Build and CI](docs/BUILD.md) |
+| Inspect original experiments, mistakes and model outputs | [Research archive](research/README.md) |
+| Understand what is and is not established | [Limitations](docs/LIMITATIONS.md) |
+| Review evidence transformations and attribution | [Privacy](docs/PRIVACY.md) · [Development disclosure](docs/DEVELOPMENT-DISCLOSURE.md) |
+| Contribute a reproducible issue or change | [Contribution guide](CONTRIBUTING.md) |
+| Review submission copy, video and artwork | [Submission review pack](docs/SUBMISSION-REVIEW.md) |
+
+<details>
+<summary>Earlier fault cases and evaluation limits</summary>
 
 ## What is actually demonstrated
 
@@ -59,6 +97,12 @@ The author's local verification also uses the existing signed-commit launch guar
 - Client policy denial: source/control difference, one completed historical call, and a second request blocked before POST. The watchdog needed an in-run repair; the case remains HOLD.
 
 Four cases and seven historical calls are a small case series. The first three categories contain six of those calls. Fresh integration checks do not increase the number of real fault categories or establish statistical reliability. No MTTR reduction, production qualification, autonomous remediation or superiority over an experienced SRE is claimed.
+
+
+</details>
+
+<details>
+<summary>Evidence, privacy and complete forensic records</summary>
 
 ## Evidence and privacy
 
@@ -70,6 +114,12 @@ Logs and packets were collected in different windows: the packet timings are not
 
 The standalone export needs no private Rootweaver services. No model weights or credentials are bundled. See [privacy](docs/PRIVACY.md), [limits](docs/LIMITATIONS.md) and the [visual architecture](docs/ARCHITECTURE.md), which separates the retained lab loop, the case console and the standalone runtime.
 
+
+</details>
+
+<details>
+<summary>Verification details</summary>
+
 ## Verify and build
 
 ```sh
@@ -80,6 +130,9 @@ node --test tests/*.mjs
 ```
 
 For the pinned toolchain, CI, custody verification and a clean-wheel smoke check, follow [Build and verify](docs/BUILD.md). Tests use simulated provider responses and synthetic controller fixtures where explicitly labelled. They make no inference calls. See the separate retained verification receipt for genuine integration outcomes. Install the wheel into a clean environment to verify the packaged assets. The local server binds only to loopback. Hosting requires a separately reviewed gateway/access/budget plan; see [publication handoff](docs/PUBLICATION-HANDOFF.md).
+
+
+</details>
 
 ## Review candidate, not published
 

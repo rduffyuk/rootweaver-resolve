@@ -1,6 +1,10 @@
 # Rootweaver Resolve — inspect the investigation
 
-Version 0.5.0 owner-review draft. Nothing has been published or submitted.
+Version 0.5.0 owner-review draft. The story and gallery are saved in the [Devpost draft](https://devpost.com/software/rootweaver-resolve). Public release and final submission remain on hold.
+
+**An agent investigates. You inspect the evidence.**
+
+Resolve makes an AI investigation reviewable: which debugging checks it chose, what came back, what changed its assessment and what still needs a human.
 
 ## Inspiration
 
@@ -34,15 +38,15 @@ The main run contains five genuine calls and four checks in one adapted disposab
 
 ## Existing work and AI assistance
 
-Rootweaver predates this competition. Resolve's application, bounded model integration, evidence contracts, fault demonstrations and investigation workspace were developed during the competition. The older platform and independent watchdog are disclosed dependencies. Ryan Duffy owns the problem, architecture and acceptance; OpenAI Codex assisted implementation, verification and packaging. NVIDIA Nemotron produced the actual diagnostic outputs. No fine-tuning was performed.
+Rootweaver predates this competition. Resolve's application, bounded model integration, evidence contracts, fault demonstrations and investigation workspace were developed during the competition. The older platform and independent watchdog are disclosed dependencies. Ryan Duffy owns the problem, architecture and acceptance; OpenAI Codex assisted implementation, verification and packaging. OpenAI image generation supplied conceptual cover artwork, separate from actual product screenshots. NVIDIA Nemotron produced the actual diagnostic outputs. No fine-tuning was performed.
 
 ## Links awaiting owner approval
 
 - Public repository: publication pending; standalone source includes MIT licence and setup instructions.
 - Working demo or downloadable test build: publication pending; local source ZIP and wheel prepared for review.
-- Public YouTube video, under three minutes: local review cut narrated by Ryan; upload pending.
+- Public YouTube video, under three minutes: Ryan-narrated review cut uploaded privately; public visibility remains pending.
 
 All official form answers are in docs/DEVPOST-FIELDS.md. Subjective ratings and personal declarations remain owner decisions.
 
 
-Repository preparation update: https://github.com/rduffyuk/rootweaver-resolve is the private owner-review repository. It includes the build workflow, MIT license, research records and narrated review video. Public visibility, judge-facing demo access, YouTube upload and submission remain pending owner approval.
+Repository preparation update: https://github.com/rduffyuk/rootweaver-resolve is the private owner-review repository. It includes the build workflow, MIT license, research records and narrated review video. Public visibility, judge-facing demo access and final submission remain pending owner approval. The YouTube review upload is private.

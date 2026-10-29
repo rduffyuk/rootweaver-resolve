@@ -21,4 +21,4 @@ Ryan's words and pace were preserved. Audio processing consists of a 60 Hz high-
 
 The opening workbench replays five genuine historical model calls. The fresh HTTP panel is a separate supported runtime route, not a live continuation of the packet investigation. Public aliases, separate observation windows, four paired timings and model limitations remain visible.
 
-Review and publication are separate. No upload is authorised by preparing this cut.
+Review and publication are separate. Ryan subsequently authorised a private review upload on 29 October 2026; see [YouTube receipt](YOUTUBE-UPLOAD.md). Public release remains on hold.

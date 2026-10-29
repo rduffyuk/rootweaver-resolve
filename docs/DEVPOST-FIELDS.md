@@ -1,6 +1,6 @@
 # Devpost field packet — 0.5.0 owner-review draft
 
-Prepared from the official event requirements retrieved on 29 October 2026. Nothing has been posted. Proposed subjective ratings and personal declarations require owner review; they are not already attested.
+Prepared from the official event requirements retrieved on 29 October 2026. The project story, technologies, repository link, cover and screenshot gallery are saved in the [online draft](https://devpost.com/software/rootweaver-resolve). Eleven technical/free-text answers plus the track and Tavily selection are also saved and read back. Personal declarations and publication-dependent URL fields remain incomplete. No final submission has been made. Proposed subjective ratings and personal declarations require owner review; they are not already attested.
 
 [Official event rules](https://nebiusglobalaihackathon.devpost.com/rules). The demo/test-build URL is required by the narrative rules for this track even though the API field metadata marks it optional. A public YouTube video of no more than three minutes is also required; its approved URL remains pending.
 
@@ -140,7 +140,7 @@ OWNER MUST CONFIRM. Do not pre-check or attest on the owner's behalf.
 
 Required · textarea
 
-OpenAI Codex assisted source inspection, implementation, tests, debugging, documentation and packaging. NVIDIA Nemotron supplied the application's actual AI analyses through Nebius Token Factory. Ryan recorded the narration for the current review cut. Codex assisted the script, screen capture, audio levelling, subtitle preparation and editing; local Whisper supplied draft transcription. No cloned or synthetic voice is used in that cut. Ryan Duffy owns the problem, design choices, evaluation acceptance and publication decisions.
+OpenAI Codex assisted source inspection, implementation, tests, debugging, documentation and packaging. NVIDIA Nemotron supplied the application's actual AI analyses through Nebius Token Factory. Ryan recorded the narration for the current review cut. Codex assisted the script, screen capture, audio levelling, subtitle preparation and editing; local Whisper supplied draft transcription. No cloned or synthetic voice is used in that cut. OpenAI image generation supplied conceptual cover artwork; the product gallery uses actual browser screenshots. Ryan Duffy owns the problem, design choices, evaluation acceptance and publication decisions.
 
 ## 29060 — Describe the level of learning you/your team derived from the project
 
@@ -157,4 +157,4 @@ Suggested: Yes. Owner must confirm. Practical learning included evidence provena
 
 
 
-Repository preparation update: https://github.com/rduffyuk/rootweaver-resolve is the private owner-review repository. It includes the build workflow, MIT license, research records and narrated review video. Public visibility, judge-facing demo access, YouTube upload and submission remain pending owner approval.
+Repository preparation update: https://github.com/rduffyuk/rootweaver-resolve is the private owner-review repository. It includes the build workflow, MIT license, research records and narrated review video. Public visibility, judge-facing demo access and final submission remain pending owner approval. The YouTube review upload is private.
