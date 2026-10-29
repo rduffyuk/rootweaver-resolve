@@ -2,7 +2,7 @@
 
 Prepared from the official event requirements retrieved on 29 October 2026. The project story, technologies, repository link, cover and screenshot gallery are saved in the [online draft](https://devpost.com/software/rootweaver-resolve). Eleven technical/free-text answers plus the track and Tavily selection are also saved and read back. Personal declarations and publication-dependent URL fields remain incomplete. No final submission has been made. The project page was inadvertently published by a general-editor gallery save; it is hidden from the portfolio but the owner accepted continuing to edit the project page. The revised 28272 clarification was saved through the hackathon draft form and read back. Proposed subjective ratings and personal declarations require owner review; they are not already attested.
 
-[Official event rules](https://nebiusglobalaihackathon.devpost.com/rules). The demo/test-build URL is required by the narrative rules for this track even though the API field metadata marks it optional. A public YouTube video of no more than three minutes is also required; its approved URL remains pending.
+[Official event rules](https://nebiusglobalaihackathon.devpost.com/rules). The demo/test-build URL is required by the narrative rules for this track even though the API field metadata marks it optional. A public YouTube video of no more than three minutes is also required. The approved 137.52-second video is now public: https://youtu.be/WQ6nVurVR9Q. This is the verified URL for the staged submission; this publication step did not edit the online Devpost form.
 
 ## 28261 — Submitter Type
 
@@ -157,4 +157,4 @@ Suggested: Yes. Owner must confirm. Practical learning included evidence provena
 
 
 
-Repository preparation update: https://github.com/rduffyuk/rootweaver-resolve is the private owner-review repository. It includes the build workflow, MIT license, research records and narrated review video. Public visibility, judge-facing demo access and final submission remain pending owner approval. The YouTube review upload is private.
+Repository preparation update: https://github.com/rduffyuk/rootweaver-resolve is the private owner-review repository. It includes the build workflow, MIT license, research records and narrated review video. Public visibility, judge-facing demo access and final submission remain pending owner approval. The approved [YouTube demonstration](https://youtu.be/WQ6nVurVR9Q) is public following owner authorisation on 29 October 2026.

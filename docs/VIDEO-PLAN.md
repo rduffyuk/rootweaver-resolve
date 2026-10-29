@@ -23,4 +23,4 @@ Ryan's original levelled voice track and caption files are reused byte-for-byte.
 
 The opening workbench replays five genuine historical model calls. The fresh HTTP panel is a separate supported runtime route, not a live continuation of the packet investigation. Public aliases, separate observation windows, four paired timings and model limitations remain visible.
 
-Review and publication are separate. Ryan subsequently authorised a private review upload on 29 October 2026; see [YouTube receipt](YOUTUBE-UPLOAD.md). Public release remains on hold.
+Ryan authorised the private review upload and then public visibility on 29 October 2026. The approved video is now [public on YouTube](https://youtu.be/WQ6nVurVR9Q), with narration, footage, thumbnail and captions unchanged; see the [publication receipt](YOUTUBE-UPLOAD.md).

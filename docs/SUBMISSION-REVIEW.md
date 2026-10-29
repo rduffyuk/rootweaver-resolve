@@ -1,7 +1,8 @@
 # Submission review pack — Resolve 0.5.0
 
 Prepared on 29 October 2026 for the Nebius x NVIDIA Global AI Hackathon.
-**Owner review. Repository/video publication and final submission remain on hold.**
+**Owner review. The approved video is public; repository publication, test-build
+access and final submission remain on hold.**
 
 **Project-page visibility:** Devpost's general editor published the project
 page on Save. It is hidden from the portfolio, but the owner subsequently accepted continuing to edit it; see the status below. Do not describe this package as wholly unpublished.
@@ -19,8 +20,10 @@ The hackathon entry remains DRAFT with no submitted date. During this polish pas
 saving the gallery through Devpost's general project editor unexpectedly changed
 the project page to `published` at 20:18:58 UTC. It was immediately hidden from
 the owner's portfolio; that does not restore draft visibility. The owner subsequently accepted keeping and editing this page; no support request was sent. The private repository
-and private review video remain separate from this project-page state.
-[YouTube review](https://youtu.be/WQ6nVurVR9Q) is **Private** with thumbnail and captions.
+remains separate from this project-page state.
+[YouTube demonstration](https://youtu.be/WQ6nVurVR9Q) is **Public** with thumbnail and
+captions, explicitly authorised by Ryan on 29 October 2026. See the
+[publication receipt](YOUTUBE-UPLOAD.md).
 
 Ryan accepted the current video and requested that it remain unchanged on
 29 October 2026. The README and project story now explain the investigation
@@ -31,7 +34,7 @@ review; it requires no new recording or change to the video, audio or captions.
 
 ## Open these first
 
-1. [Ryan's 2:18 demonstration](media/resolve-05-ryan-review.mp4)
+1. [Ryan's 2:18 demonstration on YouTube](https://youtu.be/WQ6nVurVR9Q)
 2. [Devpost story](../devpost-submission.md)
 3. [All official form answers](DEVPOST-FIELDS.md)
 4. [YouTube title, description and chapters](YOUTUBE-UPLOAD.md)
@@ -54,8 +57,8 @@ review; it requires no new recording or change to the video, audio or captions.
 
 ## Publication decisions still needed
 
-- Approve the revised README and project story. The current video is accepted and
-  unchanged; public video visibility and thumbnail approval remain separate.
+- Approve the revised README and project story. The current video is accepted,
+  unchanged and public with the existing thumbnail and captions.
 - Approve public repository visibility and an anonymously accessible test-build
   URL. A local preview and a private GitHub Actions artifact do not satisfy this.
 - Decide whether the downloadable test build with the documented opt-in runtime

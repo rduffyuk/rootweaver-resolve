@@ -1,11 +1,16 @@
-# YouTube review upload
+# YouTube publication receipt
 
-Visibility: **Private**, verified in YouTube Studio on 29 October 2026.
-[Watch in the owner account](https://youtu.be/WQ6nVurVR9Q) ·
+Visibility: **Public**, authorised by Ryan and verified in YouTube Studio on
+29 October 2026. YouTube’s unauthenticated oEmbed endpoint also returns HTTP 200
+for this video.
+[Watch on YouTube](https://youtu.be/WQ6nVurVR9Q) ·
 [Edit in YouTube Studio](https://studio.youtube.com/video/WQ6nVurVR9Q/edit)
 
 Uploaded with the cover thumbnail, chapters and English (United Kingdom) SRT subtitles.
-YouTube copyright check: no issues found. Public release requires a separate owner decision.
+YouTube copyright check at upload: no issues found. Publication changed visibility
+and removed the obsolete private-review paragraph from the description. The
+approved video, narration, thumbnail and captions are unchanged. Repository
+publication, test-build hosting and final Devpost submission remain separate.
 
 File: [Ryan-narrated demonstration](media/resolve-05-ryan-review.mp4), 137.52 seconds.
 The revised footage opens with the measured finding and model/evidence comparison. The original levelled voice track and caption timings are unchanged. Captions: [SRT](media/captions.srt).
@@ -51,6 +56,3 @@ Built with Python, JavaScript, SVG, Kubernetes evidence, dumpcap/TShark and
 NVIDIA Nemotron 3 Ultra via Nebius Token Factory. Ryan Duffy owns the problem,
 design and acceptance; OpenAI Codex assisted implementation and verification.
 Narration is Ryan's own recording, not a cloned or synthetic voice.
-
-Private owner-review upload. Public repository and test-build links will be
-verified and added only after publication approval.
