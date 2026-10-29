@@ -17,7 +17,7 @@ method inspectable, including the model's mistakes and unresolved questions.
 
 [MIT](LICENSE) · Python 3.12+ · No runtime dependencies · Version 0.5.0 · Public retained-evidence test build
 
-https://github.com/user-attachments/assets/7a714890-4fa9-4867-9038-e99ed3623cff
+https://github.com/user-attachments/assets/f84d90ae-19a2-4c2c-aebc-0d588876c647
 
 **[▶ Watch the narrated demonstration on YouTube](https://youtu.be/WQ6nVurVR9Q)** · [Download the video](docs/media/resolve-05-ryan-review.mp4)
 

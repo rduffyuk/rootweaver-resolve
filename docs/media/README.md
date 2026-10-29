@@ -24,12 +24,12 @@ The README plays the approved full MP4 through GitHub’s native attachment play
 The same video remains [public on YouTube](https://youtu.be/WQ6nVurVR9Q), with that
 link alongside the player. The repository is public following Ryan's 29 October publication instruction.
 
-Attachment: https://github.com/user-attachments/assets/7a714890-4fa9-4867-9038-e99ed3623cff
+Attachment: https://github.com/user-attachments/assets/f84d90ae-19a2-4c2c-aebc-0d588876c647
 
 Source: `resolve-05-ryan-review.mp4`, H.264, 1440 × 900, 137.52 seconds,
 5,800,666 bytes. SHA-256:
 `5126441f32ac0fb6f2794bc86e40dc771e7b2085d759207f9153cf031f169666`.
-Uploaded unchanged through this private repository’s Markdown editor on
+Re-uploaded unchanged through the now-public repository’s Markdown editor on
 29 October 2026. The attachment URL is placed on its own line so GitHub renders
 the native player. The retained GIF, local MP4, YouTube captions and original
 evidence remain available.
