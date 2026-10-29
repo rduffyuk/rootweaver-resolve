@@ -1,36 +1,6 @@
 # Submission review pack — Resolve 0.5.0
 
-Prepared on 29 October 2026 for the Nebius x NVIDIA Global AI Hackathon.
-**Owner review. The approved video is public; repository publication, test-build
-access and final submission remain on hold.**
-
-**Project-page visibility:** Devpost's general editor published the project
-page on Save. It is hidden from the portfolio, but the owner subsequently accepted continuing to edit it; see the status below. Do not describe this package as wholly unpublished.
-
-The official deadline is **30 October 2026, 17:00 UTC / London time**.
-[Official event](https://nebiusglobalaihackathon.devpost.com/) ·
-[Requirements](https://nebiusglobalaihackathon.devpost.com/rules)
-
-[Devpost draft](https://devpost.com/software/rootweaver-resolve) is saved with the
-project story, technologies, repository link, cover and three actual screenshots.
-Eleven technical/free-text answers plus track and Tavily selection were saved and
-read back. Proposed ratings still say owner review. Personal declarations and
-publication-dependent URL fields remain incomplete.
-The hackathon entry remains DRAFT with no submitted date. During this polish pass,
-saving the gallery through Devpost's general project editor unexpectedly changed
-the project page to `published` at 20:18:58 UTC. It was immediately hidden from
-the owner's portfolio; that does not restore draft visibility. The owner subsequently accepted keeping and editing this page; no support request was sent. The private repository
-remains separate from this project-page state.
-[YouTube demonstration](https://youtu.be/WQ6nVurVR9Q) is **Public** with thumbnail and
-captions, explicitly authorised by Ryan on 29 October 2026. See the
-[publication receipt](YOUTUBE-UPLOAD.md).
-
-Ryan accepted the current video and requested that it remain unchanged on
-29 October 2026. The README and project story now explain the investigation
-principles: incomplete context, bounded evidence collection, competing hypotheses
-and an experienced operator's review. Architecture, code and business-context
-integrations are explicitly future work. This wording revision needs owner
-review; it requires no new recording or change to the video, audio or captions.
+Public repository, downloadable test build, article and Ryan-narrated video are authorised for publication. The hackathon entry remains unsubmitted. See [publication handoff](PUBLICATION-HANDOFF.md) for the current URLs. Identity, eligibility and feedback answers were explicitly approved by Ryan; final submission remains a separate decision.
 
 ## Open these first
 
@@ -41,33 +11,23 @@ review; it requires no new recording or change to the video, audio or captions.
 5. [Build and verify](BUILD.md), [original research](../research/README.md) and
    [animated architecture](ARCHITECTURE.md)
 
-## Cover candidate
+## Conceptual anime cover
 
-![Resolve cover candidate — conceptual branding](media/resolve-cover.png)
+![Resolve cover candidate — conceptual branding](media/resolve-evidence-bench.png)
 
 ## Proposed Devpost gallery
 
 | Order | File | Caption |
 |---|---|---|
-| Cover | [Resolve cover](media/resolve-cover.png) | An agent investigates. You inspect the evidence. Conceptual branding. |
+| Cover | [Resolve cover](media/resolve-evidence-bench.png) | An agent investigates. You inspect the evidence. Conceptual branding. |
 | 1 | [Desktop workbench](media/desktop-overview.png) | The measured finding, proportional packet timing and four-part operator handover upfront. Genuine retained execution; playback does not make new calls. |
 | 2 | [Model and evidence](media/comparison-desktop.png) | The measured capture beside two post-run reviewer qualifications. These are not automatic corrections. |
 | 3 | [Mobile comparison](media/comparison-mobile.png) | Compare the model assessment with retained evidence in a mobile viewport. Physical-phone validation remains separate. |
 | 4, optional | [Evidence artwork](media/resolve-evidence-art.png) | Follow the checks. Challenge the conclusion. Conceptual illustration, not a product screenshot. |
 
-## Publication decisions still needed
+## Final owner action
 
-- Approve the revised README and project story. The current video is accepted,
-  unchanged and public with the existing thumbnail and captions.
-- Approve public repository visibility and an anonymously accessible test-build
-  URL. A local preview and a private GitHub Actions artifact do not satisfy this.
-- Decide whether the downloadable test build with the documented opt-in runtime
-  meets the desired judge experience, or whether a hosted replay is also wanted.
-  Fresh inference needs the operator's own key; the retained packet collector is
-  not portable. Do not claim a hosted live agent or automatic new collection.
-- Confirm submitter identity/residence, existing-project disclosure, eligibility
-  declarations and subjective feedback ratings in the field packet.
-- Authorise the final Devpost submission separately.
+Review the saved Devpost draft and authorise submission separately. Publication of the supporting materials does not submit the entry.
 
 ## Review criteria
 

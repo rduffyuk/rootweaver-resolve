@@ -1,6 +1,6 @@
 # Devpost field packet — 0.5.0 saved draft
 
-Prepared from the official event requirements retrieved on 29 October 2026. The story, technologies, cover, three product screenshots and approved YouTube video are saved in the [project page](https://devpost.com/software/rootweaver-resolve). The hackathon draft's separate video field is also saved and read back. Technical answers, individual identity, eligibility declarations and subjective feedback were saved and read back after Ryan's explicit confirmation. Only the public-code URL and judge-accessible demo/test-build URL remain pending publication authorization. The optional event city and optional file upload are intentionally empty. Final rules/terms acceptance and final submission have not been performed. The project page is public; the hackathon entry remains a draft and the GitHub repository remains private.
+Prepared from the official event requirements retrieved on 29 October 2026. The story, technologies, cover, three product screenshots and approved YouTube video are saved in the [project page](https://devpost.com/software/rootweaver-resolve). The hackathon draft's separate video field is also saved and read back. Technical answers, individual identity, eligibility declarations and subjective feedback were saved and read back after Ryan's explicit confirmation. Ryan has authorised public repository access, the downloadable test build and the article. The two URL fields are set to the links below as part of release verification. The optional event city and optional file upload are intentionally empty. Final rules/terms acceptance and final submission have not been performed. The project page is public; the hackathon entry remains a draft and the GitHub repository is public.
 
 [Official event rules](https://nebiusglobalaihackathon.devpost.com/rules). The demo/test-build URL is required by the narrative rules for this track even though the API field metadata marks it optional. A public YouTube video of no more than three minutes is also required. The approved 137.52-second video is now public: https://youtu.be/WQ6nVurVR9Q. This URL was saved and read back in both the public project and the separate hackathon draft video field on 29 October 2026. The current gallery captions were corrected to match their mobile and desktop images.
 
@@ -50,13 +50,13 @@ Rootweaver's private SRE and observation platform existed before this competitio
 
 Required · text
 
-PUBLICATION PENDING — insert the approved public standalone repository URL after verifying anonymous access, root LICENSE and setup instructions. Do not use a private platform repository.
+https://github.com/rduffyuk/rootweaver-resolve
 
 ## 28271 — Provide a URL to a working demo, hosted application, or test build of your Project.
 
 Optional in form metadata · text
 
-PUBLICATION PENDING — insert the approved working application or downloadable test-build URL and exact revision. Local loopback previews are not public URLs. The prepared source ZIP/wheel supports a downloadable test build.
+https://github.com/rduffyuk/rootweaver-resolve/releases/tag/v0.5.0 — version 0.5.0 downloadable retained-evidence viewer, with wheel, source archive and checksums.
 
 ## 28272 — Which model(s) did you use, and why did you choose that size/variant?
 
@@ -157,4 +157,4 @@ Yes. Approved by Ryan; saved and read back. Practical learning included evidence
 
 
 
-Repository preparation update: https://github.com/rduffyuk/rootweaver-resolve is the private owner-review repository. It includes the build workflow, MIT license, research records and narrated review video. Public visibility, judge-facing demo access and final submission remain pending owner approval. The approved [YouTube demonstration](https://youtu.be/WQ6nVurVR9Q) is public following owner authorisation on 29 October 2026.
+Supporting engineering article: https://rduffy.uk/writing/rootweaver-resolve/

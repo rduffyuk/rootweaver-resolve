@@ -2,6 +2,8 @@
 
 **An agent investigates. You inspect the evidence.**
 
+<img align="right" width="260" src="docs/media/resolve-evidence-bench.png" alt="Conceptual anime illustration: an engineer inspects diagnostic traces before acting.">
+
 Resolve helps SREs investigate incidents when the model has incomplete system
 context. It brings debugging checks, readable evidence and competing hypotheses
 together so an experienced operator can assess the conclusions and decide where
@@ -11,11 +13,11 @@ In the retained lab investigation, NVIDIA Nemotron 3 Ultra selected bounded
 checks and Rootweaver Observe supervised collection. The workspace makes that
 method inspectable, including the model's mistakes and unresolved questions.
 
-[**Run locally →**](#start-here--no-credentials-needed) · [**Watch Ryan’s 2:18 demo →**](https://youtu.be/WQ6nVurVR9Q) · [**Explore the architecture →**](docs/ARCHITECTURE.md)
+[**Download v0.5.0 →**](https://github.com/rduffyuk/rootweaver-resolve/releases/tag/v0.5.0) · [**Read the engineering story →**](https://rduffy.uk/writing/rootweaver-resolve/) · [**Run locally →**](#start-here--no-credentials-needed) · [**Watch Ryan’s 2:18 demo →**](https://youtu.be/WQ6nVurVR9Q) · [**Explore the architecture →**](docs/ARCHITECTURE.md)
 
-[MIT](LICENSE) · Python 3.12+ · No runtime dependencies · Version 0.5.0 · Private review candidate
+[MIT](LICENSE) · Python 3.12+ · No runtime dependencies · Version 0.5.0 · Public retained-evidence test build
 
-https://github.com/user-attachments/assets/7a714890-4fa9-4867-9038-e99ed3623cff
+https://github.com/user-attachments/assets/f84d90ae-19a2-4c2c-aebc-0d588876c647
 
 **[▶ Watch the narrated demonstration on YouTube](https://youtu.be/WQ6nVurVR9Q)** · [Download the video](docs/media/resolve-05-ryan-review.mp4)
 
@@ -187,10 +189,10 @@ For the pinned toolchain, CI, custody verification and a clean-wheel smoke check
 
 </details>
 
-## Owner-review candidate
+## Public release and competition scope
 
-The repository remains private for owner review. [Ryan’s narrated demonstration](https://youtu.be/WQ6nVurVR9Q) is public, with owner approval on 29 October 2026. The Devpost project-page visibility exception and unsubmitted hackathon entry are recorded in [the review pack](docs/SUBMISSION-REVIEW.md).
+The [v0.5.0 test build](https://github.com/rduffyuk/rootweaver-resolve/releases/tag/v0.5.0) includes a Python wheel, source archive and checksums. It runs locally with retained evidence; it is not a hosted live cluster agent. The repository and [Ryan's narrated demonstration](https://youtu.be/WQ6nVurVR9Q) are public. The [engineering article](https://rduffy.uk/writing/rootweaver-resolve/) explains the method, findings and limits. The Devpost hackathon entry remains unsubmitted pending Ryan's separate decision.
 
-The repository is prepared at [rduffyuk/rootweaver-resolve](https://github.com/rduffyuk/rootweaver-resolve), **private for owner review**. Public repository access and a judge-facing working demo/test-build URL remain pending owner approval. The public narrated video uses Ryan Duffy's own recording, aligned to actual browser footage. The editable script and corrected captions are retained; the earlier synthetic-voice cut was rejected. A local loopback URL is not a judge-facing URL.
+The anime artwork is conceptual editorial illustration. The workspace screenshots, original experiment artifacts and unchanged narration remain separately identified. See [the media record](docs/media/README.md).
 
 Rootweaver predates the competition. Resolve's application, inference integration, evidence controls and visual investigation flow are competition-period work. Ryan Duffy owns the problem, design and acceptance; OpenAI Codex assisted implementation and verification. NVIDIA Nemotron produced the actual AI analyses through Nebius Token Factory. No fine-tuning was performed. MIT covers this prepared standalone slice. See LICENSE, SOURCE-ORIGINS.json, [license and attribution](docs/LICENSE-AND-ATTRIBUTION.md) and [development disclosure](docs/DEVELOPMENT-DISCLOSURE.md).

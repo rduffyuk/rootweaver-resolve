@@ -5,15 +5,14 @@ has no third-party runtime dependencies. Node is needed only for presentation
 tests; no npm install or frontend bundler is needed.
 
 ```sh
-git clone git@github.com:rduffyuk/rootweaver-resolve.git
+git clone https://github.com/rduffyuk/rootweaver-resolve.git
 cd rootweaver-resolve
 make setup
 make test verify build smoke
 make run
 ```
 
-The repository is private during owner review, so cloning requires authorized
-GitHub access. Open http://127.0.0.1:8766/ after `make run`. For a different port,
+The repository is public; no GitHub account is needed to clone or download it. Open http://127.0.0.1:8766/ after `make run`. For a different port,
 run `.venv/bin/resolve-demo --port 8793`. These commands replay retained evidence
 and make no inference request. The separate opt-in route is documented in the
 [README](../README.md#run-a-fresh-model-analysis).
@@ -56,3 +55,15 @@ Build output goes to `dist/`, which is ignored by Git. Keep API credentials and
 fresh-inference reservation state outside this repository. Do not enable live
 inference in CI. Updating a freeze is a separate reviewed change, not a way to
 silence an integrity failure.
+
+## Download the test build
+
+Download `rootweaver_resolve-0.5.0-py3-none-any.whl` and `SHA256SUMS` from the [v0.5.0 release](https://github.com/rduffyuk/rootweaver-resolve/releases/tag/v0.5.0). Compare the wheel's SHA-256 with its entry in that file (`shasum -a 256` on macOS or `sha256sum` on Linux). In the download directory:
+
+```sh
+python3.12 -m venv .venv
+.venv/bin/python -m pip install --no-index --no-deps rootweaver_resolve-0.5.0-py3-none-any.whl
+.venv/bin/resolve-demo
+```
+
+Open http://127.0.0.1:8766/. On Windows, use `py -3.12 -m venv .venv`, `.venv\Scripts\python` and `.venv\Scripts\resolve-demo`; Windows execution has not been qualified in this release. The default replay requires no API credentials and executes no cluster commands. Python 3.12+ is required. Use the full source ZIP for the research archive and offline packet calculations; TShark is only needed for those calculations.
