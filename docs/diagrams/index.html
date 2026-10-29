@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self'; style-src 'self'; object-src 'none'; base-uri 'none'">
+<title>Resolve — Architecture in motion</title>
+<link rel="stylesheet" href="review.css">
+<script defer src="review.js"></script>
+<main>
+  <p class="eyebrow">ROOTWEAVER RESOLVE / ARCHITECTURE REVIEW</p>
+  <h1>Follow the investigation.<br>See who does what.</h1>
+  <p class="intro">Three Atlas views connect model choices, debugging tools and inspectable evidence. The last view shows exactly what the standalone package runs today.</p>
+  <div class="toolbar">
+    <button id="motion" type="button" aria-pressed="false">Use still diagrams</button>
+    <button id="replay" type="button">Replay motion</button>
+    <span id="state" role="status">Direction only. Animation stops after 4.8 seconds.</span>
+  </div>
+  <nav aria-label="Diagram navigation"><a href="#loop">01 · Investigation loop</a><a href="#case">02 · Actual lab sequence</a><a href="#package">03 · Standalone package</a></nav>
+  <p class="pan-hint">Swipe each diagram sideways to follow the flow. With a keyboard, focus the diagram and use the arrow keys.</p>
+  <article id="loop">
+    <h2>01 · The investigation loop</h2>
+    <p>Ultra chooses an available check. The trusted host executes it within a fixed scope. The human can inspect both the full captured output and the smaller input the model actually saw.</p>
+    <div class="canvas" tabindex="0" role="region" aria-label="Investigation loop diagram; scroll horizontally on a small screen"><img data-view="investigation-loop" src="investigation-loop.svg" alt="Historical lab loop: Ultra proposes a check ID; the host executes fixed scoped tools; complete evidence is retained; a bounded projection returns for reassessment; the human reviews the evidence and public assessment."></div>
+    <p class="links"><a href="investigation-loop.svg">Open full-size SVG</a> · <a href="investigation-loop.static.svg">Static SVG</a> · <a href="investigation-loop.mmd">Editable Mermaid</a></p>
+  </article>
+  <article id="case">
+    <h2>02 · What happened in the packet investigation</h2>
+    <p>The model worked through four checks across five calls. The useful result was a narrower question about delayed server response, with the unresolved cause and the model's timing overcount left visible.</p>
+    <div class="canvas" tabindex="0" role="region" aria-label="Actual investigation sequence; scroll horizontally on a small screen"><img data-view="packet-investigation" src="packet-investigation.svg" alt="Actual retained order: client logs, Service and endpoints, TCP capture, Pod status, human handover. Four complete timings show server data around 2001 milliseconds after client payload and client FIN around 801 milliseconds. Cause unresolved."></div>
+    <p class="links"><a href="packet-investigation.svg">Open full-size SVG</a> · <a href="packet-investigation.static.svg">Static SVG</a> · <a href="packet-investigation.mmd">Editable Mermaid</a></p>
+  </article>
+  <article id="package">
+    <h2>03 · What runs when someone installs Resolve</h2>
+    <p>Opening the workspace reads local retained records. A separate, explicitly enabled action sends a fixed HTTP evidence bundle to Ultra. It produces a fresh analysis, not a new collection from a cluster.</p>
+    <div class="canvas" tabindex="0" role="region" aria-label="Standalone runtime paths; scroll horizontally on a small screen"><img data-view="standalone-paths" src="standalone-paths.svg" alt="Default: browser reads the loopback server and retained local assets. Opt-in: explicit POST passes server-side admission and a durable reservation before Nebius inference; result receipts remain separate. No cluster collector or remediation endpoint is shipped."></div>
+    <p class="links"><a href="standalone-paths.svg">Open full-size SVG</a> · <a href="standalone-paths.static.svg">Static SVG</a> · <a href="standalone-paths.mmd">Editable Mermaid</a></p>
+  </article>
+  <footer>Architecture candidate for owner review. Solid arrows show actions; dotted arrows show returned evidence. Animation is illustrative, never a claim of live activity. The source map and limits are in <a href="../ARCHITECTURE.md">the architecture document</a>.</footer>
+</main>
+</html>

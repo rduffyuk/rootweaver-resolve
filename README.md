@@ -2,7 +2,7 @@
 
 **An agent investigates. An SRE can inspect every check.**
 
-[MIT license](LICENSE) · [Build and CI](docs/BUILD.md) · [Research and original outputs](research/README.md) · [Narrated review video](docs/media/resolve-05-ryan-review.mp4)
+[MIT license](LICENSE) · [Build and CI](docs/BUILD.md) · [Visual architecture](docs/ARCHITECTURE.md) · [Research and original outputs](research/README.md) · [Narrated review video](docs/media/resolve-05-ryan-review.mp4)
 
 ![Resolve evidence workbench](docs/media/desktop-overview.png)
 
@@ -25,6 +25,12 @@ In thirty seconds: select **TCP capture**. Four complete timings show first serv
 The five genuine Ultra calls and four executed checks happened during the retained lab run. This exported workbench is playback: clicking it makes no provider or cluster request. Commands contain public aliases, so a human must substitute authorised targets to reproduce the method. A new capture observes a new time window. The application includes all 45 decoded frames, 74 captured log records, five model exchanges and the complete sanitised execution journal. This repository also includes the [original lab PCAP and unaliased model exchanges](research/packet-lab/README.md) for offline research inspection.
 
 **Other cases & fresh HTTP analysis** opens the existing four-case console. Its seven historical model responses remain byte-identical. Its optional inference action below analyses a fixed HTTP evidence bundle; it does not run a new packet investigation. The earlier guided checks are authored navigation, whereas the packet investigation's four checks were selected by Ultra from a fixed catalogue.
+
+## See how the investigation works
+
+![Resolve investigation architecture](docs/diagrams/investigation-loop.svg)
+
+[Visual architecture and source map](docs/ARCHITECTURE.md) · [Actual investigation sequence](docs/diagrams/packet-investigation.svg) · [What the standalone package runs](docs/diagrams/standalone-paths.svg) · [Static overview](docs/diagrams/investigation-loop.static.svg)
 
 ## Run a fresh model analysis
 
@@ -62,7 +68,7 @@ The packet case is a disclosed sanitised derivative, including its five model an
 
 Logs and packets were collected in different windows: the packet timings are not a correlation to those same six log requests. One stream begins mid-connection; another ends before a response. The model's five-pair claim and its unsupported timeout recommendation remain visible. The workbench is not a general claim validator or a production RCA system.
 
-The standalone export needs no private Rootweaver services. No model weights or credentials are bundled. See [privacy](docs/PRIVACY.md), [limits](docs/LIMITATIONS.md) and the [existing four-case console architecture](docs/ARCHITECTURE.md). That architecture document describes the earlier console; the new workbench is a static replay of the separately retained model-selected investigation.
+The standalone export needs no private Rootweaver services. No model weights or credentials are bundled. See [privacy](docs/PRIVACY.md), [limits](docs/LIMITATIONS.md) and the [visual architecture](docs/ARCHITECTURE.md), which separates the retained lab loop, the case console and the standalone runtime.
 
 ## Verify and build
 

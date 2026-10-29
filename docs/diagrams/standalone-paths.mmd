@@ -1,0 +1,15 @@
+flowchart TD
+  browser["Investigation UI — Browser"]
+  server["Loopback server — Python standard library"]
+  bundle["Retained bundle — Local files"]
+  request["Explicit fresh request — Other cases → HTTP analysis"]
+  guard["Server-side admission — Credentials never enter the browser"]
+  provider["Nemotron Ultra — Nebius Token Factory"]
+  browser -->|"read UI"| server
+  server -->|"read files"| bundle
+  bundle -->|"retained data"| server
+  server -->|"render"| browser
+  request -->|"explicit POST"| guard
+  guard -->|"fixed HTTPS request"| provider
+  provider -->|"new answer"| guard
+  guard -->|"polled result"| request

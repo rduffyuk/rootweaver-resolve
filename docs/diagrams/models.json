@@ -1,0 +1,724 @@
+{
+  "style": "Rootweaver Atlas",
+  "owner": "docs/ARCHITECTURE.md",
+  "diagrams": [
+    {
+      "id": "investigation-loop",
+      "kicker": "INVESTIGATION DESIGN",
+      "title": "Give the model tools. Keep the method visible.",
+      "subtitle": "The retained lab loop: an available check is chosen, executed, recorded and reassessed.",
+      "description": "Nemotron Ultra proposes a check ID. The host validates it and executes fixed scoped tooling. Complete output is retained, a bounded projection returns to the model, and the human reviews the method and remaining uncertainty. This is the historical lab implementation; the standalone app replays its records.",
+      "height": 820,
+      "groups": [
+        {
+          "x": 44,
+          "y": 158,
+          "w": 1192,
+          "h": 514,
+          "label": "RETAINED LAB EXECUTION · not a new collection from the standalone viewer"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "model",
+          "x": 64,
+          "y": 218,
+          "title": "Nemotron Ultra",
+          "role": "Nebius Token Factory",
+          "detail": [
+            "Competing hypotheses",
+            "Chooses an available check ID"
+          ],
+          "icon": "model"
+        },
+        {
+          "id": "host",
+          "x": 484,
+          "y": 218,
+          "title": "Trusted host",
+          "role": "Scope and execution authority",
+          "detail": [
+            "Validates choice and citations",
+            "Binds target, arguments and limits"
+          ],
+          "icon": "shield"
+        },
+        {
+          "id": "tools",
+          "x": 904,
+          "y": 218,
+          "title": "Debugging tools",
+          "role": "Read-only checks / bounded capture",
+          "detail": [
+            "kubectl logs · resources",
+            "Observe + dumpcap / TShark"
+          ],
+          "icon": "terminal"
+        },
+        {
+          "id": "record",
+          "x": 904,
+          "y": 478,
+          "title": "Retained evidence",
+          "role": "Complete captured output",
+          "detail": [
+            "Sources, timestamps and receipts",
+            "Logs, packets and model exchanges"
+          ],
+          "icon": "database"
+        },
+        {
+          "id": "input",
+          "x": 484,
+          "y": 478,
+          "title": "Model-facing evidence",
+          "role": "A disclosed, bounded projection",
+          "detail": [
+            "Only evidence acquired so far",
+            "Capture and input limits stay visible"
+          ],
+          "icon": "network"
+        },
+        {
+          "id": "human",
+          "x": 64,
+          "y": 478,
+          "title": "Human SRE",
+          "role": "Interpretation and operational judgment",
+          "detail": [
+            "Inspect commands and source data",
+            "Review uncertainty and next steps"
+          ],
+          "icon": "human"
+        }
+      ],
+      "edges": [
+        {
+          "points": [
+            [
+              374,
+              290
+            ],
+            [
+              484,
+              290
+            ]
+          ],
+          "label": "check ID",
+          "label_position": [
+            429,
+            267
+          ],
+          "kind": "action",
+          "label_width": 100
+        },
+        {
+          "points": [
+            [
+              794,
+              290
+            ],
+            [
+              904,
+              290
+            ]
+          ],
+          "label": "fixed call",
+          "label_position": [
+            849,
+            267
+          ],
+          "kind": "action",
+          "label_width": 100
+        },
+        {
+          "points": [
+            [
+              1060,
+              362
+            ],
+            [
+              1060,
+              478
+            ]
+          ],
+          "label": "full output",
+          "label_position": [
+            1140,
+            426
+          ],
+          "kind": "result",
+          "label_width": 102
+        },
+        {
+          "points": [
+            [
+              904,
+              550
+            ],
+            [
+              794,
+              550
+            ]
+          ],
+          "label": "project",
+          "label_position": [
+            849,
+            528
+          ],
+          "kind": "result",
+          "label_width": 90
+        },
+        {
+          "points": [
+            [
+              640,
+              478
+            ],
+            [
+              640,
+              420
+            ],
+            [
+              310,
+              420
+            ],
+            [
+              310,
+              362
+            ]
+          ],
+          "label": "new evidence → reassess",
+          "label_position": [
+            482,
+            407
+          ],
+          "kind": "result",
+          "label_width": 245
+        },
+        {
+          "points": [
+            [
+              160,
+              362
+            ],
+            [
+              160,
+              478
+            ]
+          ],
+          "label": "public assessment",
+          "label_position": [
+            174,
+            445
+          ],
+          "kind": "result",
+          "label_width": 162
+        },
+        {
+          "points": [
+            [
+              1060,
+              622
+            ],
+            [
+              1060,
+              650
+            ],
+            [
+              220,
+              650
+            ],
+            [
+              220,
+              622
+            ]
+          ],
+          "label": "inspect complete captured records",
+          "label_position": [
+            645,
+            646
+          ],
+          "kind": "result",
+          "label_width": 302
+        }
+      ],
+      "annotations": [
+        {
+          "x": 64,
+          "y": 703,
+          "text": "Model statements remain advisory. Separate selector rules establish only the narrow finding in the earlier case console.",
+          "size": 15
+        }
+      ],
+      "footer": "A bounded prototype · Model-selected checks are not arbitrary shell access · Animation is illustrative, not live traffic."
+    },
+    {
+      "id": "packet-investigation",
+      "kicker": "ONE RETAINED INVESTIGATION",
+      "title": "From a timeout to a better next question.",
+      "subtitle": "Five genuine Ultra calls. Four executed checks. The remaining cause stays open.",
+      "description": "The actual sequence is client logs, Service and EndpointSlice inspection, bounded TCP capture, workload status, and human handover. Four complete packet timings show server data later than client FIN. The reason for delayed server processing remains unproven.",
+      "height": 720,
+      "groups": [
+        {
+          "x": 44,
+          "y": 155,
+          "w": 1192,
+          "h": 286,
+          "label": "OBSERVED ORDER · Each returned observation enters the next model assessment"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "logs",
+          "x": 64,
+          "y": 218,
+          "title": "Client logs",
+          "role": "01 · Ultra selects logs",
+          "detail": [
+            "Timeout symptoms",
+            "74 lines captured",
+            "6 in the model window"
+          ],
+          "icon": "terminal",
+          "w": 208,
+          "h": 174,
+          "title_size": 18
+        },
+        {
+          "id": "services",
+          "x": 300,
+          "y": 218,
+          "title": "Service / endpoint",
+          "role": "02 · Inspect selection",
+          "detail": [
+            "Selected backend",
+            "and resource state",
+            "Selection less likely"
+          ],
+          "icon": "network",
+          "w": 208,
+          "h": 174,
+          "title_size": 16
+        },
+        {
+          "id": "packets",
+          "x": 536,
+          "y": 218,
+          "title": "TCP capture",
+          "role": "03 · Inspect timings",
+          "detail": [
+            "45 decoded frames",
+            "4 complete pairs",
+            "Response arrives late"
+          ],
+          "icon": "clock",
+          "w": 208,
+          "h": 174,
+          "title_size": 18
+        },
+        {
+          "id": "pods",
+          "x": 772,
+          "y": 218,
+          "title": "Pod status",
+          "role": "04 · Check workloads",
+          "detail": [
+            "Running / Ready",
+            "does not explain",
+            "application delay"
+          ],
+          "icon": "terminal",
+          "w": 208,
+          "h": 174,
+          "title_size": 18
+        },
+        {
+          "id": "handover",
+          "x": 1008,
+          "y": 218,
+          "title": "Human review",
+          "role": "05 · Handover",
+          "detail": [
+            "No approved checks",
+            "remain in catalogue",
+            "Cause unresolved"
+          ],
+          "icon": "human",
+          "w": 208,
+          "h": 174,
+          "title_size": 17
+        }
+      ],
+      "edges": [
+        {
+          "points": [
+            [
+              272,
+              290
+            ],
+            [
+              300,
+              290
+            ]
+          ],
+          "label": "",
+          "label_position": null,
+          "kind": "action"
+        },
+        {
+          "points": [
+            [
+              508,
+              290
+            ],
+            [
+              536,
+              290
+            ]
+          ],
+          "label": "",
+          "label_position": null,
+          "kind": "action"
+        },
+        {
+          "points": [
+            [
+              744,
+              290
+            ],
+            [
+              772,
+              290
+            ]
+          ],
+          "label": "",
+          "label_position": null,
+          "kind": "action"
+        },
+        {
+          "points": [
+            [
+              980,
+              290
+            ],
+            [
+              1008,
+              290
+            ]
+          ],
+          "label": "",
+          "label_position": null,
+          "kind": "action"
+        }
+      ],
+      "annotations": [
+        {
+          "x": 64,
+          "y": 480,
+          "text": "Observed: first server data ≈ 2,001 ms after client payload; client FIN ≈ 801 ms.",
+          "size": 19,
+          "weight": 600,
+          "color": "ink"
+        },
+        {
+          "x": 64,
+          "y": 516,
+          "text": "Useful narrowing: the captured endpoint is reachable; server data arrives after the client sends FIN.",
+          "size": 17
+        },
+        {
+          "x": 64,
+          "y": 550,
+          "text": "Still unknown: why the server is delayed, and whether changing the client timeout would be correct.",
+          "size": 17
+        },
+        {
+          "x": 64,
+          "y": 584,
+          "text": "Original error preserved: Ultra claimed five complete pairs; independent packet inspection finds four.",
+          "size": 16
+        }
+      ],
+      "footer": "Logs and packets cover different windows · No per-request correlation · No model-directed remediation."
+    },
+    {
+      "id": "standalone-paths",
+      "kicker": "WHAT THE PACKAGE RUNS",
+      "title": "Playback by default. Fresh analysis by choice.",
+      "subtitle": "The default viewer needs no credentials. Fresh inference uses one fixed HTTP evidence bundle.",
+      "description": "Default loopback playback reads local retained assets and makes no provider or cluster request. An explicit fresh-analysis action goes through same-origin validation, frozen inputs and a durable reservation before a Nebius Token Factory request. Results and receipts are separate from historical records. There is no cluster collector or remediation endpoint in this package.",
+      "height": 860,
+      "groups": [
+        {
+          "x": 44,
+          "y": 155,
+          "w": 1192,
+          "h": 250,
+          "label": "DEFAULT · LOCAL PLAYBACK · Browser, server and data on the operator’s machine"
+        },
+        {
+          "x": 44,
+          "y": 440,
+          "w": 770,
+          "h": 230,
+          "label": "OPT-IN · TRUSTED LOCAL SERVER · Private key and reservation state stay here"
+        },
+        {
+          "x": 892,
+          "y": 440,
+          "w": 344,
+          "h": 230,
+          "label": "EXTERNAL PROVIDER",
+          "dash": "6 5"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "browser",
+          "x": 64,
+          "y": 218,
+          "title": "Investigation UI",
+          "role": "Browser",
+          "detail": [
+            "Follow the recorded checks",
+            "Open complete evidence"
+          ],
+          "icon": "human"
+        },
+        {
+          "id": "server",
+          "x": 484,
+          "y": 218,
+          "title": "Loopback server",
+          "role": "Python standard library",
+          "detail": [
+            "Serve static workbench assets",
+            "No private platform dependency"
+          ],
+          "icon": "terminal"
+        },
+        {
+          "id": "bundle",
+          "x": 904,
+          "y": 218,
+          "title": "Retained bundle",
+          "role": "Local files",
+          "detail": [
+            "Captured evidence + old answers",
+            "Separate manifests and review notes"
+          ],
+          "icon": "database"
+        },
+        {
+          "id": "request",
+          "x": 64,
+          "y": 498,
+          "title": "Explicit fresh request",
+          "role": "Other cases → HTTP analysis",
+          "detail": [
+            "Inspect the exact outgoing input",
+            "Human starts the request"
+          ],
+          "icon": "human"
+        },
+        {
+          "id": "guard",
+          "x": 484,
+          "y": 498,
+          "title": "Server-side admission",
+          "role": "Credentials never enter the browser",
+          "detail": [
+            "Frozen files · durable reservation",
+            "Model / price preflight · no retries"
+          ],
+          "icon": "shield"
+        },
+        {
+          "id": "provider",
+          "x": 904,
+          "y": 498,
+          "title": "Nemotron Ultra",
+          "role": "Nebius Token Factory",
+          "detail": [
+            "Fixed HTTP evidence input",
+            "A new advisory answer"
+          ],
+          "icon": "model"
+        }
+      ],
+      "edges": [
+        {
+          "points": [
+            [
+              374,
+              265
+            ],
+            [
+              484,
+              265
+            ]
+          ],
+          "label": "read UI",
+          "label_position": [
+            429,
+            245
+          ],
+          "kind": "action",
+          "label_width": 94
+        },
+        {
+          "points": [
+            [
+              794,
+              265
+            ],
+            [
+              904,
+              265
+            ]
+          ],
+          "label": "read files",
+          "label_position": [
+            849,
+            245
+          ],
+          "kind": "action",
+          "label_width": 100
+        },
+        {
+          "points": [
+            [
+              904,
+              340
+            ],
+            [
+              794,
+              340
+            ]
+          ],
+          "label": "data",
+          "label_position": [
+            849,
+            326
+          ],
+          "kind": "result",
+          "label_width": 75
+        },
+        {
+          "points": [
+            [
+              484,
+              340
+            ],
+            [
+              374,
+              340
+            ]
+          ],
+          "label": "render",
+          "label_position": [
+            429,
+            326
+          ],
+          "kind": "result",
+          "label_width": 78
+        },
+        {
+          "points": [
+            [
+              374,
+              550
+            ],
+            [
+              484,
+              550
+            ]
+          ],
+          "label": "POST",
+          "label_position": [
+            429,
+            530
+          ],
+          "kind": "action",
+          "label_width": 85
+        },
+        {
+          "points": [
+            [
+              794,
+              550
+            ],
+            [
+              904,
+              550
+            ]
+          ],
+          "label": "HTTPS",
+          "label_position": [
+            849,
+            530
+          ],
+          "kind": "action",
+          "label_width": 88
+        },
+        {
+          "points": [
+            [
+              1060,
+              642
+            ],
+            [
+              1060,
+              702
+            ],
+            [
+              642,
+              702
+            ],
+            [
+              642,
+              642
+            ]
+          ],
+          "label": "answer + receipt",
+          "label_position": [
+            860,
+            697
+          ],
+          "kind": "result",
+          "label_width": 168
+        },
+        {
+          "points": [
+            [
+              484,
+              620
+            ],
+            [
+              374,
+              620
+            ]
+          ],
+          "label": "poll result",
+          "label_position": [
+            429,
+            608
+          ],
+          "kind": "result",
+          "label_width": 103
+        }
+      ],
+      "annotations": [
+        {
+          "x": 64,
+          "y": 738,
+          "text": "New results are separate from the historical answers. No cluster collector or remediation endpoint is shipped.",
+          "size": 16
+        }
+      ],
+      "footer": "Current standalone source · Fresh inference is not new telemetry or a new packet investigation · Local server only."
+    }
+  ]
+}

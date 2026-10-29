@@ -6,6 +6,8 @@ includes useful answers, contradictions, rejected outputs and unsuccessful
 qualification. It is a selected research export, not a claim that every private
 development attempt is included.
 
+[Animated investigation sequence](../docs/diagrams/packet-investigation.svg) · [Architecture and source map](../docs/ARCHITECTURE.md)
+
 ## Start with the evidence, not a score
 
 | Experiment | Included records | What it establishes and what it does not |

@@ -1,0 +1,10 @@
+flowchart TD
+  logs["Client logs — 01 · Ultra selects logs"]
+  services["Service / endpoint — 02 · Inspect selection"]
+  packets["TCP capture — 03 · Inspect timings"]
+  pods["Pod status — 04 · Check workloads"]
+  handover["Human review — 05 · Handover"]
+  logs -->|"reassess and choose"| services
+  services -->|"reassess and choose"| packets
+  packets -->|"reassess and choose"| pods
+  pods -->|"handover"| handover

@@ -1,0 +1,15 @@
+{
+  "schema": "resolve-atlas-diagrams/v1",
+  "source_sha256": "6b8312777a73aca1d5b03eb360f968bef2b27ef25ff3039c2844262bb2d15bcf",
+  "renderer_sha256": "a829c20b24057adb475ce4b0e93f1117e6ab699e1690ef3706eb91c0eff70851",
+  "files": {
+    "investigation-loop.svg": "223d9ef7c634ed13c15b5cd18388b825826b8424d24fe04dc1db700d03c63abd",
+    "investigation-loop.static.svg": "52188ed35a0f91460f303109c15ad115f71235276c131ab3c82a821406319d89",
+    "packet-investigation.svg": "9a0aedc4d4ffd3435f74ca3d082fed4dd3af2a6953977c9294ce16788cd83426",
+    "packet-investigation.static.svg": "b7e0b1a19e192aedb1bc541da5e7aab12ff02621a9bc8475e334b18ec11d379d",
+    "standalone-paths.svg": "342066bcf1b56d67d6380c8ddac9adca016a6823e080057d68e596a1aa2d7094",
+    "standalone-paths.static.svg": "8e9e5158bba125ed4a40406d1e0e84be6f342c1b0a308f74fd751afb8558cc4f"
+  },
+  "animation": "Illustrative direction; stops after 4.8 seconds; suppressed for reduced motion and print",
+  "owner_acceptance": "pending"
+}
