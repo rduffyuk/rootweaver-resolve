@@ -20,4 +20,3 @@ build-backend = "hatchling.build"
 packages = ["src/rootweaver_resolve"]
 [tool.hatch.build.targets.sdist]
 include = ["/src", "/tests", "/scripts", "/reference", "/research", "/docs", "/README.md", "/CONTRIBUTING.md", "/LICENSE", "/pyproject.toml", "/requirements-build.txt", "/Makefile", "/AGENTS.md", "/SOURCE-ORIGINS.json", "/demo-freeze.json", "/demo-freeze.sha256", "/LIVE-FREEZE.sha256", "/devpost-submission.md"]
-exclude = ["/docs/media/*.mp4"]

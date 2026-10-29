@@ -1,6 +1,6 @@
 # Rootweaver Resolve — inspect the investigation
 
-Version 0.5.0 owner-review draft. The story and gallery are saved in the [Devpost draft](https://devpost.com/software/rootweaver-resolve). Public release and final submission remain on hold.
+Version 0.5.0 owner-review draft. The story and gallery are saved in the [Devpost draft](https://devpost.com/software/rootweaver-resolve). Public release and final submission remain on hold. The hackathon entry is still draft; the project page was inadvertently published by a general-editor gallery save and hidden from the portfolio. The owner accepted continuing to edit this project page; the hackathon entry remains unsubmitted. See docs/SUBMISSION-REVIEW.md.
 
 **An agent investigates. You inspect the evidence.**
 
@@ -14,13 +14,13 @@ I am an SRE. Agents can read logs convincingly, but their suggested fixes can co
 
 Resolve gives NVIDIA Nemotron 3 Ultra a fixed catalogue of scoped checks. In the demonstrated laboratory run, Ultra selected client logs, Service/EndpointSlice inspection, a bounded TCP capture and pod status, then handed the unresolved investigation to a human. Observe supervised collection; the controller constrained the targets and budgets. The model could not execute arbitrary commands or remediate.
 
-The evidence workbench presents readable log rows, resource snapshots and TCP conversation timings beside the evolving hypotheses. Every check exposes its recorded command, output, model input and accepted assessment. A human can follow the method and access complete captured records without having to read JSON first.
+The workbench opens with the concrete finding and a proportional packet timing diagram. Established observations, weakened explanations, remaining uncertainty and the next suggested investigation are visible together. Readable log rows, resource snapshots and TCP conversations remain beside the evolving hypotheses. Every check exposes its recorded command, output, model input and accepted assessment. A human can follow the method and access complete captured records without having to read JSON first.
 
 ## The demonstration
 
 A dependency times out while readiness stays green. Service evidence weakens an endpoint-selection explanation. Packet evidence shows successful exchanges and four complete timings: first server data around 2,001 ms after client payload, after client FIN around 801 ms. The investigation narrows toward response delay and client waiting budget, but it does not establish the underlying latency cause or the correct timeout.
 
-The model overstated five complete timings and called the timeout too aggressive. Resolve preserves those statements and shows explicit reviewer qualifications. The video and default viewer replay genuine prior execution; they do not imply that playback runs new commands or inference. Public evidence is an explicitly sanitised derivative.
+The model overstated five complete timings and called the timeout too aggressive. A side-by-side model/evidence comparison preserves those statements and shows the reviewer qualifications. These were added after the run, not detected automatically by the agent. The practical consequence is explicit: these observations do not yet justify changing the timeout. Check its configuration and intended service budget, then select a scoped server-side trace to locate the wait; that follow-up has not run. The video and default viewer replay genuine prior execution; they do not imply that playback runs new commands or inference. The viewer uses an explicitly aliased derivative. The repository also includes the original lab PCAP, retained model requests and public answers, and commands to reproduce the four timings offline. The earlier log window and later packet window are not correlated request by request.
 
 ## How we built it
 

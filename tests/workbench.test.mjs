@@ -7,6 +7,18 @@ const root=process.env.RESOLVE_WORKSPACE??fileURLToPath(new URL('../src/rootweav
 const {availableReceipts,logRows,streamRows,hypothesisComparison,assessmentFor,boundReview}=await import(root+'/workbench-data.mjs');
 const raw=readFileSync(root+'/data/investigation/session.json','utf8'),session=JSON.parse(raw);
 const notes=JSON.parse(readFileSync(root+'/data/investigation/review-notes.json'));
+const {investigationSummary}=await import(root+'/workbench-summary.mjs');
+test('finding overview cannot leak future packet evidence into earlier checks',()=>{
+  for(const index of [0,1]){const s=investigationSummary(session,index);assert.equal(s.packet,undefined);assert.equal(s.sample,undefined);assert.equal(s.complete.length,0);}
+  assert.equal(investigationSummary(session,2).checks,3);
+});
+test('finding overview derives coverage and direction from the available capture',()=>{
+  const s=investigationSummary(session,4);assert.equal(s.complete.length,4);assert.equal(s.streams.length,6);assert.equal(s.laterThanFin,true);assert.equal(s.final,true);
+  const changed=structuredClone(session),packet=changed.steps.find(s=>s.receipt?.check_id==='packets').receipt;
+  packet.model_data.streams[0].first_server_payload_after_client_ms=100;
+  assert.equal(investigationSummary(changed,4).laterThanFin,false);
+  assert.equal(investigationSummary(changed,4).sample.response,100);
+});
 test('past checks cannot see later observations',()=>{assert.deepEqual(availableReceipts(session,0).map(r=>r.check_id),['logs']);assert.deepEqual(availableReceipts(session,1).map(r=>r.check_id),['logs','services']);assert.equal(availableReceipts(session,4).length,4);});
 test('after-check assessment uses next accepted answer, not pre-check proposal',()=>{assert.equal(assessmentFor(session.steps,1).index,3);assert.equal(hypothesisComparison(session.steps,1).find(h=>h.id==='svc-misconfig').after,'weakened');assert.equal(hypothesisComparison(session.steps,0).find(h=>h.id==='dep-unhealthy').after,'unresolved');});
 test('all logs preserved, model window is exact, filters cannot expand that window',()=>{const r=availableReceipts(session,4)[0];assert.equal(logRows(r,true).length,74);assert.deepEqual(logRows(r).map(x=>x.row),[69,70,71,72,73,74]);assert.equal(logRows(r,false,'TimeoutError').length,6);assert.equal(logRows(r,false,'gaierror').length,0);assert.ok(logRows(r,true,'gaierror').length>0);});

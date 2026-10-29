@@ -49,7 +49,7 @@
     "workspace/data/policy.json": "ac95e59a1901f93b1abdeb9756e0682c7c45087b180e71b2090effa5cc8634ca",
     "workspace/data/selector.json": "0ef16569b0e2c1a5a45f380e7b763db4e9128eeac0894181a40ca08fb60e8719",
     "workspace/guide.mjs": "d06003830b090b48a031280b909335326f642bf28a91c00f966b707df919271a",
-    "workspace/index.html": "6d04e941f6a6cbf7e5c6823dd0e142b4dbaa473f0e9fbaa108e61350e0e76a58",
+    "workspace/index.html": "41fed1ae80ce0ed0adcf5f79978ea3125a5fcf139a156adefc2f650052e2f733",
     "workspace/investigation-review.css": "66fef5c4eb46e2d4ec93f1f3dce92f8e272f7667805c9c353e4100895f486166",
     "workspace/investigation-review.html": "3e95efa0f5a7ac9ee959f0a0c0bb3771f2dd35c7a9bbb1e65712ab9adaeb7d8e",
     "workspace/investigation-review.mjs": "38c7bf3e6d6889e403861ca56ed5aefa9eaa56f1f9f4632f7b006ca91467adbb",
@@ -58,8 +58,9 @@
     "workspace/release.json": "44a5a98d2431e9100f1143ecddabe2d6593d970ad16d237186cf65c39eb17315",
     "workspace/style.css": "d2c4961fe797791c2b9cbe79eb51d0819145411409cb87ea49711feae4e806ef",
     "workspace/workbench-data.mjs": "82d7d8edfcadab27b97b00b1a5be817e507f3eeb114ef8df40d5f62eddca28fd",
-    "workspace/workbench.css": "c9a7c3e69b4fec1a641fd5997809398833cdc9767736e2cfbd5eea6f42ea77f9",
-    "workspace/workbench.html": "6d04e941f6a6cbf7e5c6823dd0e142b4dbaa473f0e9fbaa108e61350e0e76a58",
-    "workspace/workbench.mjs": "096db23e2a98a60cf98b026eacca481d49759f8d0c7405927f3dcfd83c2a89cf"
+    "workspace/workbench-summary.mjs": "989ae0154351ddf5ca98d2568dd1811ba6c21277527ba6be6d27ea3e7fa21cdc",
+    "workspace/workbench.css": "bdf3f951a7e53c8ca8d210dbcfa783fbb66050af22d2f923aaaf920afb8edd88",
+    "workspace/workbench.html": "41fed1ae80ce0ed0adcf5f79978ea3125a5fcf139a156adefc2f650052e2f733",
+    "workspace/workbench.mjs": "45ee492cb6651def5e9652fa361252dc923c1b4fc1b30e2939180408623a2f8b"
   }
 }

@@ -1,6 +1,6 @@
 # Devpost field packet — 0.5.0 owner-review draft
 
-Prepared from the official event requirements retrieved on 29 October 2026. The project story, technologies, repository link, cover and screenshot gallery are saved in the [online draft](https://devpost.com/software/rootweaver-resolve). Eleven technical/free-text answers plus the track and Tavily selection are also saved and read back. Personal declarations and publication-dependent URL fields remain incomplete. No final submission has been made. Proposed subjective ratings and personal declarations require owner review; they are not already attested.
+Prepared from the official event requirements retrieved on 29 October 2026. The project story, technologies, repository link, cover and screenshot gallery are saved in the [online draft](https://devpost.com/software/rootweaver-resolve). Eleven technical/free-text answers plus the track and Tavily selection are also saved and read back. Personal declarations and publication-dependent URL fields remain incomplete. No final submission has been made. The project page was inadvertently published by a general-editor gallery save; it is hidden from the portfolio but the owner accepted continuing to edit the project page. The revised 28272 clarification was saved through the hackathon draft form and read back. Proposed subjective ratings and personal declarations require owner review; they are not already attested.
 
 [Official event rules](https://nebiusglobalaihackathon.devpost.com/rules). The demo/test-build URL is required by the narrative rules for this track even though the API field metadata marks it optional. A public YouTube video of no more than three minutes is also required; its approved URL remains pending.
 
@@ -62,7 +62,7 @@ PUBLICATION PENDING — insert the approved working application or downloadable 
 
 Required · textarea
 
-The demonstrated application uses nvidia/Nemotron-3-Ultra-550b-a55b through Nebius Token Factory for advisory investigation of bounded Kubernetes, log and TCP evidence. In the main retained run, it selected four debugging checks and revised competing hypotheses across five calls. Earlier exploratory family trials included Nano, Super and Super-VL, with different prompts and small samples; those trials do not establish a general ranking. Ultra provided useful scoped technical interpretations, but its errors require the independent deterministic finding and visible uncertainty.
+The demonstrated application uses nvidia/Nemotron-3-Ultra-550b-a55b through Nebius Token Factory for advisory investigation of bounded Kubernetes, log and TCP evidence. In the main retained run, it selected four debugging checks and revised competing hypotheses across five calls. Earlier exploratory family trials included Nano, Super and Super-VL, with different prompts and small samples; those trials do not establish a general ranking. Ultra provided useful scoped technical interpretations, but its errors require inspectable evidence and reviewer qualifications. Deterministic validation covers only the separate narrow Service-selection mechanism; the packet workbench does not automatically validate all model claims.
 
 ## 28273 — How would you rate Nemotron's output quality for your use case? (1 = Poor, 10 = Excellent)
 

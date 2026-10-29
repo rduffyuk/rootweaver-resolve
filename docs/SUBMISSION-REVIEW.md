@@ -1,7 +1,10 @@
 # Submission review pack — Resolve 0.5.0
 
 Prepared on 29 October 2026 for the Nebius x NVIDIA Global AI Hackathon.
-**Private owner review. No final submission or public release is authorised.**
+**Owner review. Repository/video publication and final submission remain on hold.**
+
+**Project-page visibility:** Devpost's general editor published the project
+page on Save. It is hidden from the portfolio, but the owner subsequently accepted continuing to edit it; see the status below. Do not describe this package as wholly unpublished.
 
 The official deadline is **30 October 2026, 17:00 UTC / London time**.
 [Official event](https://nebiusglobalaihackathon.devpost.com/) ·
@@ -12,8 +15,12 @@ project story, technologies, repository link, cover and three actual screenshots
 Eleven technical/free-text answers plus track and Tavily selection were saved and
 read back. Proposed ratings still say owner review. Personal declarations and
 publication-dependent URL fields remain incomplete.
-Devpost reports `draft`, `published_at: null`, and no submitted date.
-[YouTube review](https://youtu.be/u5MD-dPgKpo) is **Private** with thumbnail and captions.
+The hackathon entry remains DRAFT with no submitted date. During this polish pass,
+saving the gallery through Devpost's general project editor unexpectedly changed
+the project page to `published` at 20:18:58 UTC. It was immediately hidden from
+the owner's portfolio; that does not restore draft visibility. The owner subsequently accepted keeping and editing this page; no support request was sent. The private repository
+and private review video remain separate from this project-page state.
+[YouTube review](https://youtu.be/WQ6nVurVR9Q) is **Private** with thumbnail and captions.
 
 ## Open these first
 
@@ -33,9 +40,9 @@ Devpost reports `draft`, `published_at: null`, and no submitted date.
 | Order | File | Caption |
 |---|---|---|
 | Cover | [Resolve cover](media/resolve-cover.png) | An agent investigates. You inspect the evidence. Conceptual branding. |
-| 1 | [Desktop workbench](media/desktop-overview.png) | The recorded check, readable output and model assessment in one workbench. Genuine retained execution; playback does not make new calls. |
-| 2 | [Collection method](media/method-desktop.png) | Inspect the scoped command, tool method and captured output. Original records remain available in full. |
-| 3 | [Mobile assessment](media/mobile-assessment.png) | Review hypotheses and qualifications in a mobile viewport. Physical-phone validation remains separate. |
+| 1 | [Desktop workbench](media/desktop-overview.png) | The measured finding, proportional packet timing and four-part operator handover upfront. Genuine retained execution; playback does not make new calls. |
+| 2 | [Model and evidence](media/comparison-desktop.png) | The measured capture beside two post-run reviewer qualifications. These are not automatic corrections. |
+| 3 | [Mobile comparison](media/comparison-mobile.png) | Compare the model assessment with retained evidence in a mobile viewport. Physical-phone validation remains separate. |
 | 4, optional | [Evidence artwork](media/resolve-evidence-art.png) | Follow the checks. Challenge the conclusion. Conceptual illustration, not a product screenshot. |
 
 ## Publication decisions still needed
@@ -53,11 +60,11 @@ Devpost reports `draft`, `published_at: null`, and no submitted date.
 
 ## Review criteria
 
-The strongest thirty-second path is **TCP capture → four measured timings →
-model qualification → unresolved next check**. The video currently reaches the
-detailed timings around 61 seconds. An optional future opening edit could move
-that visual payoff earlier; the current recording already fits the time limit
-and preserves Ryan's delivery.
+The thirty-second path is **measured finding → compare model and evidence →
+next investigation**. The revised video opens on the measured timing diagram and
+shows the model/evidence comparison from approximately seven seconds. It then
+follows Ryan's unchanged narration through the original check sequence. The fuller
+spoken timing explanation remains around 61 seconds.
 
 Keep the story focused on inspectable debugging and a useful human handover.
 Do not claim reliable autonomous RCA, improved MTTR, calibrated confidence,

@@ -1,15 +1,17 @@
 # YouTube review upload
 
 Visibility: **Private**, verified in YouTube Studio on 29 October 2026.
-[Watch in the owner account](https://youtu.be/u5MD-dPgKpo) ·
-[Edit in YouTube Studio](https://studio.youtube.com/video/u5MD-dPgKpo/edit)
+[Watch in the owner account](https://youtu.be/WQ6nVurVR9Q) ·
+[Edit in YouTube Studio](https://studio.youtube.com/video/WQ6nVurVR9Q/edit)
 
 Uploaded with the cover thumbnail, chapters and English (United Kingdom) SRT subtitles.
 YouTube copyright check: no issues found. Public release requires a separate owner decision.
 
 File: [Ryan-narrated demonstration](media/resolve-05-ryan-review.mp4), 137.52 seconds.
-Original narration and video are unchanged. Captions: [SRT](media/captions.srt).
+The revised footage opens with the measured finding and model/evidence comparison. The original levelled voice track and caption timings are unchanged. Captions: [SRT](media/captions.srt).
 Thumbnail candidate: [Resolve cover](media/resolve-cover.png).
+
+Previous private cut: https://youtu.be/u5MD-dPgKpo (retained for comparison; superseded by this finding-first cut).
 
 ## Title
 
@@ -36,7 +38,8 @@ Nebius Token Factory call on fixed retained evidence; it is disabled in this vid
 Public evidence uses disclosed aliases. The standalone viewer has no cluster
 connection and performs no remediation.
 
-00:00 Why an SRE needs an inspectable investigation
+00:00 Measured packet finding and inspectable investigation
+00:16 What the evidence establishes
 00:30 Logs and Service evidence
 00:45 Scoped packet capture and collection method
 01:01 TCP timings and the remaining uncertainty

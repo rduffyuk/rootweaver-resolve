@@ -17,12 +17,16 @@ new model call or cluster request. [Full desktop view](docs/media/desktop-overvi
 
 ## Understand it in thirty seconds
 
-1. **Inspect TCP capture.** The selected endpoint is reachable. Four complete timings
+1. **Read the measured finding.** The selected endpoint is reachable in the captured connections. Four complete timings
    show first server data around **2,001 ms**, after the client FIN around **801 ms**.
-2. **Compare the explanation.** Ultra narrows the investigation, but overcounts the
-   timings and recommends a timeout change without seeing its configuration.
-3. **Challenge the conclusion.** Open the method, original output and qualifications.
-   The underlying latency cause and correct timeout remain unresolved.
+2. **Compare model and evidence.** Ultra narrows the investigation, but overcounts the
+   timings and calls the timeout too aggressive without seeing its configuration.
+   The comparison is labelled as post-run review, not automatic error detection.
+3. **Choose the next investigation.** Establish the configured timeout and intended
+   service budget, then select a scoped server-side trace to locate the wait.
+   That follow-up is suggested, not run; the cause and correct timeout remain open.
+
+[Reproduce the packet timings offline](research/packet-lab/README.md) · [Inspect the original model exchanges and experiments](research/README.md)
 
 That is the useful handover: the checks already done, the evidence that changed the
 assessment, and the uncertainty an operator still needs to resolve.
@@ -37,15 +41,16 @@ python3.12 -m venv .venv
 .venv/bin/resolve-demo
 ```
 
-Open **http://127.0.0.1:8766/**. Choose **TCP capture** for the payoff, or **Follow from
-the first check** for the full investigation. For cloning, pinned build tools and CI,
+Open **http://127.0.0.1:8766/**. The measured packet finding is visible immediately. Choose **Inspect the capture**
+for the complete timings, **Compare model and evidence** for the reviewer qualifications,
+or **Follow the investigation** for the original check sequence. For cloning, pinned build tools and CI,
 see [Build and verify](docs/BUILD.md).
 
 <details>
 <summary>What the replay includes, collection windows and original research artifacts</summary>
 
 
-Open http://127.0.0.1:8766/ . The opening screen shows the completed investigation. Choose **Follow from the first check** to replay Logs → Service & endpoint → TCP capture → Pod status → Handover. Each step exposes the command, evidence available then and the next accepted model assessment. Later evidence is unavailable in earlier steps.
+Open http://127.0.0.1:8766/ . The opening screen shows the completed investigation. Choose **Follow the investigation** to replay Logs → Service & endpoint → TCP capture → Pod status → Handover. Each step exposes the command, evidence available then and the next accepted model assessment. Later evidence is unavailable in earlier steps.
 
 In thirty seconds: select **TCP capture**. Four complete timings show first server data around 2,001 ms after client payload, after client FIN around 801 ms. The selected endpoint is reachable. Neither the reason for the delay nor the correct client timeout has been established. Inspect Ultra's explanation and the visible reviewer qualifications.
 
@@ -134,7 +139,9 @@ For the pinned toolchain, CI, custody verification and a clean-wheel smoke check
 
 </details>
 
-## Review candidate, not published
+## Owner-review candidate
+
+The repository and video remain private review assets. The Devpost project-page visibility exception and unsubmitted hackathon entry are recorded in [the review pack](docs/SUBMISSION-REVIEW.md).
 
 The repository is prepared at [rduffyuk/rootweaver-resolve](https://github.com/rduffyuk/rootweaver-resolve), **private for owner review**. Public repository access, a judge-facing working demo/test-build URL and the public YouTube video remain pending owner approval. The current narrated review video uses Ryan Duffy's own recording, aligned to actual browser footage. The editable script and corrected captions are retained; the earlier synthetic-voice cut was rejected. A local loopback URL is not a judge-facing URL.
 

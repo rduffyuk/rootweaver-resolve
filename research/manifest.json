@@ -637,38 +637,73 @@
     },
     {
       "path": "docs/media/desktop-overview.png",
-      "origin": "artifacts/VW-2321/option-b-release/screenshots/desktop-overview.png",
-      "source_sha256": "6416b8a3df0c896b0a399294cb0ffa053c6429949e03dbc557186bf9b6589ac3",
-      "sha256": "6416b8a3df0c896b0a399294cb0ffa053c6429949e03dbc557186bf9b6589ac3",
-      "transformation": "none; byte-identical"
+      "origin": "artifacts/VW-2321/final-polish/screenshots/desktop-overview.png",
+      "source_sha256": "d1e6a2a265999dd2eb3ed6f02d33ca4af92361d0d7906c23c14961e81eab782c",
+      "sha256": "d1e6a2a265999dd2eb3ed6f02d33ca4af92361d0d7906c23c14961e81eab782c",
+      "transformation": "none; byte-identical",
+      "supersedes": {
+        "path": "docs/media/desktop-overview.png",
+        "origin": "artifacts/VW-2321/option-b-release/screenshots/desktop-overview.png",
+        "source_sha256": "6416b8a3df0c896b0a399294cb0ffa053c6429949e03dbc557186bf9b6589ac3",
+        "sha256": "6416b8a3df0c896b0a399294cb0ffa053c6429949e03dbc557186bf9b6589ac3",
+        "transformation": "none; byte-identical"
+      }
     },
     {
       "path": "docs/media/mobile-overview.png",
-      "origin": "artifacts/VW-2321/option-b-release/screenshots/mobile-overview.png",
-      "source_sha256": "dbe82ce46c69895ede9a281d5810c65e5350dd5722451572d2ac54b9f1011d39",
-      "sha256": "dbe82ce46c69895ede9a281d5810c65e5350dd5722451572d2ac54b9f1011d39",
-      "transformation": "none; byte-identical"
+      "origin": "artifacts/VW-2321/final-polish/screenshots/mobile-overview.png",
+      "source_sha256": "caa05b8e6d3d2ffe60e33936db77291ebd181d59932f4d99ae3418685f73661f",
+      "sha256": "caa05b8e6d3d2ffe60e33936db77291ebd181d59932f4d99ae3418685f73661f",
+      "transformation": "none; byte-identical",
+      "supersedes": {
+        "path": "docs/media/mobile-overview.png",
+        "origin": "artifacts/VW-2321/option-b-release/screenshots/mobile-overview.png",
+        "source_sha256": "dbe82ce46c69895ede9a281d5810c65e5350dd5722451572d2ac54b9f1011d39",
+        "sha256": "dbe82ce46c69895ede9a281d5810c65e5350dd5722451572d2ac54b9f1011d39",
+        "transformation": "none; byte-identical"
+      }
     },
     {
       "path": "docs/media/mobile-assessment.png",
-      "origin": "artifacts/VW-2321/option-b-release/screenshots/mobile-assessment.png",
-      "source_sha256": "79d8433c4cd4452553bbf2b0e7bf7503cc810f6c927320a87dd1c1f23b67d134",
-      "sha256": "79d8433c4cd4452553bbf2b0e7bf7503cc810f6c927320a87dd1c1f23b67d134",
-      "transformation": "none; byte-identical"
+      "origin": "artifacts/VW-2321/final-polish/screenshots/mobile-assessment.png",
+      "source_sha256": "b25d8ca1e756957a3040c804f1e1acd76e0603cea01b2c947a0440edd0f51bd2",
+      "sha256": "b25d8ca1e756957a3040c804f1e1acd76e0603cea01b2c947a0440edd0f51bd2",
+      "transformation": "none; byte-identical",
+      "supersedes": {
+        "path": "docs/media/mobile-assessment.png",
+        "origin": "artifacts/VW-2321/option-b-release/screenshots/mobile-assessment.png",
+        "source_sha256": "79d8433c4cd4452553bbf2b0e7bf7503cc810f6c927320a87dd1c1f23b67d134",
+        "sha256": "79d8433c4cd4452553bbf2b0e7bf7503cc810f6c927320a87dd1c1f23b67d134",
+        "transformation": "none; byte-identical"
+      }
     },
     {
       "path": "docs/media/method-desktop.png",
-      "origin": "artifacts/VW-2321/option-b-release/screenshots/method-desktop.png",
-      "source_sha256": "eb029f3106e3eb497f46bfab0de15a649daae3f71dde9bf7067bdae0ae887a99",
-      "sha256": "eb029f3106e3eb497f46bfab0de15a649daae3f71dde9bf7067bdae0ae887a99",
-      "transformation": "none; byte-identical"
+      "origin": "artifacts/VW-2321/final-polish/screenshots/method-desktop.png",
+      "source_sha256": "d151327dc907def361b245e77cca98039c7e404bbcd67aaff797e813060582ef",
+      "sha256": "d151327dc907def361b245e77cca98039c7e404bbcd67aaff797e813060582ef",
+      "transformation": "none; byte-identical",
+      "supersedes": {
+        "path": "docs/media/method-desktop.png",
+        "origin": "artifacts/VW-2321/option-b-release/screenshots/method-desktop.png",
+        "source_sha256": "eb029f3106e3eb497f46bfab0de15a649daae3f71dde9bf7067bdae0ae887a99",
+        "sha256": "eb029f3106e3eb497f46bfab0de15a649daae3f71dde9bf7067bdae0ae887a99",
+        "transformation": "none; byte-identical"
+      }
     },
     {
       "path": "docs/media/resolve-05-ryan-review.mp4",
-      "origin": "artifacts/VW-2321/option-b-release/video/human-voice/resolve-05-ryan-review.mp4",
-      "source_sha256": "c289a5b9a7c181232fe49fa09997d72c26d54948a1d6b136a6008e5e667a3cf4",
-      "sha256": "c289a5b9a7c181232fe49fa09997d72c26d54948a1d6b136a6008e5e667a3cf4",
-      "transformation": "none; byte-identical"
+      "origin": "artifacts/VW-2321/final-polish/video/resolve-05-ryan-review.mp4",
+      "source_sha256": "5126441f32ac0fb6f2794bc86e40dc771e7b2085d759207f9153cf031f169666",
+      "sha256": "5126441f32ac0fb6f2794bc86e40dc771e7b2085d759207f9153cf031f169666",
+      "transformation": "none; byte-identical",
+      "supersedes": {
+        "path": "docs/media/resolve-05-ryan-review.mp4",
+        "origin": "artifacts/VW-2321/option-b-release/video/human-voice/resolve-05-ryan-review.mp4",
+        "source_sha256": "c289a5b9a7c181232fe49fa09997d72c26d54948a1d6b136a6008e5e667a3cf4",
+        "sha256": "c289a5b9a7c181232fe49fa09997d72c26d54948a1d6b136a6008e5e667a3cf4",
+        "transformation": "none; byte-identical"
+      }
     },
     {
       "path": "docs/media/captions.vtt",
@@ -682,6 +717,20 @@
       "origin": "artifacts/VW-2321/option-b-release/video/human-voice/captions.srt",
       "source_sha256": "a479b81d1544da9d9ef02efc9be5d668f93c139daa556443a1df052480c51113",
       "sha256": "a479b81d1544da9d9ef02efc9be5d668f93c139daa556443a1df052480c51113",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "docs/media/comparison-desktop.png",
+      "origin": "artifacts/VW-2321/final-polish/screenshots/comparison-desktop.png",
+      "source_sha256": "fdd7f573dc3461e51bdabdfdf648757ce01c04df53592af6976b0fde6c926e49",
+      "sha256": "fdd7f573dc3461e51bdabdfdf648757ce01c04df53592af6976b0fde6c926e49",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "path": "docs/media/comparison-mobile.png",
+      "origin": "artifacts/VW-2321/final-polish/screenshots/comparison-mobile.png",
+      "source_sha256": "138de908066c175fda8b2dd303b85838539dcc0fd7a6de9576894de1db0d3f81",
+      "sha256": "138de908066c175fda8b2dd303b85838539dcc0fd7a6de9576894de1db0d3f81",
       "transformation": "none; byte-identical"
     }
   ]
