@@ -1,18 +1,22 @@
 # Rootweaver Resolve — inspect the investigation
 
-Version 0.5.0 owner-review draft. The story and gallery are saved in the [Devpost draft](https://devpost.com/software/rootweaver-resolve). Public release and final submission remain on hold. The hackathon entry is still draft; the project page was inadvertently published by a general-editor gallery save and hidden from the portfolio. The owner accepted continuing to edit this project page; the hackathon entry remains unsubmitted. See docs/SUBMISSION-REVIEW.md.
+Version 0.5.0 owner-review copy. The story and gallery are saved on the [Devpost project page](https://devpost.com/software/rootweaver-resolve); the hackathon entry remains a draft. The project page was published by a general-editor gallery save and hidden from the portfolio. The owner accepted continuing to edit it. Public repository/video release and final submission remain on hold. See docs/SUBMISSION-REVIEW.md.
 
 **An agent investigates. You inspect the evidence.**
 
-Resolve makes an AI investigation reviewable: which debugging checks it chose, what came back, what changed its assessment and what still needs a human.
+Resolve helps SREs investigate incidents under incomplete system context: gather evidence, compare possible explanations and hand an inspectable investigation to an experienced operator.
 
 ## Inspiration
 
-I am an SRE. Agents can read logs convincingly, but their suggested fixes can conflict or be disruptive. I wanted to give a model real debugging tools, let it gather evidence against competing explanations, and expose enough of its method for a human to judge what to investigate next.
+I am an SRE. Agents can be useful at reading logs and suggesting explanations, but their proposed fixes can conflict or be disruptive. A model may not know the full architecture, the dependencies, the business purpose of a service or the impact of changing it. A technically effective restoration still needs operational judgement.
+
+I built Resolve to let the model do the investigative legwork: choose bounded debugging checks, gather more information and develop possible explanations that an experienced person can review. I want to see what it checked, what came back, why its assessment changed and what it is still guessing. The useful outcome is a narrower investigation and a better-informed next decision.
 
 ## What it does
 
-Resolve gives NVIDIA Nemotron 3 Ultra a fixed catalogue of scoped checks. In the demonstrated laboratory run, Ultra selected client logs, Service/EndpointSlice inspection, a bounded TCP capture and pod status, then handed the unresolved investigation to a human. Observe supervised collection; the controller constrained the targets and budgets. The model could not execute arbitrary commands or remediate.
+Resolve gives NVIDIA Nemotron 3 Ultra a fixed catalogue of scoped checks. In the demonstrated laboratory run, Ultra selected client logs, Service/EndpointSlice inspection, a bounded TCP capture and pod status, then handed the unresolved investigation to a human. Rootweaver Observe supervised collection; the controller constrained the targets and budgets. The model could not execute arbitrary commands or remediate.
+
+Observe supplies observations that can strengthen or weaken competing hypotheses. It does not supply complete architecture or business understanding. The operator reviews whether the evidence supports the conclusions, identifies missing dependencies or constraints, and decides what to investigate or change next. Human review is an assessment of the investigation, with operational authority remaining outside the model.
 
 The workbench opens with the concrete finding and a proportional packet timing diagram. Established observations, weakened explanations, remaining uncertainty and the next suggested investigation are visible together. Readable log rows, resource snapshots and TCP conversations remain beside the evolving hypotheses. Every check exposes its recorded command, output, model input and accepted assessment. A human can follow the method and access complete captured records without having to read JSON first.
 
@@ -32,9 +36,15 @@ The existing four-case console remains available. It includes a narrow determini
 
 Readable output and honest attribution mattered as much as tool access. A readiness result does not establish application health. A packet capture does not identify a server-side lock or GC pause. Valid JSON and citations do not establish a correct explanation. We preserve evidence windows, model mistakes, complete outputs and the distinction between observations, model assessments and post-run editorial explanations.
 
+## Where richer context could help
+
+The intended direction is an investigation assistant that fits into an operator's existing environment and uses the context they authorise. Architecture and dependency information could reveal missing relationships and potential impact. Deployment-matched source code and configuration could help explain observed behaviour. Business objectives and service contracts could establish acceptable waiting budgets and what a restoration must preserve. Deployment history could help test an explanation against recent changes.
+
+Those context integrations are future work. Their sources, versions and freshness would need to remain inspectable, and providing more information would not expand the model's authority to make changes. Today, the standalone viewer installs without private services; the original Observe collector is not bundled as a plug-and-play cluster integration. This release does not ingest arbitrary codebases, architecture or business documents.
+
 ## Scope and limits
 
-The main run contains five genuine calls and four checks in one adapted disposable fixture. Four earlier fault case records contain seven separate historical calls. These are small demonstrations with differing prompts and windows, not a combined accuracy benchmark, held-out evaluation, calibrated confidence estimate or proof of reduced MTTR. No production qualification, autonomous remediation or superiority over experienced SREs is claimed.
+The main run contains five genuine calls and four checks in one adapted disposable fixture. Four earlier fault case records contain seven separate historical calls. These controlled examples demonstrate parts of the investigative workflow; they do not establish that a laboratory diagnosis or restoration generalises to an enterprise production system. They use differing prompts and windows and are not a combined accuracy benchmark, held-out evaluation, calibrated confidence estimate or proof of reduced MTTR. No production qualification, autonomous remediation or superiority over experienced SREs is claimed.
 
 ## Existing work and AI assistance
 

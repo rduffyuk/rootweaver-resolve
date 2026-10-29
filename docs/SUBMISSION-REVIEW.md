@@ -22,6 +22,13 @@ the owner's portfolio; that does not restore draft visibility. The owner subsequ
 and private review video remain separate from this project-page state.
 [YouTube review](https://youtu.be/WQ6nVurVR9Q) is **Private** with thumbnail and captions.
 
+Ryan accepted the current video and requested that it remain unchanged on
+29 October 2026. The README and project story now explain the investigation
+principles: incomplete context, bounded evidence collection, competing hypotheses
+and an experienced operator's review. Architecture, code and business-context
+integrations are explicitly future work. This wording revision needs owner
+review; it requires no new recording or change to the video, audio or captions.
+
 ## Open these first
 
 1. [Ryan's 2:18 demonstration](media/resolve-05-ryan-review.mp4)
@@ -47,7 +54,8 @@ and private review video remain separate from this project-page state.
 
 ## Publication decisions still needed
 
-- Approve the video, captions and thumbnail after viewing the private upload.
+- Approve the revised README and project story. The current video is accepted and
+  unchanged; public video visibility and thumbnail approval remain separate.
 - Approve public repository visibility and an anonymously accessible test-build
   URL. A local preview and a private GitHub Actions artifact do not satisfy this.
 - Decide whether the downloadable test build with the documented opt-in runtime
