@@ -15,12 +15,13 @@ method inspectable, including the model's mistakes and unresolved questions.
 
 [MIT](LICENSE) · Python 3.12+ · No runtime dependencies · Version 0.5.0 · Private review candidate
 
-[![Watch Ryan’s 2:18 demonstration on YouTube — actual Resolve workbench footage](docs/media/investigation-preview.gif)](https://youtu.be/WQ6nVurVR9Q)
+https://github.com/user-attachments/assets/7a714890-4fa9-4867-9038-e99ed3623cff
 
 **[▶ Watch the narrated demonstration on YouTube](https://youtu.be/WQ6nVurVR9Q)** · [Download the video](docs/media/resolve-05-ryan-review.mp4)
 
-*Select the animated preview to watch. Actual browser footage from a retained
-laboratory investigation; playback makes no new model call or cluster request.
+*Play the full 2:18 demonstration above, with Ryan’s own narration.
+Actual browser footage from a retained laboratory investigation; playback makes
+no new model call or cluster request.
 [Full desktop view](docs/media/desktop-overview.png) · [Mobile assessment](docs/media/mobile-assessment.png)*
 
 ## Understand it in thirty seconds
