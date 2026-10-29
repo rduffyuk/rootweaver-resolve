@@ -39,7 +39,7 @@ jobs:
         run: python -m build --no-isolation
       - name: Test installed wheel outside the checkout
         run: python scripts/smoke_wheel.py
-      - name: Retain private review build
+      - name: Retain verified build
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: rootweaver-resolve-${{ github.sha }}

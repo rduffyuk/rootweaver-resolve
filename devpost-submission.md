@@ -1,6 +1,6 @@
 # Rootweaver Resolve — inspect the investigation
 
-Version 0.5.0 owner-review copy. The story and gallery are saved on the [Devpost project page](https://devpost.com/software/rootweaver-resolve); the hackathon entry remains a draft. The project page was published by a general-editor gallery save and hidden from the portfolio. The owner accepted continuing to edit it. The approved YouTube video is public. Public repository release, test-build access and final submission remain on hold. See docs/SUBMISSION-REVIEW.md.
+Version 0.5.0 public release copy. Ryan authorised repository, downloadable build and article publication on 29 October 2026. The Devpost project page is public; the hackathon entry remains a draft and has not been submitted.
 
 **An agent investigates. You inspect the evidence.**
 
@@ -50,13 +50,8 @@ The main run contains five genuine calls and four checks in one adapted disposab
 
 Rootweaver predates this competition. Resolve's application, bounded model integration, evidence contracts, fault demonstrations and investigation workspace were developed during the competition. The older platform and independent watchdog are disclosed dependencies. Ryan Duffy owns the problem, architecture and acceptance; OpenAI Codex assisted implementation, verification and packaging. OpenAI image generation supplied conceptual cover artwork, separate from actual product screenshots. NVIDIA Nemotron produced the actual diagnostic outputs. No fine-tuning was performed.
 
-## Submission links and publication status
+## Explore the project
 
-- Public repository: publication pending; standalone source includes MIT licence and setup instructions.
-- Working demo or downloadable test build: publication pending; local source ZIP and wheel prepared for review.
-- [Public YouTube demonstration](https://youtu.be/WQ6nVurVR9Q): Ryan’s approved narration, 137.52 seconds; public visibility verified on 29 October 2026.
+[Download the v0.5.0 test build](https://github.com/rduffyuk/rootweaver-resolve/releases/tag/v0.5.0) · [Read the engineering article](https://rduffy.uk/writing/rootweaver-resolve/) · [Inspect the source and experiments](https://github.com/rduffyuk/rootweaver-resolve)
 
-All official form answers are in docs/DEVPOST-FIELDS.md. Subjective ratings and personal declarations remain owner decisions.
-
-
-Repository preparation update: https://github.com/rduffyuk/rootweaver-resolve is the private owner-review repository. It includes the build workflow, MIT license, research records and narrated review video. Public visibility, judge-facing demo access and final submission remain pending owner approval. The approved [YouTube demonstration](https://youtu.be/WQ6nVurVR9Q) is public following owner authorisation on 29 October 2026.
+The cover is conceptual anime artwork. Product screenshots, original experiment records and the Ryan-narrated demonstration remain separately identified.
