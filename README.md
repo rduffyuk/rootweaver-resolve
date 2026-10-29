@@ -39,8 +39,8 @@ assessment, and the uncertainty an operator still needs to resolve.
 ## Why investigate before changing a system
 
 An incident rarely arrives with complete architecture, dependency and business
-context. A change may restore a symptom while leaving its cause unresolved or
-moving the impact elsewhere. An operator needs to understand both the evidence
+context. A change may restore service while leaving the cause unresolved or
+shifting the impact elsewhere. An operator needs to understand both the evidence
 and the consequences of a restoration.
 
 Resolve uses bounded debugging tools to surface information that can strengthen
