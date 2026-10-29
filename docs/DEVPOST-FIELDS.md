@@ -1,32 +1,32 @@
-# Devpost field packet — 0.5.0 owner-review draft
+# Devpost field packet — 0.5.0 saved draft
 
-Prepared from the official event requirements retrieved on 29 October 2026. The project story, technologies, repository link, cover and screenshot gallery are saved in the [online draft](https://devpost.com/software/rootweaver-resolve). Eleven technical/free-text answers plus the track and Tavily selection are also saved and read back. Personal declarations and publication-dependent URL fields remain incomplete. No final submission has been made. The project page was inadvertently published by a general-editor gallery save; it is hidden from the portfolio but the owner accepted continuing to edit the project page. The revised 28272 clarification was saved through the hackathon draft form and read back. Proposed subjective ratings and personal declarations require owner review; they are not already attested.
+Prepared from the official event requirements retrieved on 29 October 2026. The story, technologies, cover, three product screenshots and approved YouTube video are saved in the [project page](https://devpost.com/software/rootweaver-resolve). The hackathon draft's separate video field is also saved and read back. Technical answers, individual identity, eligibility declarations and subjective feedback were saved and read back after Ryan's explicit confirmation. Only the public-code URL and judge-accessible demo/test-build URL remain pending publication authorization. The optional event city and optional file upload are intentionally empty. Final rules/terms acceptance and final submission have not been performed. The project page is public; the hackathon entry remains a draft and the GitHub repository remains private.
 
-[Official event rules](https://nebiusglobalaihackathon.devpost.com/rules). The demo/test-build URL is required by the narrative rules for this track even though the API field metadata marks it optional. A public YouTube video of no more than three minutes is also required. The approved 137.52-second video is now public: https://youtu.be/WQ6nVurVR9Q. This is the verified URL for the staged submission; this publication step did not edit the online Devpost form.
+[Official event rules](https://nebiusglobalaihackathon.devpost.com/rules). The demo/test-build URL is required by the narrative rules for this track even though the API field metadata marks it optional. A public YouTube video of no more than three minutes is also required. The approved 137.52-second video is now public: https://youtu.be/WQ6nVurVR9Q. This URL was saved and read back in both the public project and the separate hackathon draft video field on 29 October 2026. The current gallery captions were corrected to match their mobile and desktop images.
 
 ## 28261 — Submitter Type
 
 Required · dropdown
 
-Suggested: Individual. Owner must confirm whether submitting personally or as an organisation/team.
+Individual. Confirmed by Ryan: sole entrant, no team. Saved and read back.
 
 ## 28262 — Organization Name (if applicable)
 
 Required · text
 
-Suggested: N/A if submitting as an individual. Owner declaration.
+N/A. Confirmed by Ryan; saved and read back.
 
 ## 28265 — Submitter Country of Residence
 
 Required · dropdown
 
-Suggested: United Kingdom. Owner must confirm current residence.
+United Kingdom. Confirmed by Ryan; saved and read back.
 
 ## 28266 — If you or any team members reside in Canada, please indicate the province below.
 
 Required · text
 
-Suggested: N/A if no team member resides in Canada. Owner declaration.
+N/A. Confirmed by Ryan; sole entrant, no team. Saved and read back.
 
 ## 28267 — Which track are you submitting your project into?
 
@@ -38,7 +38,7 @@ Best apps and agents.
 
 Required · dropdown
 
-Suggested: Existing, with the explicit disclosure below. Rootweaver predates 26 August; Resolve is a new competition-period application slice. Owner must confirm how the event's definition applies.
+Existing, with the explicit disclosure below. Rootweaver predates 26 August; Resolve is a new competition-period application slice. Approved by Ryan; saved and read back.
 
 ## 28269 — If your project is existing, explain how you significantly updated your project with Nebius tools.
 
@@ -68,7 +68,7 @@ The demonstrated application uses nvidia/Nemotron-3-Ultra-550b-a55b through Nebi
 
 Required · textarea
 
-Draft rating for owner review: 6/10 for this constrained SRE use case. Ultra connects supplied logs to a concrete InvalidOperation/calculate_checkout_total clue and can interpret selector/label mismatches. It also made an unsupported Ready-only EndpointSlice claim, contradicted hypothesis polarity, requested logs already provided and gave weak DNS specificity. The main packet run additionally shows useful narrowing from connection failure to response timing, but overcounts complete timing pairs and calls a timeout too aggressive without seeing its configuration. Four earlier fault cases with seven calls and this separate five-call adapted run are not broad qualification. New integration calls use a changed prompt and must not be counted as an accuracy benchmark.
+6/10 for this constrained SRE use case. Ultra connects supplied logs to a concrete InvalidOperation/calculate_checkout_total clue and can interpret selector/label mismatches. It also made an unsupported Ready-only EndpointSlice claim, contradicted hypothesis polarity, requested logs already provided and gave weak DNS specificity. The main packet run additionally shows useful narrowing from connection failure to response timing, but overcounts complete timing pairs and calls a timeout too aggressive without seeing its configuration. Four earlier fault cases with seven calls and this separate five-call adapted run are not broad qualification. New integration calls use a changed prompt and must not be counted as an accuracy benchmark.
 
 ## 28274 — Did you fine-tune, prompt-engineer, or use Nemotron out of the box? What was your approach?
 
@@ -92,13 +92,13 @@ Token Factory's hosted inference API and model catalogue let us use Ultra withou
 
 Required · textarea
 
-Draft rating for owner review: 8/10 for hosted experimentation. API access made a large NVIDIA model practical to integrate and inspect, but production use still requires application-level budgets, input limits, failure handling and evidence validation. This is a subjective proposed rating, not a measured service score.
+8/10 for hosted experimentation. API access made a large NVIDIA model practical to integrate and inspect, but production use still requires application-level budgets, input limits, failure handling and evidence validation. This is a subjective rating, not a measured service score.
 
 ## 28278 — How would you rate your experience running Nemotron inference on Nebius compared to previous cloud or local development environments? (1 = Poor, 10 = Excellent)
 
 Required · textarea
 
-Draft rating for owner review: 8/10. Hosted access reduced model-serving setup for this application. We retained catalogue, limit, output and usage diagnostics rather than assuming successful JSON equals reliable reasoning. No controlled cloud/local performance comparison or verified invoice reconciliation was performed.
+8/10. Hosted access reduced model-serving setup for this application. We retained catalogue, limit, output and usage diagnostics rather than assuming successful JSON equals reliable reasoning. No controlled cloud/local performance comparison or verified invoice reconciliation was performed.
 
 ## 28279 — What additional features or improvements would have made the Nemotron on Nebius experience more effective for your project?
 
@@ -122,19 +122,19 @@ No. There is no functional runtime Tavily call in Resolve.
 
 Optional in form metadata · dropdown
 
-Leave blank unless the owner actually attended an eligible event. Do not infer attendance from residence.
+Blank, confirmed by Ryan. No eligible event city declared.
 
 ## 28283 — Age
 
 Required · checkbox
 
-OWNER MUST CONFIRM. Do not pre-check or attest on the owner's behalf.
+Confirmed by Ryan in this session; checkbox saved and read back. This records the owner's declaration, not independent verification.
 
 ## 28284 — Employee
 
 Required · checkbox
 
-OWNER MUST CONFIRM. Do not pre-check or attest on the owner's behalf.
+Confirmed by Ryan in this session; checkbox saved and read back. This records the owner's declaration, not independent verification.
 
 ## 29059 — Which AI tools have you leveraged while working on this project?
 
@@ -146,13 +146,13 @@ OpenAI Codex assisted source inspection, implementation, tests, debugging, docum
 
 Required · dropdown
 
-Suggested: Significant. Owner must confirm this subjective response.
+Significant. Approved by Ryan; saved and read back.
 
 ## 29061 — Did you gain AI value that you can use in your career?
 
 Required · dropdown
 
-Suggested: Yes. Owner must confirm. Practical learning included evidence provenance, separating deterministic support from model interpretation, bounded inference and incident UX.
+Yes. Approved by Ryan; saved and read back. Practical learning included evidence provenance, separating deterministic support from model interpretation, bounded inference and incident UX.
 
 
 
